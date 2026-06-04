@@ -32,12 +32,11 @@ const tacticTypeLabel = (t: string) => ({ tackle: "🎣 仕掛け", bait: "🪱 
 
 export async function generateStaticParams() {
   const fishList = readData<FishMeta[]>("fish/index.json") ?? [];
-  return fishList.map(f => ({ name: encodeURIComponent(f.name) }));
+  return fishList.map(f => ({ name: f.name }));
 }
 
 export default async function FishPage({ params }: { params: Promise<{ name: string }> }) {
-  const { name: encodedName } = await params;
-  const fishName = decodeURIComponent(encodedName);
+  const { name: fishName } = await params;
 
   const fishList = readData<FishMeta[]>("fish/index.json") ?? [];
   const fish = fishList.find(f => f.name === fishName);

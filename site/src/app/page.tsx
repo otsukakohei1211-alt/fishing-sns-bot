@@ -80,7 +80,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
             {latest.catches.slice(0, 8).map(c => (
-              <Link key={c.name} href={`/fish/${encodeURIComponent(c.name)}`}
+              <Link key={c.name} href={`/fish/${c.name}`}
                 className="bg-blue-50 hover:bg-blue-100 rounded-lg p-3 text-center transition-colors">
                 <div className="font-bold text-blue-800">{c.name}</div>
                 <div className="text-xs text-slate-500">{c.min_size}〜{c.max_size}{c.unit}</div>
@@ -101,7 +101,7 @@ export default function Home() {
         <h2 className="text-lg font-bold mb-4">🔥 今週の注目魚種</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {featured.map(f => (
-            <Link key={f.name} href={`/fish/${encodeURIComponent(f.name)}`}
+            <Link key={f.name} href={`/fish/${f.name}`}
               className="bg-white rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md p-4 transition-all">
               <div className="flex items-start justify-between mb-2">
                 <span className="font-bold text-slate-800">{f.name}</span>

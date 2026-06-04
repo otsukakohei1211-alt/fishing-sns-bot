@@ -47,7 +47,7 @@ export default function Ranking() {
                   </span>
                 </td>
                 <td className="px-4 py-3">
-                  <Link href={`/fish/${encodeURIComponent(r.name)}`} className="font-bold hover:text-blue-600">
+                  <Link href={`/fish/${r.name}`} className="font-bold hover:text-blue-600">
                     {r.name}
                   </Link>
                   {r.price_range >= 3 && (
