@@ -1,25 +1,19 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
-import { readFileSync } from "fs";
-import { join } from "path";
 
 export const runtime = "nodejs";
 
-// モジュールレベルでキャッシュ（インスタンス再起動まで保持）
-const fontJa = readFileSync(
-  join(process.cwd(), "node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-700-normal.woff2"),
-);
-const fontLatin = readFileSync(
-  join(process.cwd(), "node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-latin-700-normal.woff2"),
-);
+let cachedFont: ArrayBuffer | null = null;
 
-const FONTS = [
-  { name: "NotoSansJP", data: fontJa.buffer as ArrayBuffer, weight: 700 as const, style: "normal" as const },
-  { name: "NotoSansJP", data: fontLatin.buffer as ArrayBuffer, weight: 700 as const, style: "normal" as const },
-];
+async function loadFont(origin: string): Promise<ArrayBuffer> {
+  if (cachedFont) return cachedFont;
+  const res = await fetch(`${origin}/fonts/NotoSansJP-Bold.woff2`);
+  cachedFont = await res.arrayBuffer();
+  return cachedFont;
+}
 
 export async function GET(req: NextRequest) {
-  const { searchParams } = req.nextUrl;
+  const { searchParams, origin } = req.nextUrl;
   const title = searchParams.get("title") ?? "本牧釣果レポート";
   const topFish = searchParams.get("fish") ?? "";
   const bakuchouRaw = searchParams.get("bakuchou");
@@ -27,6 +21,8 @@ export async function GET(req: NextRequest) {
 
   const bakuchouNum = bakuchouRaw ? parseInt(bakuchouRaw, 10) : null;
   const isHot = bakuchouNum !== null && bakuchouNum >= 120;
+
+  const fontData = await loadFont(origin);
 
   return new ImageResponse(
     (
@@ -104,6 +100,10 @@ export async function GET(req: NextRequest) {
         </div>
       </div>
     ),
-    { width: 1200, height: 630, fonts: FONTS },
+    {
+      width: 1200,
+      height: 630,
+      fonts: [{ name: "NotoSansJP", data: fontData, weight: 700, style: "normal" }],
+    },
   );
 }
