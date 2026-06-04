@@ -22,8 +22,14 @@ export async function GET(req: NextRequest) {
   const bakuchouNum = bakuchouRaw ? parseInt(bakuchouRaw, 10) : null;
   const isHot = bakuchouNum !== null && bakuchouNum >= 120;
 
-  const fontData = await loadFont(origin);
+  let fontData: ArrayBuffer;
+  try {
+    fontData = await loadFont(origin);
+  } catch (e) {
+    return new Response(`Font load error: ${e}`, { status: 500 });
+  }
 
+  try {
   return new ImageResponse(
     (
       <div
@@ -106,4 +112,7 @@ export async function GET(req: NextRequest) {
       fonts: [{ name: "NotoSansJP", data: fontData, weight: 700, style: "normal" }],
     },
   );
+  } catch (e) {
+    return new Response(`ImageResponse error: ${e}`, { status: 500 });
+  }
 }
