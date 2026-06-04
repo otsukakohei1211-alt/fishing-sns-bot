@@ -84,6 +84,24 @@ export default async function ReportPage(
         <span className="text-slate-600">{article.date}</span>
       </nav>
 
+      {/* メインビジュアル（OGP画像を流用） */}
+      {(() => {
+        const p = new URLSearchParams({ title: article.title });
+        if (article.topCatches[0]) p.set("fish", article.topCatches[0]);
+        if (article.bakuchouIndex) p.set("bakuchou", String(article.bakuchouIndex));
+        if (article.date) p.set("date", article.date);
+        return (
+          <img
+            src={`/api/og?${p}`}
+            alt={article.title}
+            width={1200}
+            height={630}
+            className="w-full rounded-xl"
+            style={{ aspectRatio: "1200/630" }}
+          />
+        );
+      })()}
+
       {/* ヘッダー */}
       <header className="space-y-4">
         <div className="flex flex-wrap gap-2 text-sm">
