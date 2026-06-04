@@ -1,7 +1,6 @@
 import { readFileSync, existsSync } from "fs";
 import { join } from "path";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 
 type FishMeta = {
@@ -32,38 +31,32 @@ const tacticTypeLabel = (t: string) => ({ tackle: "🎣 仕掛け", bait: "🪱 
 
 export async function generateStaticParams() {
   const fishList = readData<FishMeta[]>("fish/index.json") ?? [];
-  return fishList.map(f => ({ name: f.name }));
+  return fishList.map(f => ({ id: String(f.id) }));
 }
 
-export default async function FishPage({ params }: { params: Promise<{ name: string }> }) {
-  const { name: fishName } = await params;
-
+export default async function FishPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const fishList = readData<FishMeta[]>("fish/index.json") ?? [];
-  const fish = fishList.find(f => f.name === fishName);
+  const fish = fishList.find(f => String(f.id) === id);
   if (!fish) notFound();
 
-  const detail = readData<FishDetail>(`fish/${fishName}.json`);
+  const detail = readData<FishDetail>(`fish/${fish.name}.json`);
   if (!detail) notFound();
 
   const thisMonth = new Date().getMonth() + 1;
-  const chartPath = `/charts/monthly_${fishName}.png`;
-  const hasChart = existsSync(join(process.cwd(), "..", "data/charts/monthly", `${fishName}.png`));
-
-  // 最高爆釣月
-  const peakMonth = detail.monthly.reduce((best, m) =>
-    (m.avg_catch ?? 0) > (best.avg_catch ?? 0) ? m : best,
+  const peakMonth = detail.monthly.reduce(
+    (best, m) => (m.avg_catch ?? 0) > (best.avg_catch ?? 0) ? m : best,
     detail.monthly[0]
   );
 
   return (
     <div className="space-y-8">
-      {/* ヘッダー */}
       <div className="flex items-start justify-between">
         <div>
           <div className="text-sm text-slate-500 mb-1">
-            <Link href="/fish" className="hover:underline">魚種図鑑</Link> / {fishName}
+            <Link href="/fish" className="hover:underline">魚種図鑑</Link> / {fish.name}
           </div>
-          <h1 className="text-3xl font-bold text-slate-800">{fishName}</h1>
+          <h1 className="text-3xl font-bold text-slate-800">{fish.name}</h1>
           <p className="text-slate-500">{fish.name_kana} ／ {fish.category}</p>
         </div>
         <div className="flex flex-col items-end gap-2">
@@ -73,13 +66,12 @@ export default async function FishPage({ params }: { params: Promise<{ name: str
           {fish.price_range >= 3 && (
             <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm">{priceLabel(fish.price_range)}</span>
           )}
-          {fish.danger_level >= 1 && (
+          {fish.danger_level >= 1 && fish.danger_note && (
             <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">⚠ {fish.danger_note}</span>
           )}
         </div>
       </div>
 
-      {/* 基本情報 */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {[
           { label: "標準サイズ", value: `${fish.typical_size_min}〜${fish.typical_size_max}${fish.size_unit}` },
@@ -94,7 +86,6 @@ export default async function FishPage({ params }: { params: Promise<{ name: str
         ))}
       </div>
 
-      {/* 月別グラフ */}
       <section>
         <h2 className="text-lg font-bold mb-3">📅 月別釣果データ</h2>
         <div className="bg-white border border-slate-200 rounded-xl p-4 overflow-x-auto">
@@ -107,16 +98,14 @@ export default async function FishPage({ params }: { params: Promise<{ name: str
               return (
                 <div key={m.month} className="flex flex-col items-center gap-1 w-12">
                   <div className="text-xs text-slate-500">{m.avg_catch ?? "-"}</div>
-                  <div
-                    className={`w-10 rounded-t transition-all ${
-                      isThisMonth ? "bg-orange-400" : isPeak ? "bg-blue-600" : "bg-blue-300"
-                    }`}
-                    style={{ height: `${height}px` }}
-                  />
+                  <div className={`w-10 rounded-t ${isThisMonth ? "bg-orange-400" : isPeak ? "bg-blue-600" : "bg-blue-300"}`}
+                    style={{ height: `${height}px` }} />
                   <div className={`text-xs ${isThisMonth ? "font-bold text-orange-600" : "text-slate-500"}`}>
                     {MONTH_LABELS[m.month - 1]}
                   </div>
-                  {m.appearance_pct && <div className="text-xs text-slate-400">{m.appearance_pct}%</div>}
+                  {m.appearance_pct != null && (
+                    <div className="text-xs text-slate-400">{m.appearance_pct}%</div>
+                  )}
                 </div>
               );
             })}
@@ -124,12 +113,11 @@ export default async function FishPage({ params }: { params: Promise<{ name: str
           <div className="text-xs text-slate-400 mt-2 flex gap-4">
             <span><span className="inline-block w-3 h-3 bg-orange-400 rounded mr-1"/>今月</span>
             <span><span className="inline-block w-3 h-3 bg-blue-600 rounded mr-1"/>ピーク月</span>
-            <span>棒グラフの下の%は出現率</span>
+            <span>下の%は出現率</span>
           </div>
         </div>
       </section>
 
-      {/* 仕掛け実績 */}
       {detail.tactics.length > 0 && (
         <section>
           <h2 className="text-lg font-bold mb-3">🎣 釣り方データ（施設コメント実績）</h2>
@@ -160,8 +148,7 @@ export default async function FishPage({ params }: { params: Promise<{ name: str
         </section>
       )}
 
-      {/* 味の特徴 */}
-      {fish.taste_profile && (
+      {fish.taste_profile && Object.values(fish.taste_profile).some(Boolean) && (
         <section>
           <h2 className="text-lg font-bold mb-3">🍳 食べ方・味の特徴</h2>
           <div className="bg-white border border-slate-200 rounded-xl p-4">
@@ -174,13 +161,10 @@ export default async function FishPage({ params }: { params: Promise<{ name: str
         </section>
       )}
 
-      {/* X誘導 */}
       <div className="bg-blue-50 rounded-xl p-4 text-sm text-slate-600">
-        最新の{fishName}の釣果情報は
-        <a href={`https://x.com/search?q=%23${fishName}%20%40MigakuZ80887`}
-          target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mx-1">
-          Xの@MigakuZ80887
-        </a>
+        最新の{fish.name}の釣果は
+        <a href="https://x.com/MigakuZ80887" target="_blank" rel="noopener noreferrer"
+          className="text-blue-600 hover:underline mx-1">@MigakuZ80887</a>
         で毎日更新中
       </div>
     </div>

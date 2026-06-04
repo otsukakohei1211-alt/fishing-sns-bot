@@ -40,7 +40,7 @@ export default function FishIndex() {
             <h2 className="text-base font-bold text-slate-600 mb-3 border-b border-slate-200 pb-2">{cat}</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
               {fish.map(f => (
-                <Link key={f.name} href={`/fish/${f.name}`}
+                <Link key={f.name} href={`/fish/${f.id}`}
                   className="bg-white border border-slate-200 hover:border-blue-300 hover:shadow-sm rounded-xl p-4 transition-all">
                   <div className="font-bold text-slate-800 mb-1">{f.name}</div>
                   <div className="text-xs text-slate-400 mb-2">{f.name_kana}</div>

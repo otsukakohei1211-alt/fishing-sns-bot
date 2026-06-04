@@ -145,7 +145,7 @@ async function exportLatestCatch() {
   if (!latest) return;
 
   const catches = db.prepare(`
-    SELECT f.name, cr.count, cr.min_size, cr.max_size, cr.unit, cr.places
+    SELECT f.id, f.name, cr.count, cr.min_size, cr.max_size, cr.unit, cr.places
     FROM catch_records cr JOIN fish f ON f.id=cr.fish_id
     WHERE cr.date=? AND cr.facility='honmoku' AND cr.count>0
     ORDER BY cr.count DESC
@@ -171,7 +171,7 @@ async function exportMonthlyRanking() {
   const year = ym.slice(0, 4);
 
   const ranking = db.prepare(`
-    SELECT f.name, f.price_range,
+    SELECT f.id, f.name, f.price_range,
       ROUND(AVG(CASE WHEN cr.count > 0 THEN cr.count END), 1) AS avg_catch,
       ROUND(AVG(CASE WHEN cr.count > 0 THEN cr.count END) / NULLIF(AVG(dc.visitors), 0), 3) AS avg_per_person,
       ROUND(AVG(CASE WHEN cr.max_size > 0 THEN cr.max_size END), 1) AS avg_size,

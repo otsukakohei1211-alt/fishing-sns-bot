@@ -3,7 +3,7 @@ import { join } from "path";
 import Link from "next/link";
 
 type RankingItem = {
-  name: string; price_range: number;
+  id: number; name: string; price_range: number;
   avg_catch: number; avg_per_person: number; avg_size: number;
   active_days: number; total_days: number;
 };
@@ -47,7 +47,7 @@ export default function Ranking() {
                   </span>
                 </td>
                 <td className="px-4 py-3">
-                  <Link href={`/fish/${r.name}`} className="font-bold hover:text-blue-600">
+                  <Link href={`/fish/${r.id}`} className="font-bold hover:text-blue-600">
                     {r.name}
                   </Link>
                   {r.price_range >= 3 && (
