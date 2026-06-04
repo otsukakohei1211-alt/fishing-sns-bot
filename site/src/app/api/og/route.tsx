@@ -7,7 +7,7 @@ let cachedFont: ArrayBuffer | null = null;
 
 async function loadFont(origin: string): Promise<ArrayBuffer> {
   if (cachedFont) return cachedFont;
-  const res = await fetch(`${origin}/fonts/NotoSansJP-Bold.woff2`);
+  const res = await fetch(`${origin}/fonts/NotoSansJP-Bold.woff`);
   cachedFont = await res.arrayBuffer();
   return cachedFont;
 }
