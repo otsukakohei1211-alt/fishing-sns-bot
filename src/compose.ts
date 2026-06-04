@@ -10,51 +10,76 @@ import { spawn } from "node:child_process";
 import { readFile, readdir } from "node:fs/promises";
 import type { DailyReport } from "./types.js";
 
+export type ComposeContext = {
+  bakuchouIndex?: number;        // 今日の合計 / 今月日平均 × 100
+  prevWeekWaterTemp?: string;    // 先週同日の水温
+  prevWeekTopCatches?: string[]; // 先週同日の上位魚種
+};
+
 // claude CLI のパス。PATH が通っていれば "claude" のみで動く。
 // launchd など PATH が限られる環境向けに既知のパスもフォールバックとして持つ。
 const CLAUDE_BIN =
   process.env.CLAUDE_BIN ??
   (process.env.HOME ? `${process.env.HOME}/.local/bin/claude` : "claude");
 
-const PROMPT_TEMPLATE = `あなたは東京湾（神奈川エリア）の本牧海づり施設の釣果情報をチェックしている釣り好きです。以下の釣果情報を見た上での「感想・ひとこと」をXに投稿してください。
+const PROMPT_TEMPLATE = `あなたは本牧海づり施設の釣果データを発信している釣りブログ「さかなりす」の中の人です。
+今日のブログ記事に誘導するX投稿を書いてください。
 
-【絶対に守ること】
-- **日本語130字以内**（ハッシュタグ・絵文字・改行を含む全文字）。最優先。
-- 出力は投稿本文のみ。前置き・説明・引用符は一切不要。
-- ハッシュタグは末尾に2〜4個（例: #本牧海づり施設 #釣り #東京湾釣り）。
-- 絵文字は2〜4個まで。
-- **釣れた匹数・来場者数などの集計数値をそのまま転記しない**。
-- 魚種名・サイズ（cm/kg）・場所・釣り方は書いてOK。
-- **公式情報の引用・転載にならないよう**、あくまで自分の感想・印象として書く。
+【ルール】
+- 出力は投稿本文のみ（前置き・説明・引用符なし）
+- 日本語130字以内（URL・ハッシュタグを除く）
+- ハッシュタグは末尾に3〜4個（#本牧海づり施設 必須）
+- 絵文字は2〜3個
+- 嘘・憶測は書かない
 
-【トーン・表現のヒント】
-- カジュアル。釣り仲間に話しかけるノリ。
-- 「〜が好調らしい！」「〜行ってみたくなった」「〜が熱そう」など感想口調でOK。
-- 魚種・サイズ・場所・釣り方のヒントは感想として1〜2点触れてOK。
-- 嘘・憶測は書かない。あくまで釣果情報を見た上での個人の感想。
+【形式】
+1行目〜2行目: 今日の釣果の一番の見どころ（サイズ・魚種・爆釣指数など具体的に）
+空行
+「詳細はブログで↓」という一言
+{ARTICLE_URL}
 
-【参考にする釣果情報（投稿に転記しないこと）】
+【今日の釣果情報（詳細はブログ記事に書いてある）】
 {DATA}
 
 投稿文:`;
 
-function formatData(report: DailyReport): string {
+function formatData(report: DailyReport, ctx?: ComposeContext): string {
   const catches = [...report.catches]
     .sort((a, b) => b.count - a.count)
     .map(
       (c) =>
-        `  - ${c.name}: ${c.count}匹, ${c.minSize}〜${c.maxSize}${c.unit}, 場所: ${c.places.join("・")}`,
+        `  - ${c.name}: ${c.minSize}〜${c.maxSize}${c.unit}, 場所: ${c.places.join("・")}`,
     )
     .join("\n");
 
-  return `日付: ${report.date}
-天気: ${report.weather} / 水温: ${report.waterTemp}℃ / 潮: ${report.tide} / 来場者: ${report.visitors}名
+  let text = `【釣果情報】
+日付: ${report.date}
+天気: ${report.weather} / 水温: ${report.waterTemp}℃ / 潮: ${report.tide}
 
 釣果:
 ${catches}
 
 施設コメント（仕掛け・釣り方・状況・注意点）:
 ${report.comment}`;
+
+  if (ctx) {
+    const extras: string[] = [];
+    if (ctx.bakuchouIndex !== undefined) {
+      const label = ctx.bakuchouIndex >= 150 ? "大爆釣" : ctx.bakuchouIndex >= 120 ? "好調" : ctx.bakuchouIndex >= 80 ? "平均的" : "やや渋め";
+      extras.push(`爆釣指数: 今月日平均の${ctx.bakuchouIndex}%（${label}）`);
+    }
+    if (ctx.prevWeekWaterTemp) {
+      extras.push(`先週同日の水温: ${ctx.prevWeekWaterTemp}℃`);
+    }
+    if (ctx.prevWeekTopCatches && ctx.prevWeekTopCatches.length > 0) {
+      extras.push(`先週同日の上位魚種: ${ctx.prevWeekTopCatches.join("、")}`);
+    }
+    if (extras.length > 0) {
+      text += "\n\n【追加データ】\n" + extras.join("\n");
+    }
+  }
+
+  return text;
 }
 
 function callClaude(prompt: string): Promise<string> {
@@ -102,14 +127,17 @@ function callClaude(prompt: string): Promise<string> {
 
 // ── 公開 API ──────────────────────────────────────────────────────────────────
 
-/** 投稿文を生成する（opts は後方互換のため残しているが未使用） */
+/** 投稿文を生成する */
 export async function composePost(
   reports: DailyReport[],
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  opts?: { strict?: boolean },
+  ctx?: ComposeContext,
+  articleUrl?: string,
 ): Promise<string> {
-  const data = formatData(reports[0]);
-  const prompt = PROMPT_TEMPLATE.replace("{DATA}", data);
+  const data = formatData(reports[0], ctx);
+  const url = articleUrl ?? "（記事URL）";
+  const prompt = PROMPT_TEMPLATE
+    .replace("{ARTICLE_URL}", url)
+    .replace("{DATA}", data);
   return callClaude(prompt);
 }
 

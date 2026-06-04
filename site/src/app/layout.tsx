@@ -5,6 +5,7 @@ import "./globals.css";
 const noto = Noto_Sans_JP({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.SITE_URL ?? "https://sakanalis.vercel.app"),
   title: "さかなりす | 東京湾釣り データ分析",
   description: "東京湾（神奈川エリア）の釣果データを分析。本牧・大黒・磯子海づり施設の釣果予測・魚種図鑑・季節情報をお届け。",
 };
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
             <nav className="flex gap-6 text-sm">
               <a href="/" className="hover:text-blue-600">ホーム</a>
+              <a href="/reports" className="hover:text-blue-600">記事</a>
               <a href="/fish" className="hover:text-blue-600">魚種図鑑</a>
               <a href="/ranking" className="hover:text-blue-600">ランキング</a>
             </nav>
