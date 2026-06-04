@@ -41,7 +41,8 @@ export async function GET(req: NextRequest) {
   const isHot = bakuchouNum !== null && bakuchouNum >= 120;
 
   const fontData = await loadJapaneseFont();
-  const fonts: ConstructorParameters<typeof ImageResponse>[1]["fonts"] = fontData
+  type FontDef = { name: string; data: ArrayBuffer; weight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900; style: "normal" | "italic" };
+  const fonts: FontDef[] = fontData
     ? [{ name: "NotoSansJP", data: fontData, weight: 700, style: "normal" }]
     : [];
 
