@@ -1,0 +1,259 @@
+{
+  "monthly": [
+    {
+      "month": 1,
+      "avg_catch": null,
+      "avg_per_person": null,
+      "avg_max_size": null,
+      "appearance_pct": 0
+    },
+    {
+      "month": 2,
+      "avg_catch": null,
+      "avg_per_person": null,
+      "avg_max_size": null,
+      "appearance_pct": 0
+    },
+    {
+      "month": 3,
+      "avg_catch": null,
+      "avg_per_person": null,
+      "avg_max_size": null,
+      "appearance_pct": 0
+    },
+    {
+      "month": 4,
+      "avg_catch": 1,
+      "avg_per_person": 0,
+      "avg_max_size": 36.7,
+      "appearance_pct": 10
+    },
+    {
+      "month": 5,
+      "avg_catch": 1.4,
+      "avg_per_person": 0,
+      "avg_max_size": 35.9,
+      "appearance_pct": 17
+    },
+    {
+      "month": 6,
+      "avg_catch": 1,
+      "avg_per_person": 0,
+      "avg_max_size": 40,
+      "appearance_pct": 3
+    },
+    {
+      "month": 7,
+      "avg_catch": null,
+      "avg_per_person": null,
+      "avg_max_size": null,
+      "appearance_pct": 0
+    },
+    {
+      "month": 8,
+      "avg_catch": null,
+      "avg_per_person": null,
+      "avg_max_size": null,
+      "appearance_pct": 0
+    },
+    {
+      "month": 9,
+      "avg_catch": null,
+      "avg_per_person": null,
+      "avg_max_size": null,
+      "appearance_pct": 0
+    },
+    {
+      "month": 10,
+      "avg_catch": 1,
+      "avg_per_person": 0,
+      "avg_max_size": 55,
+      "appearance_pct": 3
+    },
+    {
+      "month": 11,
+      "avg_catch": 1,
+      "avg_per_person": 0,
+      "avg_max_size": 30,
+      "appearance_pct": 3
+    },
+    {
+      "month": 12,
+      "avg_catch": 1,
+      "avg_per_person": 0,
+      "avg_max_size": 28,
+      "appearance_pct": 3
+    }
+  ],
+  "recent": [
+    {
+      "date": "2026/05/05",
+      "count": 2,
+      "water_temp": 16,
+      "avg_size": 36
+    },
+    {
+      "date": "2026/05/06",
+      "count": 0,
+      "water_temp": 17,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/07",
+      "count": 0,
+      "water_temp": 17,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/08",
+      "count": 1,
+      "water_temp": 17,
+      "avg_size": 40
+    },
+    {
+      "date": "2026/05/09",
+      "count": 3,
+      "water_temp": 17,
+      "avg_size": 28.5
+    },
+    {
+      "date": "2026/05/10",
+      "count": 0,
+      "water_temp": 17,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/11",
+      "count": 0,
+      "water_temp": 18,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/13",
+      "count": 1,
+      "water_temp": 18,
+      "avg_size": 20
+    },
+    {
+      "date": "2026/05/14",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/15",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/16",
+      "count": 0,
+      "water_temp": 19.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/17",
+      "count": 1,
+      "water_temp": 19.5,
+      "avg_size": 42
+    },
+    {
+      "date": "2026/05/18",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/19",
+      "count": 0,
+      "water_temp": 19.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/20",
+      "count": 1,
+      "water_temp": 18,
+      "avg_size": 35
+    },
+    {
+      "date": "2026/05/21",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/22",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/23",
+      "count": 0,
+      "water_temp": 18.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/24",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/25",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/26",
+      "count": 0,
+      "water_temp": 20,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/27",
+      "count": 0,
+      "water_temp": 20.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/28",
+      "count": 0,
+      "water_temp": 20.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/29",
+      "count": 0,
+      "water_temp": 20,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/30",
+      "count": 0,
+      "water_temp": 20,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/31",
+      "count": 0,
+      "water_temp": 20,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/01",
+      "count": 0,
+      "water_temp": 20,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/02",
+      "count": 0,
+      "water_temp": 20,
+      "avg_size": null
+    }
+  ],
+  "tactics": []
+}

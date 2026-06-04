@@ -1,0 +1,43 @@
+{
+  "name": "fishing-sns-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "inspect:honmoku": "tsx scripts/inspect_honmoku.ts",
+    "scrape:honmoku": "tsx src/scrapers/honmoku.ts",
+    "compose": "tsx src/compose.ts",
+    "x:login": "tsx src/x_login.ts",
+    "x:import": "tsx src/x_import_state.ts",
+    "x:draft": "tsx src/x_draft.ts",
+    "x:post": "tsx src/x_post.ts",
+    "run:daily": "tsx src/index.ts",
+    "run:weekly": "tsx src/index.ts",
+    "db:seed:history": "tsx scripts/seed_history.ts",
+    "db:seed:fish": "tsx scripts/seed_fish.ts",
+    "batch:extract": "tsx src/batch/extract_observations.ts",
+    "batch:aggregate": "tsx src/batch/aggregate_stats.ts",
+    "batch:all": "npm run batch:extract && npm run batch:aggregate",
+    "run:feature": "tsx src/fish_feature/index.ts",
+    "run:feature:dry": "DRY_RUN=1 tsx src/fish_feature/index.ts",
+    "site:export": "tsx scripts/export_site_data.ts",
+    "site:dev": "npm run site:export && cd site && npm run dev"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0",
+    "@google/generative-ai": "^0.24.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "better-sqlite3": "^12.10.0",
+    "chart.js": "^4.5.1",
+    "chartjs-node-canvas": "^5.0.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.49.0",
+    "resend": "^6.12.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.0"
+  }
+}

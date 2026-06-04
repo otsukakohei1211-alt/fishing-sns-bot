@@ -1,0 +1,26 @@
+# 環境変数・認証情報
+.env
+data/auth/
+
+# DBファイル（ローカルのみ）
+data/fishing.db
+data/fishing.db-wal
+data/fishing.db-shm
+
+# ログ・スナップショット
+data/logs/
+data/snapshots/
+data/charts/
+
+# サイトビルド成果物
+site/.next/
+site/node_modules/
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# TypeScript
+*.tsbuildinfo

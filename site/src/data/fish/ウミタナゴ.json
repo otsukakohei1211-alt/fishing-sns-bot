@@ -1,0 +1,323 @@
+{
+  "monthly": [
+    {
+      "month": 1,
+      "avg_catch": 32.7,
+      "avg_per_person": 0.13,
+      "avg_max_size": 21.8,
+      "appearance_pct": 100
+    },
+    {
+      "month": 2,
+      "avg_catch": 8.7,
+      "avg_per_person": 0.04,
+      "avg_max_size": 21,
+      "appearance_pct": 100
+    },
+    {
+      "month": 3,
+      "avg_catch": 8.4,
+      "avg_per_person": 0.02,
+      "avg_max_size": 20.9,
+      "appearance_pct": 98
+    },
+    {
+      "month": 4,
+      "avg_catch": 6.9,
+      "avg_per_person": 0.02,
+      "avg_max_size": 21.5,
+      "appearance_pct": 95
+    },
+    {
+      "month": 5,
+      "avg_catch": 3.2,
+      "avg_per_person": 0.01,
+      "avg_max_size": 20.2,
+      "appearance_pct": 70
+    },
+    {
+      "month": 6,
+      "avg_catch": 4.9,
+      "avg_per_person": 0.01,
+      "avg_max_size": 20.5,
+      "appearance_pct": 100
+    },
+    {
+      "month": 7,
+      "avg_catch": 3,
+      "avg_per_person": 0.01,
+      "avg_max_size": 20.1,
+      "appearance_pct": 47
+    },
+    {
+      "month": 8,
+      "avg_catch": 1.8,
+      "avg_per_person": 0,
+      "avg_max_size": 19.3,
+      "appearance_pct": 61
+    },
+    {
+      "month": 9,
+      "avg_catch": 1.8,
+      "avg_per_person": 0,
+      "avg_max_size": 19.5,
+      "appearance_pct": 38
+    },
+    {
+      "month": 10,
+      "avg_catch": 5,
+      "avg_per_person": 0.01,
+      "avg_max_size": 19.7,
+      "appearance_pct": 81
+    },
+    {
+      "month": 11,
+      "avg_catch": 14.4,
+      "avg_per_person": 0.03,
+      "avg_max_size": 19.3,
+      "appearance_pct": 100
+    },
+    {
+      "month": 12,
+      "avg_catch": 34.3,
+      "avg_per_person": 0.12,
+      "avg_max_size": 20.4,
+      "appearance_pct": 100
+    }
+  ],
+  "recent": [
+    {
+      "date": "2026/05/05",
+      "count": 6,
+      "water_temp": 16,
+      "avg_size": 17.5
+    },
+    {
+      "date": "2026/05/06",
+      "count": 1,
+      "water_temp": 17,
+      "avg_size": 15
+    },
+    {
+      "date": "2026/05/07",
+      "count": 0,
+      "water_temp": 17,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/08",
+      "count": 2,
+      "water_temp": 17,
+      "avg_size": 15
+    },
+    {
+      "date": "2026/05/09",
+      "count": 2,
+      "water_temp": 17,
+      "avg_size": 20
+    },
+    {
+      "date": "2026/05/10",
+      "count": 0,
+      "water_temp": 17,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/11",
+      "count": 1,
+      "water_temp": 18,
+      "avg_size": 18
+    },
+    {
+      "date": "2026/05/13",
+      "count": 0,
+      "water_temp": 18,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/14",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/15",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/16",
+      "count": 2,
+      "water_temp": 19.5,
+      "avg_size": 17.5
+    },
+    {
+      "date": "2026/05/17",
+      "count": 1,
+      "water_temp": 19.5,
+      "avg_size": 15
+    },
+    {
+      "date": "2026/05/18",
+      "count": 2,
+      "water_temp": 19,
+      "avg_size": 20
+    },
+    {
+      "date": "2026/05/19",
+      "count": 0,
+      "water_temp": 19.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/20",
+      "count": 0,
+      "water_temp": 18,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/21",
+      "count": 0,
+      "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/22",
+      "count": 2,
+      "water_temp": 19,
+      "avg_size": 20
+    },
+    {
+      "date": "2026/05/23",
+      "count": 5,
+      "water_temp": 18.5,
+      "avg_size": 17.5
+    },
+    {
+      "date": "2026/05/24",
+      "count": 6,
+      "water_temp": 19,
+      "avg_size": 17.5
+    },
+    {
+      "date": "2026/05/25",
+      "count": 3,
+      "water_temp": 19,
+      "avg_size": 18.5
+    },
+    {
+      "date": "2026/05/26",
+      "count": 7,
+      "water_temp": 20,
+      "avg_size": 22.5
+    },
+    {
+      "date": "2026/05/27",
+      "count": 9,
+      "water_temp": 20.5,
+      "avg_size": 18.5
+    },
+    {
+      "date": "2026/05/28",
+      "count": 4,
+      "water_temp": 20.5,
+      "avg_size": 19
+    },
+    {
+      "date": "2026/05/29",
+      "count": 1,
+      "water_temp": 20,
+      "avg_size": 20
+    },
+    {
+      "date": "2026/05/30",
+      "count": 4,
+      "water_temp": 20,
+      "avg_size": 21.5
+    },
+    {
+      "date": "2026/05/31",
+      "count": 5,
+      "water_temp": 20,
+      "avg_size": 18.5
+    },
+    {
+      "date": "2026/06/01",
+      "count": 5,
+      "water_temp": 20,
+      "avg_size": 17.5
+    },
+    {
+      "date": "2026/06/02",
+      "count": 9,
+      "water_temp": 20,
+      "avg_size": 19
+    }
+  ],
+  "tactics": [
+    {
+      "tactic_type": "tackle",
+      "tactic_value": "サビキ",
+      "mention_count": 19,
+      "co_catch_count": 19,
+      "hit_rate_pct": 100
+    },
+    {
+      "tactic_type": "tackle",
+      "tactic_value": "ウキフカセ",
+      "mention_count": 3,
+      "co_catch_count": 3,
+      "hit_rate_pct": 100
+    },
+    {
+      "tactic_type": "tackle",
+      "tactic_value": "ウキ釣り（浮きフカセ）",
+      "mention_count": 2,
+      "co_catch_count": 2,
+      "hit_rate_pct": 100
+    },
+    {
+      "tactic_type": "tackle",
+      "tactic_value": "ウキ釣り",
+      "mention_count": 1,
+      "co_catch_count": 1,
+      "hit_rate_pct": 100
+    },
+    {
+      "tactic_type": "tackle",
+      "tactic_value": "エサ釣り",
+      "mention_count": 1,
+      "co_catch_count": 1,
+      "hit_rate_pct": 100
+    },
+    {
+      "tactic_type": "tackle",
+      "tactic_value": "トリックサビキ",
+      "mention_count": 1,
+      "co_catch_count": 1,
+      "hit_rate_pct": 100
+    },
+    {
+      "tactic_type": "tackle",
+      "tactic_value": "浮きフカセ",
+      "mention_count": 1,
+      "co_catch_count": 1,
+      "hit_rate_pct": 100
+    },
+    {
+      "tactic_type": "spot",
+      "tactic_value": "南桟橋",
+      "mention_count": 1,
+      "co_catch_count": 1,
+      "hit_rate_pct": 100
+    },
+    {
+      "tactic_type": "time",
+      "tactic_value": "午後",
+      "mention_count": 1,
+      "co_catch_count": 1,
+      "hit_rate_pct": 100
+    }
+  ]
+}

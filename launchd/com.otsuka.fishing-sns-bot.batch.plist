@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.otsuka.fishing-sns-bot.batch</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/koheiotsuka/fishing-sns-bot/scripts/run_batch.sh</string>
+    </array>
+
+    <!--
+      週3回（月・水・金）の 6:00 JST に観察記録抽出 + 統計集計を実行する。
+      前日までの新しいコメントを差分処理するため、朝の実行が最適。
+    -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Weekday</key><integer>1</integer>
+            <key>Hour</key><integer>6</integer>
+            <key>Minute</key><integer>0</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key><integer>3</integer>
+            <key>Hour</key><integer>6</integer>
+            <key>Minute</key><integer>0</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key><integer>5</integer>
+            <key>Hour</key><integer>6</integer>
+            <key>Minute</key><integer>0</integer>
+        </dict>
+    </array>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/koheiotsuka/fishing-sns-bot/data/logs/batch.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/koheiotsuka/fishing-sns-bot/data/logs/batch.err.log</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/koheiotsuka/fishing-sns-bot</string>
+</dict>
+</plist>

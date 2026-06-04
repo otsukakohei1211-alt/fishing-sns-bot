@@ -1,0 +1,274 @@
+{
+  "monthly": [
+    {
+      "month": 1,
+      "avg_catch": 4.8,
+      "avg_per_person": 0.02,
+      "avg_max_size": 17.2,
+      "appearance_pct": 20
+    },
+    {
+      "month": 2,
+      "avg_catch": 61.4,
+      "avg_per_person": 0.25,
+      "avg_max_size": 19,
+      "appearance_pct": 45
+    },
+    {
+      "month": 3,
+      "avg_catch": 87.6,
+      "avg_per_person": 0.23,
+      "avg_max_size": 17.5,
+      "appearance_pct": 75
+    },
+    {
+      "month": 4,
+      "avg_catch": 2442.6,
+      "avg_per_person": 5.46,
+      "avg_max_size": 14,
+      "appearance_pct": 88
+    },
+    {
+      "month": 5,
+      "avg_catch": 5194.8,
+      "avg_per_person": 9.85,
+      "avg_max_size": 14,
+      "appearance_pct": 98
+    },
+    {
+      "month": 6,
+      "avg_catch": 3422.7,
+      "avg_per_person": 7.46,
+      "avg_max_size": 13.3,
+      "appearance_pct": 100
+    },
+    {
+      "month": 7,
+      "avg_catch": 2672.1,
+      "avg_per_person": 7.2,
+      "avg_max_size": 13.2,
+      "appearance_pct": 100
+    },
+    {
+      "month": 8,
+      "avg_catch": 1606.7,
+      "avg_per_person": 3.41,
+      "avg_max_size": 14.9,
+      "appearance_pct": 100
+    },
+    {
+      "month": 9,
+      "avg_catch": 3465,
+      "avg_per_person": 6.89,
+      "avg_max_size": 15.2,
+      "appearance_pct": 97
+    },
+    {
+      "month": 10,
+      "avg_catch": 430.2,
+      "avg_per_person": 0.91,
+      "avg_max_size": 14.6,
+      "appearance_pct": 90
+    },
+    {
+      "month": 11,
+      "avg_catch": 70.3,
+      "avg_per_person": 0.13,
+      "avg_max_size": 11.8,
+      "appearance_pct": 55
+    },
+    {
+      "month": 12,
+      "avg_catch": 62.9,
+      "avg_per_person": 0.22,
+      "avg_max_size": 11.4,
+      "appearance_pct": 53
+    }
+  ],
+  "recent": [
+    {
+      "date": "2026/05/05",
+      "count": 10686,
+      "water_temp": 16,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/05/06",
+      "count": 2455,
+      "water_temp": 17,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/05/07",
+      "count": 404,
+      "water_temp": 17,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/05/08",
+      "count": 5880,
+      "water_temp": 17,
+      "avg_size": 16
+    },
+    {
+      "date": "2026/05/09",
+      "count": 12832,
+      "water_temp": 17,
+      "avg_size": 15
+    },
+    {
+      "date": "2026/05/10",
+      "count": 5832,
+      "water_temp": 17,
+      "avg_size": 15
+    },
+    {
+      "date": "2026/05/11",
+      "count": 4297,
+      "water_temp": 18,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/13",
+      "count": 10397,
+      "water_temp": 18,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/05/14",
+      "count": 5086,
+      "water_temp": 19,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/15",
+      "count": 1615,
+      "water_temp": 19,
+      "avg_size": 15
+    },
+    {
+      "date": "2026/05/16",
+      "count": 8002,
+      "water_temp": 19.5,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/17",
+      "count": 10421,
+      "water_temp": 19.5,
+      "avg_size": 15
+    },
+    {
+      "date": "2026/05/18",
+      "count": 3936,
+      "water_temp": 19,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/19",
+      "count": 4621,
+      "water_temp": 19.5,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/20",
+      "count": 5794,
+      "water_temp": 18,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/21",
+      "count": 166,
+      "water_temp": 19,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/22",
+      "count": 88,
+      "water_temp": 19,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/23",
+      "count": 5732,
+      "water_temp": 18.5,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/24",
+      "count": 3080,
+      "water_temp": 19,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/05/25",
+      "count": 456,
+      "water_temp": 19,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/26",
+      "count": 575,
+      "water_temp": 20,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/05/27",
+      "count": 25,
+      "water_temp": 20.5,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/05/28",
+      "count": 0,
+      "water_temp": 20.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/05/29",
+      "count": 158,
+      "water_temp": 20,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/05/30",
+      "count": 438,
+      "water_temp": 20,
+      "avg_size": 16
+    },
+    {
+      "date": "2026/05/31",
+      "count": 278,
+      "water_temp": 20,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/06/01",
+      "count": 1098,
+      "water_temp": 20,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/06/02",
+      "count": 1200,
+      "water_temp": 20,
+      "avg_size": 11.5
+    }
+  ],
+  "tactics": [
+    {
+      "tactic_type": "spot",
+      "tactic_value": "外側",
+      "mention_count": 1,
+      "co_catch_count": 0,
+      "hit_rate_pct": 0
+    },
+    {
+      "tactic_type": "time",
+      "tactic_value": "朝",
+      "mention_count": 1,
+      "co_catch_count": 0,
+      "hit_rate_pct": 0
+    }
+  ]
+}

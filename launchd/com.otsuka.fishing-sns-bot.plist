@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.otsuka.fishing-sns-bot</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/koheiotsuka/fishing-sns-bot/scripts/run_daily.sh</string>
+    </array>
+
+    <!--
+      Weekday キーを省略すると「毎日」扱い。
+      毎日 20:00 JST に起動する。
+    -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>20</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- Mac を常時起動で運用しているため pmset の wake 設定は不要 -->
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/koheiotsuka/fishing-sns-bot/data/logs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/koheiotsuka/fishing-sns-bot/data/logs/launchd.err.log</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/koheiotsuka/fishing-sns-bot</string>
+</dict>
+</plist>
