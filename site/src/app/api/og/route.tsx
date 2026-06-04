@@ -1,34 +1,22 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+import { readFileSync } from "fs";
+import { join } from "path";
 
-// Node.js runtime: Google Fonts fetch が安定して動く
 export const runtime = "nodejs";
 
-// フォントはプロセス内でキャッシュ（cold start ごとに1回だけ取得）
-let cachedFont: ArrayBuffer | null = null;
+// モジュールレベルでキャッシュ（インスタンス再起動まで保持）
+const fontJa = readFileSync(
+  join(process.cwd(), "node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-700-normal.woff2"),
+);
+const fontLatin = readFileSync(
+  join(process.cwd(), "node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-latin-700-normal.woff2"),
+);
 
-async function loadJapaneseFont(): Promise<ArrayBuffer | null> {
-  if (cachedFont) return cachedFont;
-  try {
-    const css = await fetch(
-      "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap",
-      {
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        },
-      },
-    ).then((r) => r.text());
-
-    const match = css.match(/url\(([^)]+\.woff2)\)/);
-    if (!match) return null;
-
-    cachedFont = await fetch(match[1]).then((r) => r.arrayBuffer());
-    return cachedFont;
-  } catch {
-    return null;
-  }
-}
+const FONTS = [
+  { name: "NotoSansJP", data: fontJa.buffer as ArrayBuffer, weight: 700 as const, style: "normal" as const },
+  { name: "NotoSansJP", data: fontLatin.buffer as ArrayBuffer, weight: 700 as const, style: "normal" as const },
+];
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
@@ -39,12 +27,6 @@ export async function GET(req: NextRequest) {
 
   const bakuchouNum = bakuchouRaw ? parseInt(bakuchouRaw, 10) : null;
   const isHot = bakuchouNum !== null && bakuchouNum >= 120;
-
-  const fontData = await loadJapaneseFont();
-  type FontDef = { name: string; data: ArrayBuffer; weight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900; style: "normal" | "italic" };
-  const fonts: FontDef[] = fontData
-    ? [{ name: "NotoSansJP", data: fontData, weight: 700, style: "normal" }]
-    : [];
 
   return new ImageResponse(
     (
@@ -122,6 +104,6 @@ export async function GET(req: NextRequest) {
         </div>
       </div>
     ),
-    { width: 1200, height: 630, fonts },
+    { width: 1200, height: 630, fonts: FONTS },
   );
 }
