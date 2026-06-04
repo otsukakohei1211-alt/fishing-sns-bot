@@ -1,18 +1,30 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
-export const runtime = "edge";
+// Node.js runtime: Google Fonts fetch が安定して動く
+export const runtime = "nodejs";
 
-async function loadFont(): Promise<ArrayBuffer | null> {
+// フォントはプロセス内でキャッシュ（cold start ごとに1回だけ取得）
+let cachedFont: ArrayBuffer | null = null;
+
+async function loadJapaneseFont(): Promise<ArrayBuffer | null> {
+  if (cachedFont) return cachedFont;
   try {
-    // Google Fonts CSS から woff2 URL を取得
     const css = await fetch(
       "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap",
-      { headers: { "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1)" } },
+      {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        },
+      },
     ).then((r) => r.text());
-    const match = css.match(/src: url\(([^)]+)\) format\('woff2'\)/);
+
+    const match = css.match(/url\(([^)]+\.woff2)\)/);
     if (!match) return null;
-    return await fetch(match[1]).then((r) => r.arrayBuffer());
+
+    cachedFont = await fetch(match[1]).then((r) => r.arrayBuffer());
+    return cachedFont;
   } catch {
     return null;
   }
@@ -28,9 +40,9 @@ export async function GET(req: NextRequest) {
   const bakuchouNum = bakuchouRaw ? parseInt(bakuchouRaw, 10) : null;
   const isHot = bakuchouNum !== null && bakuchouNum >= 120;
 
-  const fontData = await loadFont();
-  const fonts = fontData
-    ? [{ name: "NotoSansJP", data: fontData, weight: 700 as const, style: "normal" as const }]
+  const fontData = await loadJapaneseFont();
+  const fonts: ConstructorParameters<typeof ImageResponse>[1]["fonts"] = fontData
+    ? [{ name: "NotoSansJP", data: fontData, weight: 700, style: "normal" }]
     : [];
 
   return new ImageResponse(
@@ -44,15 +56,13 @@ export async function GET(req: NextRequest) {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "60px 72px",
-          fontFamily: fonts.length > 0 ? "NotoSansJP, sans-serif" : "sans-serif",
+          fontFamily: "NotoSansJP, sans-serif",
         }}
       >
-        {/* ヘッダー */}
         <div style={{ display: "flex", color: "#7dd3fc", fontSize: "22px" }}>
           さかなりす | 東京湾釣りデータ
         </div>
 
-        {/* タイトル */}
         <div
           style={{
             color: "white",
@@ -67,7 +77,6 @@ export async function GET(req: NextRequest) {
           {title}
         </div>
 
-        {/* バッジ行 */}
         <div style={{ display: "flex", gap: "14px" }}>
           {bakuchouNum !== null ? (
             <div
@@ -80,9 +89,7 @@ export async function GET(req: NextRequest) {
                 fontWeight: "bold",
               }}
             >
-              {isHot
-                ? `爆釣指数 ${bakuchouNum}% 好調`
-                : `爆釣指数 ${bakuchouNum}%`}
+              {isHot ? `爆釣指数 ${bakuchouNum}% 好調` : `爆釣指数 ${bakuchouNum}%`}
             </div>
           ) : null}
           {topFish ? (
