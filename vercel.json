@@ -1,6 +1,0 @@
-{
-  "rootDirectory": "site",
-  "buildCommand": "cd .. && npx tsx scripts/export_site_data.ts && npm run build",
-  "installCommand": "npm install",
-  "framework": "nextjs"
-}
