@@ -24,3 +24,5 @@ node_modules/
 
 # TypeScript
 *.tsbuildinfo
+.vercel
+.env*
