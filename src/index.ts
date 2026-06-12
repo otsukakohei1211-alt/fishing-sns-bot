@@ -16,7 +16,7 @@ const execFileAsync = promisify(execFile);
 /** 記事JSONをコミット・プッシュして Vercel の自動デプロイを発火させる。 */
 async function deployArticles(slug: string): Promise<boolean> {
   try {
-    await execFileAsync("git", ["add", "site/src/data/reports"]);
+    await execFileAsync("git", ["add", "site/src/data"]);
     const { stdout: staged } = await execFileAsync("git", ["diff", "--cached", "--name-only"]);
     if (!staged.trim()) {
       console.log("    コミット対象なし（デプロイ済み）");
@@ -150,6 +150,15 @@ async function main() {
     );
   }
 
+  // DB を最新化（爆釣指数の精度向上 + サイトの統計データ更新のため）
+  console.log("    DB を更新中 …");
+  try {
+    await execFileAsync("npx", ["tsx", "scripts/seed_history.ts"], { timeout: 240_000 });
+    console.log("    DB 更新完了");
+  } catch (e) {
+    console.warn("    ⚠️ DB 更新失敗（既存データで続行）:", (e as Error).message.slice(0, 150));
+  }
+
   const totalToday = report.catches.reduce((s, c) => s + c.count, 0);
   const ctx: ComposeContext = {
     bakuchouIndex: computeBakuchouIndex(totalToday, "honmoku"),
@@ -203,6 +212,15 @@ async function main() {
   indexEntries = indexEntries.slice(0, 50);
   await writeFile(indexFile, JSON.stringify(indexEntries, null, 2), "utf8");
   console.log(`    index.json 更新: ${indexEntries.length}件`);
+
+  // サイトの統計データ（トップページ・魚種図鑑・ランキング）を再生成
+  console.log("    サイトデータを再生成中 …");
+  try {
+    await execFileAsync("npx", ["tsx", "scripts/export_site_data.ts"], { timeout: 240_000 });
+    console.log("    サイトデータ再生成完了");
+  } catch (e) {
+    console.warn("    ⚠️ サイトデータ再生成失敗（続行）:", (e as Error).message.slice(0, 150));
+  }
 
   // ── 記事をデプロイ（X投稿前にリンク先を公開する）─────────────────────────
   console.log("    記事をデプロイ中 …");

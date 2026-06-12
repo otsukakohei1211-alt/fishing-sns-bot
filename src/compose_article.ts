@@ -6,12 +6,23 @@ import { spawn } from "node:child_process";
 import type { DailyReport } from "./types.js";
 import type { ComposeContext } from "./compose.js";
 import { getAffiliateLinks, type AffiliateLink } from "./affiliate.js";
+import { getDb } from "./db/index.js";
 
 // ── 型定義 ────────────────────────────────────────────────────────────────────
 
 export type ArticleSection = {
   heading: string;
   content: string; // 複数行は \n で区切る
+};
+
+export type ArticleCatch = {
+  fishId: number | null;  // 魚種図鑑ページへのリンク用（fish テーブル）
+  name: string;
+  count: number;
+  minSize: number;
+  maxSize: number;
+  unit: string;
+  places: string[];
 };
 
 export type DailyArticle = {
@@ -24,7 +35,10 @@ export type DailyArticle = {
   topCatches: string[];   // 上位3魚種名
   waterTemp: string;
   weather: string;
+  tide?: string;
+  visitors?: number;
   bakuchouIndex?: number;
+  catches?: ArticleCatch[]; // 釣果データ（テーブル表示用）
   affiliateLinks: AffiliateLink[];
   createdAt: string;      // ISO8601
 };
@@ -161,6 +175,27 @@ function dateToSlug(date: string, facility: string): string {
   return `${facility}-${date.replace(/\//g, "-")}`;
 }
 
+// ── 釣果データの整形（魚種図鑑リンク用に fish.id を引く）──────────────────────
+
+export function buildArticleCatches(report: DailyReport): ArticleCatch[] {
+  const db = getDb();
+  const lookup = db.prepare("SELECT id FROM fish WHERE name = ?");
+  return [...report.catches]
+    .sort((a, b) => b.count - a.count)
+    .map((c) => {
+      const row = lookup.get(c.name) as { id: number } | undefined;
+      return {
+        fishId: row?.id ?? null,
+        name: c.name,
+        count: c.count,
+        minSize: c.minSize,
+        maxSize: c.maxSize,
+        unit: c.unit,
+        places: c.places,
+      };
+    });
+}
+
 // ── 公開 API ──────────────────────────────────────────────────────────────────
 
 /** ブログ記事（構造化JSON）を生成する */
@@ -205,7 +240,10 @@ export async function composeArticle(
     topCatches,
     waterTemp: report.waterTemp,
     weather: report.weather,
+    tide: report.tide,
+    visitors: report.visitors,
     bakuchouIndex: ctx?.bakuchouIndex,
+    catches: buildArticleCatches(report),
     affiliateLinks,
     createdAt: new Date().toISOString(),
   };

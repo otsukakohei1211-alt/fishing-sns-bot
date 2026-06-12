@@ -20,6 +20,11 @@ type Summary = {
   total_species: number; total_days: number; latest_date: string;
 };
 
+type ReportEntry = {
+  slug: string; date: string; title: string; lead: string;
+  topCatches: string[]; bakuchouIndex?: number;
+};
+
 function readData<T>(path: string): T {
   const fullPath = join(process.cwd(), "src/data", path);
   return JSON.parse(readFileSync(fullPath, "utf8")) as T;
@@ -42,6 +47,13 @@ export default function Home() {
   const summary = readData<Summary>("summary.json");
   const fishList = readData<FishSummary[]>("fish/index.json");
   const latest = readData<LatestCatch>("daily/latest.json");
+  let reports: ReportEntry[] = [];
+  try {
+    reports = readData<ReportEntry[]>("reports/index.json").slice(0, 3);
+  } catch {
+    // 記事がまだない場合はセクションごと非表示
+  }
+  const latestReport = reports.find((r) => r.date === latest.date);
 
   // 注目魚種（急上昇 or 爆釣指数80%以上）
   const featured = fishList
@@ -93,8 +105,45 @@ export default function Home() {
               {latest.comment}
             </p>
           )}
+          {latestReport && (
+            <div className="mt-4 text-right">
+              <Link href={`/reports/${latestReport.slug}`}
+                className="text-sm text-blue-600 font-bold hover:underline">
+                この日の詳細レポートを読む →
+              </Link>
+            </div>
+          )}
         </div>
       </section>
+
+      {/* 最新レポート */}
+      {reports.length > 0 && (
+        <section>
+          <h2 className="text-lg font-bold mb-4">📝 最新の釣果レポート</h2>
+          <div className="grid gap-3">
+            {reports.map((r) => (
+              <Link key={r.slug} href={`/reports/${r.slug}`}
+                className="bg-white rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md p-4 transition-all block">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-bold text-slate-800 text-sm leading-snug flex-1">{r.title}</h3>
+                  {r.bakuchouIndex !== undefined && (
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-bold shrink-0 ${
+                      r.bakuchouIndex >= 150 ? "bg-red-600 text-white"
+                      : r.bakuchouIndex >= 120 ? "bg-orange-500 text-white"
+                      : "bg-slate-100 text-slate-500"}`}>
+                      {r.bakuchouIndex >= 150 ? "大爆釣🔥" : `${r.bakuchouIndex}%`}
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-slate-500 mt-1 line-clamp-2">{r.lead}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-4 text-center">
+            <Link href="/reports" className="text-sm text-blue-600 hover:underline">記事一覧を見る →</Link>
+          </div>
+        </section>
+      )}
 
       {/* 注目魚種 */}
       <section>
@@ -122,7 +171,7 @@ export default function Home() {
 
       {/* X誘導 */}
       <section className="bg-blue-50 rounded-xl p-6 text-center">
-        <p className="text-sm text-slate-600 mb-3">毎日19:00に魚種データレポートを投稿中</p>
+        <p className="text-sm text-slate-600 mb-3">毎日20:00に釣果まとめレポートを投稿中</p>
         <a href="https://x.com/MigakuZ80887" target="_blank" rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-slate-800 transition-colors">
           𝕏 @MigakuZ80887 をフォロー

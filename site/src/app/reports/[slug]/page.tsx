@@ -7,6 +7,16 @@ import Link from "next/link";
 type ArticleSection = { heading: string; content: string };
 type AffiliateLink = { label: string; url: string };
 
+type ArticleCatch = {
+  fishId: number | null;
+  name: string;
+  count: number;
+  minSize: number;
+  maxSize: number;
+  unit: string;
+  places: string[];
+};
+
 type DailyArticle = {
   slug: string;
   date: string;
@@ -17,7 +27,10 @@ type DailyArticle = {
   topCatches: string[];
   waterTemp: string;
   weather: string;
+  tide?: string;
+  visitors?: number;
   bakuchouIndex?: number;
+  catches?: ArticleCatch[];
   affiliateLinks: AffiliateLink[];
   createdAt: string;
 };
@@ -120,11 +133,76 @@ export default async function ReportPage(
         <div className="flex flex-wrap gap-3 text-sm text-slate-500 bg-slate-50 rounded-lg px-4 py-3">
           {article.weather && <span>🌤 {article.weather}</span>}
           {article.waterTemp && <span>🌡 水温 {article.waterTemp}℃</span>}
+          {article.tide && <span>🌊 {article.tide}</span>}
+          {article.visitors != null && article.visitors > 0 && <span>👤 来場 {article.visitors}人</span>}
           {article.topCatches.length > 0 && (
             <span>🎣 {article.topCatches.join("・")}</span>
           )}
         </div>
       </header>
+
+      {/* 釣果データテーブル */}
+      {article.catches && article.catches.length > 0 && (() => {
+        const catches = article.catches;
+        const maxCount = Math.max(...catches.map((c) => c.count));
+        const total = catches.reduce((s, c) => s + c.count, 0);
+        return (
+          <section className="space-y-3">
+            <h2 className="text-lg font-bold text-slate-800 border-b border-slate-200 pb-1 flex items-baseline gap-2">
+              この日の全釣果
+              <span className="text-sm font-normal text-slate-400">
+                {catches.length}魚種・計{total.toLocaleString()}匹
+              </span>
+            </h2>
+            <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-slate-50 text-slate-500 text-xs">
+                    <th className="text-left font-medium px-4 py-2">魚種</th>
+                    <th className="text-right font-medium px-2 py-2 w-40 sm:w-56">匹数</th>
+                    <th className="text-right font-medium px-3 py-2 whitespace-nowrap">サイズ</th>
+                    <th className="text-left font-medium px-3 py-2 hidden sm:table-cell">釣れた場所</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {catches.map((c) => (
+                    <tr key={c.name} className="border-t border-slate-100">
+                      <td className="px-4 py-2 font-medium whitespace-nowrap">
+                        {c.fishId ? (
+                          <Link href={`/fish/${c.fishId}`} className="text-blue-700 hover:underline">
+                            {c.name}
+                          </Link>
+                        ) : (
+                          c.name
+                        )}
+                      </td>
+                      <td className="px-2 py-2">
+                        <div className="flex items-center gap-2 justify-end">
+                          <div className="flex-1 bg-slate-100 rounded-full h-2 overflow-hidden max-w-32">
+                            <div
+                              className="bg-blue-500 h-full rounded-full"
+                              style={{ width: `${Math.max(2, Math.round((c.count / maxCount) * 100))}%` }}
+                            />
+                          </div>
+                          <span className="font-bold text-slate-700 tabular-nums w-14 text-right">
+                            {c.count.toLocaleString()}
+                          </span>
+                        </div>
+                      </td>
+                      <td className="px-3 py-2 text-right text-slate-500 whitespace-nowrap tabular-nums">
+                        {c.minSize}〜{c.maxSize}{c.unit}
+                      </td>
+                      <td className="px-3 py-2 text-slate-500 text-xs hidden sm:table-cell">
+                        {c.places.join("・")}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* 本文セクション */}
       <div className="space-y-6">

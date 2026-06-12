@@ -23,8 +23,8 @@
     "bakuchou_index": 66,
     "this_month_avg": 3422.7,
     "appearance_pct": 100,
-    "recent_avg": 1107.8,
-    "prev_avg": 6085.9
+    "recent_avg": 753.5,
+    "prev_avg": 3311.8
   },
   {
     "id": 60,
@@ -49,8 +49,8 @@
     "bakuchou_index": 85,
     "this_month_avg": 262.4,
     "appearance_pct": 100,
-    "recent_avg": 85.6,
-    "prev_avg": 118.8
+    "recent_avg": 71.5,
+    "prev_avg": 86.3
   },
   {
     "id": 5,
@@ -77,8 +77,8 @@
     "bakuchou_index": 19,
     "this_month_avg": 223.9,
     "appearance_pct": 100,
-    "recent_avg": 135.5,
-    "prev_avg": 367.2
+    "recent_avg": 180.8,
+    "prev_avg": 145.4
   },
   {
     "id": 46,
@@ -104,8 +104,8 @@
     "bakuchou_index": 15,
     "this_month_avg": 171.8,
     "appearance_pct": 100,
-    "recent_avg": 214.5,
-    "prev_avg": 278.8
+    "recent_avg": 381.5,
+    "prev_avg": 138.1
   },
   {
     "id": 96,
@@ -157,8 +157,8 @@
     "bakuchou_index": 100,
     "this_month_avg": 37.3,
     "appearance_pct": 100,
-    "recent_avg": 6.5,
-    "prev_avg": 4.5
+    "recent_avg": 7.8,
+    "prev_avg": 5.7
   },
   {
     "id": 27,
@@ -184,8 +184,8 @@
     "bakuchou_index": 62,
     "this_month_avg": 29.5,
     "appearance_pct": 100,
-    "recent_avg": 24.2,
-    "prev_avg": 22.8
+    "recent_avg": 29.8,
+    "prev_avg": 21.5
   },
   {
     "id": 77,
@@ -211,8 +211,8 @@
     "bakuchou_index": 100,
     "this_month_avg": 22.5,
     "appearance_pct": 100,
-    "recent_avg": 21.1,
-    "prev_avg": 9.7
+    "recent_avg": 25.8,
+    "prev_avg": 15.8
   },
   {
     "id": 52,
@@ -238,7 +238,7 @@
     "bakuchou_index": 71,
     "this_month_avg": 22.1,
     "appearance_pct": 100,
-    "recent_avg": 2,
+    "recent_avg": 2.8,
     "prev_avg": 1.7
   },
   {
@@ -267,8 +267,8 @@
     "bakuchou_index": 68,
     "this_month_avg": 13.3,
     "appearance_pct": 100,
-    "recent_avg": 17.7,
-    "prev_avg": 28.8
+    "recent_avg": 18.5,
+    "prev_avg": 19.2
   },
   {
     "id": 67,
@@ -294,8 +294,8 @@
     "bakuchou_index": 62,
     "this_month_avg": 12.5,
     "appearance_pct": 100,
-    "recent_avg": 2.1,
-    "prev_avg": 2.5
+    "recent_avg": 1.7,
+    "prev_avg": 2.3
   },
   {
     "id": 83,
@@ -321,8 +321,8 @@
     "bakuchou_index": 90,
     "this_month_avg": 12.2,
     "appearance_pct": 100,
-    "recent_avg": 5.1,
-    "prev_avg": 3.2
+    "recent_avg": 9.3,
+    "prev_avg": 3.5
   },
   {
     "id": 11,
@@ -349,7 +349,7 @@
     "this_month_avg": 6.1,
     "appearance_pct": 100,
     "recent_avg": 3.8,
-    "prev_avg": 4.2
+    "prev_avg": 3.8
   },
   {
     "id": 8,
@@ -377,8 +377,8 @@
     "bakuchou_index": 31,
     "this_month_avg": 5.6,
     "appearance_pct": 100,
-    "recent_avg": 44.9,
-    "prev_avg": 15.4
+    "recent_avg": 46.5,
+    "prev_avg": 34.9
   },
   {
     "id": 18,
@@ -404,8 +404,8 @@
     "bakuchou_index": 14,
     "this_month_avg": 4.9,
     "appearance_pct": 100,
-    "recent_avg": 5,
-    "prev_avg": 1.7
+    "recent_avg": 5.8,
+    "prev_avg": 3.8
   },
   {
     "id": 70,
@@ -487,7 +487,7 @@
     "this_month_avg": 3.3,
     "appearance_pct": 100,
     "recent_avg": 3,
-    "prev_avg": 3
+    "prev_avg": null
   },
   {
     "id": 45,
@@ -513,7 +513,7 @@
     "bakuchou_index": 86,
     "this_month_avg": 3,
     "appearance_pct": 100,
-    "recent_avg": 1,
+    "recent_avg": null,
     "prev_avg": 1
   },
   {
@@ -540,8 +540,8 @@
     "bakuchou_index": 39,
     "this_month_avg": 3,
     "appearance_pct": 100,
-    "recent_avg": 2.8,
-    "prev_avg": 2.4
+    "recent_avg": 4.7,
+    "prev_avg": 1.8
   },
   {
     "id": 98,
@@ -567,8 +567,8 @@
     "bakuchou_index": 97,
     "this_month_avg": 2.7,
     "appearance_pct": 100,
-    "recent_avg": 5,
-    "prev_avg": 2.7
+    "recent_avg": 11,
+    "prev_avg": 3
   },
   {
     "id": 57,
@@ -594,8 +594,8 @@
     "bakuchou_index": 62,
     "this_month_avg": 2.6,
     "appearance_pct": 100,
-    "recent_avg": 4,
-    "prev_avg": 6.4
+    "recent_avg": 11,
+    "prev_avg": 6.5
   },
   {
     "id": 30,
@@ -648,8 +648,8 @@
     "bakuchou_index": 10,
     "this_month_avg": 2.3,
     "appearance_pct": 100,
-    "recent_avg": 1.5,
-    "prev_avg": 1.6
+    "recent_avg": 2,
+    "prev_avg": 1.3
   },
   {
     "id": 6,
@@ -674,8 +674,8 @@
     "bakuchou_index": 43,
     "this_month_avg": 2.1,
     "appearance_pct": 100,
-    "recent_avg": 5.2,
-    "prev_avg": 3.6
+    "recent_avg": 5.3,
+    "prev_avg": 4.2
   },
   {
     "id": 34,
@@ -729,8 +729,8 @@
     "bakuchou_index": 38,
     "this_month_avg": 2,
     "appearance_pct": 100,
-    "recent_avg": 2.1,
-    "prev_avg": 2.8
+    "recent_avg": 2.3,
+    "prev_avg": 2.1
   },
   {
     "id": 99,
@@ -756,8 +756,8 @@
     "bakuchou_index": 33,
     "this_month_avg": 1.7,
     "appearance_pct": 100,
-    "recent_avg": 3.1,
-    "prev_avg": 5.3
+    "recent_avg": 2.8,
+    "prev_avg": 3.6
   },
   {
     "id": 84,
@@ -785,7 +785,7 @@
     "this_month_avg": 1.6,
     "appearance_pct": 100,
     "recent_avg": 1,
-    "prev_avg": 2.7
+    "prev_avg": 1.8
   },
   {
     "id": 32,
@@ -812,8 +812,8 @@
     "bakuchou_index": 27,
     "this_month_avg": 1.5,
     "appearance_pct": 100,
-    "recent_avg": 2.2,
-    "prev_avg": 2.3
+    "recent_avg": 2.3,
+    "prev_avg": 2.1
   },
   {
     "id": 53,
@@ -840,8 +840,8 @@
     "bakuchou_index": 12,
     "this_month_avg": 1.5,
     "appearance_pct": 100,
-    "recent_avg": 1.8,
-    "prev_avg": 2.1
+    "recent_avg": null,
+    "prev_avg": 1.9
   },
   {
     "id": 90,
@@ -895,7 +895,7 @@
     "this_month_avg": 1.4,
     "appearance_pct": 100,
     "recent_avg": null,
-    "prev_avg": 1
+    "prev_avg": null
   },
   {
     "id": 88,
@@ -1055,7 +1055,7 @@
     "this_month_avg": 1,
     "appearance_pct": 100,
     "recent_avg": null,
-    "prev_avg": 1
+    "prev_avg": null
   },
   {
     "id": 72,
@@ -1136,7 +1136,7 @@
     "this_month_avg": 1,
     "appearance_pct": 100,
     "recent_avg": null,
-    "prev_avg": 1.4
+    "prev_avg": 1
   },
   {
     "id": 92,
@@ -1162,7 +1162,7 @@
     "this_month_avg": 1,
     "appearance_pct": 100,
     "recent_avg": null,
-    "prev_avg": 3.2
+    "prev_avg": 1
   },
   {
     "id": 93,
@@ -1189,6 +1189,6 @@
     "this_month_avg": 1,
     "appearance_pct": 100,
     "recent_avg": null,
-    "prev_avg": 1.7
+    "prev_avg": 2
   }
 ]

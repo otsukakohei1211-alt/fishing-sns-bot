@@ -44,5 +44,267 @@
       "url": "https://www.amazon.co.jp/s?k=%E3%82%B7%E3%83%AD%E3%82%AE%E3%82%B9%20%E6%8A%95%E3%81%92%E9%87%A3%E3%82%8A%20%E4%BB%95%E6%8E%9B%E3%81%91&tag=11221121-22"
     }
   ],
-  "createdAt": "2026-06-04T18:01:35.446Z"
+  "createdAt": "2026-06-04T18:01:35.446Z",
+  "catches": [
+    {
+      "fishId": 46,
+      "name": "コノシロ",
+      "count": 379,
+      "minSize": 26,
+      "maxSize": 28,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 15,
+      "name": "イワシ",
+      "count": 278,
+      "minSize": 10,
+      "maxSize": 12,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 60,
+      "name": "シロギス",
+      "count": 72,
+      "minSize": 15,
+      "maxSize": 20,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 5,
+      "name": "アジ",
+      "count": 71,
+      "minSize": 12,
+      "maxSize": 23,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "渡桟橋"
+      ]
+    },
+    {
+      "fishId": 27,
+      "name": "カサゴ",
+      "count": 65,
+      "minSize": 15,
+      "maxSize": 22,
+      "unit": "cm",
+      "places": [
+        "全釣り場"
+      ]
+    },
+    {
+      "fishId": 8,
+      "name": "イカ",
+      "count": 57,
+      "minSize": 0.4,
+      "maxSize": 0.6,
+      "unit": "kg",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 77,
+      "name": "ハゼ",
+      "count": 19,
+      "minSize": 10,
+      "maxSize": 13,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 42,
+      "name": "クロダイ",
+      "count": 16,
+      "minSize": 30,
+      "maxSize": 45,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "渡桟橋"
+      ]
+    },
+    {
+      "fishId": 98,
+      "name": "メジナ",
+      "count": 13,
+      "minSize": 20,
+      "maxSize": 28,
+      "unit": "cm",
+      "places": [
+        "渡桟橋",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 57,
+      "name": "シマダイ",
+      "count": 11,
+      "minSize": 20,
+      "maxSize": 23,
+      "unit": "cm",
+      "places": [
+        "渡桟橋"
+      ]
+    },
+    {
+      "fishId": 97,
+      "name": "メゴチ",
+      "count": 9,
+      "minSize": 10,
+      "maxSize": 12,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 6,
+      "name": "アナゴ",
+      "count": 8,
+      "minSize": 30,
+      "maxSize": 40,
+      "unit": "cm",
+      "places": [
+        "渡桟橋",
+        "旧護岸",
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 83,
+      "name": "フグ",
+      "count": 8,
+      "minSize": 18,
+      "maxSize": 20,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 52,
+      "name": "サバ",
+      "count": 6,
+      "minSize": 29,
+      "maxSize": 30,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 18,
+      "name": "ウミタナゴ",
+      "count": 5,
+      "minSize": 17,
+      "maxSize": 20,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "渡桟橋"
+      ]
+    },
+    {
+      "fishId": 67,
+      "name": "タコ",
+      "count": 3,
+      "minSize": 0.3,
+      "maxSize": 0.3,
+      "unit": "kg",
+      "places": [
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 32,
+      "name": "カレイ",
+      "count": 2,
+      "minSize": 22,
+      "maxSize": 25,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 99,
+      "name": "メバル",
+      "count": 2,
+      "minSize": 15,
+      "maxSize": 16,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 11,
+      "name": "イシモチ",
+      "count": 1,
+      "minSize": 30,
+      "maxSize": 30,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 64,
+      "name": "セイゴ",
+      "count": 1,
+      "minSize": 25,
+      "maxSize": 25,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 87,
+      "name": "ベラ",
+      "count": 1,
+      "minSize": 25,
+      "maxSize": 25,
+      "unit": "cm",
+      "places": [
+        "渡桟橋"
+      ]
+    },
+    {
+      "fishId": 88,
+      "name": "ホウボウ",
+      "count": 1,
+      "minSize": 20,
+      "maxSize": 20,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    }
+  ],
+  "tide": "大潮",
+  "visitors": 846
 }
