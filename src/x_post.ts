@@ -14,6 +14,14 @@ import { xWeight } from "./compose.js";
 const STATE_FILE = "data/auth/x_state.json";
 const MAX_WEIGHT = 275; // 280 以内で少し余裕を持たせる
 
+/** セッション失効による失敗。再ログインが必要なことを通知で区別できるようにする。 */
+export class SessionExpiredError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "SessionExpiredError";
+  }
+}
+
 // ── データソースリプライ文の生成 ──────────────────────────────────────────────
 
 export function formatDataSourceReply(report: DailyReport): string {
@@ -187,9 +195,31 @@ export async function postToX(
     console.log("  X: 5秒待機中 …");
     await page.waitForTimeout(5_000);
 
+    // セッション失効チェック: ログイン画面へリダイレクトされていないか
+    if (/login|logout|onboarding|flow/.test(page.url())) {
+      await page.screenshot({ path: "data/logs/debug_session_expired.png" }).catch(() => {});
+      throw new SessionExpiredError(
+        `X セッションが失効しています (リダイレクト先: ${page.url()})。` +
+          "`npm run x:login` で再ログインしてください。",
+      );
+    }
+
     // dialog に限定せずページ直接で取得（dialog locator がズレるケース対策）
     const editor = page.locator('[data-testid="tweetTextarea_0"]').first();
-    await editor.waitFor({ timeout: 30_000, state: "visible" });
+    try {
+      await editor.waitFor({ timeout: 30_000, state: "visible" });
+    } catch (e) {
+      await page.screenshot({ path: "data/logs/debug_compose_timeout.png" }).catch(() => {});
+      if (/login|logout|onboarding|flow/.test(page.url())) {
+        throw new SessionExpiredError(
+          `X セッションが失効しています (リダイレクト先: ${page.url()})。` +
+            "`npm run x:login` で再ログインしてください。",
+        );
+      }
+      console.log(`  X: コンポーズ画面が開けません (URL: ${page.url()})`);
+      console.log("  X: スクリーンショット: data/logs/debug_compose_timeout.png");
+      throw e;
+    }
     await editor.click();
 
     // ── テキスト入力（クリップボード経由）──────────────────────────────────

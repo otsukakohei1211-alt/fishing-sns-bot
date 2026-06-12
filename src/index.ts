@@ -1,11 +1,51 @@
 import { writeFile, readFile, mkdir, access } from "node:fs/promises";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import "dotenv/config";
 import { fetchRecentHonmoku } from "./scrapers/honmoku.js";
 import { composePost, xWeight, type ComposeContext } from "./compose.js";
 import { composeArticle } from "./compose_article.js";
-import { sendPostNotification } from "./notify.js";
-import { postToX } from "./x_post.js";
+import { sendPostNotification, sendFailureNotification } from "./notify.js";
+import { postToX, SessionExpiredError } from "./x_post.js";
 import { getDb, closeDb } from "./db/index.js";
+
+const execFileAsync = promisify(execFile);
+
+// ── デプロイヘルパー ──────────────────────────────────────────────────────────
+
+/** 記事JSONをコミット・プッシュして Vercel の自動デプロイを発火させる。 */
+async function deployArticles(slug: string): Promise<boolean> {
+  try {
+    await execFileAsync("git", ["add", "site/src/data/reports"]);
+    const { stdout: staged } = await execFileAsync("git", ["diff", "--cached", "--name-only"]);
+    if (!staged.trim()) {
+      console.log("    コミット対象なし（デプロイ済み）");
+      return true;
+    }
+    await execFileAsync("git", ["commit", "-m", `Add report ${slug}`]);
+    await execFileAsync("git", ["push", "origin", "main"]);
+    console.log("    git push 完了（Vercel デプロイ開始）");
+    return true;
+  } catch (e) {
+    console.error("    git push 失敗:", (e as Error).message.slice(0, 200));
+    return false;
+  }
+}
+
+/** 記事URLが 200 を返すまで待つ（X投稿時にリンク切れにならないように）。 */
+async function waitForArticleLive(url: string, maxWaitMs = 300_000): Promise<boolean> {
+  const start = Date.now();
+  while (Date.now() - start < maxWaitMs) {
+    try {
+      const res = await fetch(url, { method: "HEAD", redirect: "manual" });
+      if (res.status === 200) return true;
+    } catch {
+      // ネットワークエラーはリトライ
+    }
+    await new Promise((r) => setTimeout(r, 15_000));
+  }
+  return false;
+}
 
 // ── コンテキスト計算ヘルパー ──────────────────────────────────────────────────
 
@@ -164,6 +204,14 @@ async function main() {
   await writeFile(indexFile, JSON.stringify(indexEntries, null, 2), "utf8");
   console.log(`    index.json 更新: ${indexEntries.length}件`);
 
+  // ── 記事をデプロイ（X投稿前にリンク先を公開する）─────────────────────────
+  console.log("    記事をデプロイ中 …");
+  const pushed = await deployArticles(article.slug);
+  if (pushed) {
+    const live = await waitForArticleLive(articleUrl);
+    console.log(live ? `    ✅ 記事公開確認: ${articleUrl}` : "    ⚠️ 公開確認タイムアウト（投稿は続行）");
+  }
+
   // ── [3/5] X ティーザー生成 ───────────────────────────────────────────────
   console.log("[3/5] 投稿文を生成中 …");
 
@@ -183,7 +231,18 @@ async function main() {
   // ── [4/5] X に投稿 ────────────────────────────────────────────────────────
   if (weight <= 280) {
     console.log("[4/5] X に投稿中 …");
-    await postToX(post, report);
+    try {
+      await postToX(post, report);
+    } catch (e) {
+      // X投稿失敗でもブログ記事は公開済みなので、通知を送って続行する
+      const err = e as Error;
+      console.error(`  ⚠️ X投稿失敗: ${err.message}`);
+      const hint =
+        err instanceof SessionExpiredError
+          ? "ターミナルで `npm run x:login` を実行して X に再ログインしてください。"
+          : "data/logs/ の debug_*.png スクリーンショットを確認してください。";
+      await sendFailureNotification({ step: "X投稿", error: err, hint }).catch(() => {});
+    }
   } else {
     console.log(`[4/5] X 投稿スキップ (X weight ${weight} > 280)。ブログ用として保存済み。`);
   }
@@ -200,7 +259,8 @@ async function main() {
   console.log("✅ 完了");
 }
 
-main().catch((e) => {
+main().catch(async (e) => {
   console.error(e);
+  await sendFailureNotification({ step: "パイプライン", error: e as Error }).catch(() => {});
   process.exit(1);
 });

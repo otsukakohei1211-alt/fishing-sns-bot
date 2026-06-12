@@ -67,8 +67,8 @@ function callClaude(prompt: string): Promise<string> {
     // タイムアウト
     const timer = setTimeout(() => {
       proc.kill();
-      reject(new Error("claude CLI がタイムアウトしました (120s)"));
-    }, 120_000);
+      reject(new Error("claude CLI がタイムアウトしました (300s)"));
+    }, 300_000);
 
     proc.on("close", () => clearTimeout(timer));
 
