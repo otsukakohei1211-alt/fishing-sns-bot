@@ -87,24 +87,6 @@
   ],
   "recent": [
     {
-      "date": "2026/05/16",
-      "count": 0,
-      "water_temp": 19.5,
-      "avg_size": null
-    },
-    {
-      "date": "2026/05/17",
-      "count": 1,
-      "water_temp": 19.5,
-      "avg_size": 42
-    },
-    {
-      "date": "2026/05/18",
-      "count": 0,
-      "water_temp": 19,
-      "avg_size": null
-    },
-    {
       "date": "2026/05/19",
       "count": 0,
       "water_temp": 19.5,
@@ -252,6 +234,24 @@
       "date": "2026/06/12",
       "count": 0,
       "water_temp": 20,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/13",
+      "count": 0,
+      "water_temp": 20.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/14",
+      "count": 0,
+      "water_temp": 20.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/15",
+      "count": 0,
+      "water_temp": 20.5,
       "avg_size": null
     }
   ],
