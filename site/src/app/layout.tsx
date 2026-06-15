@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const noto = Noto_Sans_JP({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="text-center text-xs text-slate-400 py-8 border-t border-slate-200 mt-12">
           データ出典: 横浜フィッシングピアーズ（本牧・大黒・磯子） ／ 統計分析: さかなりす
         </footer>
+        <Analytics />
       </body>
     </html>
   );
