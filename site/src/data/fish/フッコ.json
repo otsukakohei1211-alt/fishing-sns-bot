@@ -87,12 +87,6 @@
   ],
   "recent": [
     {
-      "date": "2026/05/19",
-      "count": 1,
-      "water_temp": 19.5,
-      "avg_size": 53
-    },
-    {
       "date": "2026/05/20",
       "count": 2,
       "water_temp": 18,
@@ -250,6 +244,12 @@
     },
     {
       "date": "2026/06/15",
+      "count": 0,
+      "water_temp": 20.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/16",
       "count": 0,
       "water_temp": 20.5,
       "avg_size": null
