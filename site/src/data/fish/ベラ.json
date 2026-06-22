@@ -40,7 +40,7 @@
       "avg_catch": 3,
       "avg_per_person": 0.01,
       "avg_max_size": 20.6,
-      "appearance_pct": 42
+      "appearance_pct": 38
     },
     {
       "month": 7,
@@ -86,30 +86,6 @@
     }
   ],
   "recent": [
-    {
-      "date": "2026/05/22",
-      "count": 2,
-      "water_temp": 19,
-      "avg_size": 19
-    },
-    {
-      "date": "2026/05/23",
-      "count": 2,
-      "water_temp": 18.5,
-      "avg_size": 18.5
-    },
-    {
-      "date": "2026/05/24",
-      "count": 2,
-      "water_temp": 19,
-      "avg_size": 17.5
-    },
-    {
-      "date": "2026/05/25",
-      "count": 1,
-      "water_temp": 19,
-      "avg_size": 15
-    },
     {
       "date": "2026/05/26",
       "count": 0,
@@ -252,6 +228,30 @@
       "date": "2026/06/18",
       "count": 0,
       "water_temp": 21,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/19",
+      "count": 0,
+      "water_temp": 21,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/20",
+      "count": 0,
+      "water_temp": 22,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/21",
+      "count": 0,
+      "water_temp": 22,
+      "avg_size": null
+    },
+    {
+      "date": "2026/06/22",
+      "count": 0,
+      "water_temp": 23.5,
       "avg_size": null
     }
   ],
