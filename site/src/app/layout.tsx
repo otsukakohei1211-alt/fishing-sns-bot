@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import Nav from "./Nav";
 
 const noto = Noto_Sans_JP({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
@@ -16,17 +17,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <body className={`${noto.className} bg-slate-50 text-slate-800`}>
         <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
-          <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-            <a href="/" className="flex items-center gap-2 font-bold text-lg text-blue-700">
+          <div className="max-w-5xl mx-auto flex flex-col gap-2 px-4 py-2 sm:h-14 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-0">
+            <a href="/" className="flex shrink-0 items-baseline gap-2 font-bold text-lg text-blue-700">
               🐟 さかなりす
-              <span className="text-xs font-normal text-slate-500">東京湾釣りデータ</span>
+              <span className="hidden text-xs font-normal text-slate-500 sm:inline">東京湾釣りデータ</span>
             </a>
-            <nav className="flex gap-6 text-sm">
-              <a href="/" className="hover:text-blue-600">ホーム</a>
-              <a href="/reports" className="hover:text-blue-600">記事</a>
-              <a href="/fish" className="hover:text-blue-600">魚種図鑑</a>
-              <a href="/ranking" className="hover:text-blue-600">ランキング</a>
-            </nav>
+            <Nav />
           </div>
         </header>
         <main className="max-w-5xl mx-auto px-4 py-8">{children}</main>
