@@ -63,6 +63,7 @@ export async function generateMetadata(
   return {
     title: `${article.title} | さかなりす`,
     description: article.lead,
+    alternates: { canonical: `/reports/${slug}` },
     openGraph: {
       title: article.title,
       description: article.lead,
@@ -86,8 +87,33 @@ export default async function ReportPage(
 
   const isHot = (article.bakuchouIndex ?? 0) >= 120;
 
+  const baseUrl = process.env.SITE_URL ?? "https://sakanalis.vercel.app";
+  const isoDate = article.date.replace(/\//g, "-");
+  const ogParams = new URLSearchParams({ title: article.title });
+  if (article.topCatches[0]) ogParams.set("fish", article.topCatches[0]);
+  if (article.bakuchouIndex) ogParams.set("bakuchou", String(article.bakuchouIndex));
+  if (article.date) ogParams.set("date", article.date);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: article.title,
+    description: article.lead,
+    image: [`${baseUrl}/api/og?${ogParams}`],
+    datePublished: article.createdAt || isoDate,
+    dateModified: article.createdAt || isoDate,
+    author: { "@type": "Organization", name: "さかなりす", url: baseUrl },
+    publisher: { "@type": "Organization", name: "さかなりす", url: baseUrl },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/reports/${article.slug}` },
+    about: article.topCatches.map((name) => ({ "@type": "Thing", name })),
+    keywords: ["本牧海づり施設", "釣果情報", "東京湾", ...article.topCatches].join(", "),
+  };
+
   return (
     <article className="max-w-2xl mx-auto space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* パンくず */}
       <nav className="text-xs text-slate-400 flex gap-1">
         <Link href="/" className="hover:text-blue-500">ホーム</Link>
