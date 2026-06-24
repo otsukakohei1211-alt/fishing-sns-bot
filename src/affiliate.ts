@@ -36,9 +36,9 @@ const DEFAULT_KEYWORD = "釣り 仕掛けセット 初心者";
  */
 type GearItem = { label: string; keyword: string; asin?: string };
 const GENERAL_GEAR: GearItem[] = [
-  { label: "釣り用クーラーボックス", keyword: "釣り クーラーボックス" },
-  { label: "自動膨張式ライフジャケット", keyword: "ライフジャケット 釣り 自動膨張" },
-  { label: "万能の堤防釣りロッド＆リールセット", keyword: "堤防 釣り竿 リール セット" },
+  { label: "釣り用クーラーボックス", keyword: "釣り クーラーボックス", asin: "B09RQJF9WP" },
+  { label: "自動膨張式ライフジャケット", keyword: "ライフジャケット 釣り 自動膨張", asin: "B07YWD7YDG" },
+  { label: "万能の堤防釣りロッド＆リールセット", keyword: "堤防 釣り竿 リール セット", asin: "B089FDPFZ4" },
   { label: "タモ網・玉の柄", keyword: "釣り タモ網 玉の柄" },
   { label: "フィッシュグリップ", keyword: "フィッシュグリップ" },
   { label: "偏光サングラス", keyword: "偏光サングラス 釣り" },
