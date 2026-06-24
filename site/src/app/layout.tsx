@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL ?? "https://sakanalis.vercel.app"),
   title: "さかなりす | 東京湾釣り データ分析",
   description: "東京湾（神奈川エリア）の釣果データを分析。本牧・大黒・磯子海づり施設の釣果予測・魚種図鑑・季節情報をお届け。",
+  verification: { google: "DIcPGt8-JkdQVkR0C1qadd7U6_UEgGTW3gGG2ddLRQM" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
