@@ -41,6 +41,8 @@ const GENERAL_GEAR: GearItem[] = [
   { label: "釣り用クーラーボックス", keyword: "釣り クーラーボックス", asin: "B09RQJF9WP" },
   { label: "自動膨張式ライフジャケット", keyword: "ライフジャケット 釣り 自動膨張", asin: "B07YWD7YDG" },
   { label: "万能の堤防釣りロッド＆リールセット", keyword: "堤防 釣り竿 リール セット", asin: "B089FDPFZ4" },
+  { label: "LEDヘッドライト", keyword: "釣り ヘッドライト", asin: "B07Y21GMKQ" },
+  // ── ここまで ASIN 付きの商品リンク。以下は検索リンクのフォールバック ──
   { label: "タモ網・玉の柄", keyword: "釣り タモ網 玉の柄" },
   { label: "フィッシュグリップ", keyword: "フィッシュグリップ" },
   { label: "偏光サングラス", keyword: "偏光サングラス 釣り" },
@@ -48,7 +50,6 @@ const GENERAL_GEAR: GearItem[] = [
   { label: "フィッシングプライヤー・ハサミ", keyword: "釣り プライヤー ハサミ" },
   { label: "仕掛け収納ケース", keyword: "釣り 仕掛け ケース" },
   { label: "釣り用グローブ", keyword: "釣り グローブ" },
-  { label: "LEDヘッドライト", keyword: "釣り ヘッドライト", asin: "B07Y21GMKQ" },
   { label: "撒き餌・コマセセット", keyword: "アミエビ コマセ 釣り" },
 ];
 
@@ -86,18 +87,27 @@ function dedupeSpecies(fishNames: string[]): Array<{ name: string; keyword: stri
  * まず当日の釣果魚種に対応した仕掛け・タックルを並べ、
  * 不足分は堤防釣りの定番ギアで count 件まで補う。
  */
-export function getAffiliateLinks(fishNames: string[], count = 10): AffiliateLink[] {
+export function getAffiliateLinks(
+  fishNames: string[],
+  count = 10,
+  opts: { maxSpecies?: number } = {},
+): AffiliateLink[] {
+  // 魚種が多い日に検索リンクで全枠が埋まり、商品リンク（定番ギア）が
+  // 押し出されるのを防ぐため、魚種リンクの上限を設けられるようにする。
+  const maxSpecies = opts.maxSpecies ?? count;
   const links: AffiliateLink[] = [];
   const usedKeywords = new Set<string>();
 
-  // 1) 当日の釣果魚種に対応した仕掛け・タックル
+  // 1) 当日の釣果魚種に対応した仕掛け・タックル（上位 maxSpecies 件まで）
+  let speciesCount = 0;
   for (const { name, keyword } of dedupeSpecies(fishNames)) {
-    if (links.length >= count) break;
+    if (links.length >= count || speciesCount >= maxSpecies) break;
     usedKeywords.add(keyword);
     links.push({
       label: `${name}釣りの仕掛け・タックルをAmazonで見る`,
       url: buildAmazonUrl(keyword),
     });
+    speciesCount++;
   }
 
   // 2) 不足分は堤防・海づり施設の定番ギアで補う

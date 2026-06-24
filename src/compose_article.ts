@@ -227,11 +227,12 @@ export async function composeArticle(
     .slice(0, 3)
     .map((c) => c.name);
 
-  // 当日の全魚種（匹数降順）に対応したリンクを並べ、不足分は定番ギアで10件まで補う
+  // 上位5魚種の仕掛けリンク + 定番ギア（商品リンク）で計10件。
+  // 魚種を5件に抑えることで、CVの高い商品リンクが必ず並ぶようにする。
   const allFishNames = [...report.catches]
     .sort((a, b) => b.count - a.count)
     .map((c) => c.name);
-  const affiliateLinks = getAffiliateLinks(allFishNames, 10);
+  const affiliateLinks = getAffiliateLinks(allFishNames, 10, { maxSpecies: 5 });
   const slug = dateToSlug(report.date, report.facility);
 
   const article: DailyArticle = {
