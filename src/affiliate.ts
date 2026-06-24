@@ -36,6 +36,8 @@ const DEFAULT_KEYWORD = "釣り 仕掛けセット 初心者";
  */
 type GearItem = { label: string; keyword: string; asin?: string };
 const GENERAL_GEAR: GearItem[] = [
+  // 本牧の主役はアジ・コノシロのサビキ釣り。定番セットを先頭に置く
+  { label: "サビキ仕掛けセット", keyword: "サビキ仕掛けセット 海釣り", asin: "B0D9B2YPKX" },
   { label: "釣り用クーラーボックス", keyword: "釣り クーラーボックス", asin: "B09RQJF9WP" },
   { label: "自動膨張式ライフジャケット", keyword: "ライフジャケット 釣り 自動膨張", asin: "B07YWD7YDG" },
   { label: "万能の堤防釣りロッド＆リールセット", keyword: "堤防 釣り竿 リール セット", asin: "B089FDPFZ4" },
@@ -46,7 +48,7 @@ const GENERAL_GEAR: GearItem[] = [
   { label: "フィッシングプライヤー・ハサミ", keyword: "釣り プライヤー ハサミ" },
   { label: "仕掛け収納ケース", keyword: "釣り 仕掛け ケース" },
   { label: "釣り用グローブ", keyword: "釣り グローブ" },
-  { label: "LEDヘッドライト", keyword: "釣り ヘッドライト" },
+  { label: "LEDヘッドライト", keyword: "釣り ヘッドライト", asin: "B07Y21GMKQ" },
   { label: "撒き餌・コマセセット", keyword: "アミエビ コマセ 釣り" },
 ];
 
