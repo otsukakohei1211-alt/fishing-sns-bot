@@ -142,6 +142,7 @@ export async function postToX(
   report: DailyReport,
   imagePaths?: string[],
   threadReplies?: Array<{ text: string; images?: string[] }>,
+  affiliateReply?: string,
 ): Promise<void> {
   if (!existsSync(STATE_FILE)) {
     throw new Error(
@@ -360,6 +361,15 @@ export async function postToX(
         }
         parentId = newId;
       }
+    }
+
+    // ── 3. アフィリエイトリンクをスレッド末尾にぶら下げる ──────────────────────
+    if (affiliateReply && parentId) {
+      await postReply(page, parentId, affiliateReply, "アフィリンク").catch((e) => {
+        // アフィリンク失敗は本投稿の成否に影響させない
+        console.warn(`  アフィリンク: 投稿失敗（続行）: ${(e as Error).message.slice(0, 100)}`);
+        return null;
+      });
     }
   } finally {
     await browser.close();

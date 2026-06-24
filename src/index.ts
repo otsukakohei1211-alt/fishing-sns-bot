@@ -7,6 +7,7 @@ import { composePost, xWeight, type ComposeContext } from "./compose.js";
 import { composeArticle } from "./compose_article.js";
 import { sendPostNotification, sendFailureNotification } from "./notify.js";
 import { postToX, SessionExpiredError } from "./x_post.js";
+import { formatAffiliateReply } from "./affiliate.js";
 import { getDb, closeDb } from "./db/index.js";
 
 const execFileAsync = promisify(execFile);
@@ -249,8 +250,10 @@ async function main() {
   // ── [4/5] X に投稿 ────────────────────────────────────────────────────────
   if (weight <= 280) {
     console.log("[4/5] X に投稿中 …");
+    // 上位魚種に合わせたアフィリンク2件をスレッド末尾にぶら下げる
+    const affiliateReply = formatAffiliateReply(article.topCatches, 2) ?? undefined;
     try {
-      await postToX(post, report);
+      await postToX(post, report, undefined, undefined, affiliateReply);
     } catch (e) {
       // X投稿失敗でもブログ記事は公開済みなので、通知を送って続行する
       const err = e as Error;
