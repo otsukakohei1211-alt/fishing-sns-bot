@@ -158,6 +158,57 @@ export function xWeight(s: string): number {
   return w;
 }
 
+/** 投稿文末尾（CTA・URL・ハッシュタグブロック）の先頭を検出する正規表現 */
+const TAIL_LINE_RE = /^詳細はブログで|^https?:\/\//;
+
+/**
+ * X の weight 上限を超える投稿文を、本文（先頭の説明文）だけ詰めて上限内に収める。
+ * URL・ハッシュタグ・CTA 行は温存し、本文末尾の節（、・区切り）→行 の順で落とす。
+ * どうしても 1 行に収まらない場合のみ文字単位で削り「…」を付す。
+ * 既に上限内、または想定外の構造なら元の文をそのまま返す。
+ */
+export function shortenPostToWeight(post: string, limit = 280): string {
+  if (xWeight(post) <= limit) return post;
+
+  const lines = post.split("\n");
+  const tailStart = lines.findIndex(
+    (l) => TAIL_LINE_RE.test(l.trim()) || l.trim().startsWith("#"),
+  );
+  if (tailStart <= 0) return post; // 構造が想定外なら触らない
+
+  const tail = lines.slice(tailStart);
+  const head = lines.slice(0, tailStart);
+  while (head.length && head[head.length - 1].trim() === "") head.pop();
+
+  const rebuild = (h: string[]) => [...h, "", ...tail].join("\n");
+
+  // 本文が複数行ある間: 末尾行を「、・」区切りで詰める → ダメなら行ごと落とす
+  while (head.length > 1 && xWeight(rebuild(head)) > limit) {
+    const parts = head[head.length - 1].split(/(?<=[、・])/);
+    let trimmed = parts;
+    while (trimmed.length > 1) {
+      trimmed = trimmed.slice(0, -1);
+      const candidate = [
+        ...head.slice(0, -1),
+        trimmed.join("").replace(/[、・]$/, ""),
+      ];
+      if (xWeight(rebuild(candidate)) <= limit) return rebuild(candidate);
+    }
+    head.pop();
+  }
+
+  // 1 行だけでも超える場合は文字単位で末尾を削り「…」を付す
+  if (xWeight(rebuild(head)) > limit) {
+    let only = head[0] ?? "";
+    while (only.length && xWeight(rebuild([only + "…"])) > limit) {
+      only = Array.from(only).slice(0, -1).join("");
+    }
+    return rebuild([only + "…"]);
+  }
+
+  return rebuild(head);
+}
+
 // ── standalone 実行 (npm run compose) ────────────────────────────────────────
 
 async function loadLatestSnapshot(): Promise<DailyReport[]> {

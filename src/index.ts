@@ -3,7 +3,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import "dotenv/config";
 import { fetchRecentHonmoku } from "./scrapers/honmoku.js";
-import { composePost, xWeight, type ComposeContext } from "./compose.js";
+import { composePost, xWeight, shortenPostToWeight, type ComposeContext } from "./compose.js";
 import { composeArticle } from "./compose_article.js";
 import { sendPostNotification, sendFailureNotification } from "./notify.js";
 import { postToX, SessionExpiredError } from "./x_post.js";
@@ -234,11 +234,16 @@ async function main() {
   // ── [3/5] X ティーザー生成 ───────────────────────────────────────────────
   console.log("[3/5] 投稿文を生成中 …");
 
-  const post = await composePost(reports, ctx, articleUrl);
-  const weight = xWeight(post);
+  const rawPost = await composePost(reports, ctx, articleUrl);
+  const rawWeight = xWeight(rawPost);
 
-  if (weight > 260) {
-    console.log(`    note: X weight ${weight} (ブログ投稿として保存、X投稿は${weight > 280 ? "スキップ" : "OK"})`);
+  // 280 weight を超える場合は本文末尾を自動で詰めて必ず投稿できるようにする
+  const post = rawWeight > 280 ? shortenPostToWeight(rawPost, 280) : rawPost;
+  const weight = xWeight(post);
+  if (rawWeight > 280) {
+    console.log(`    自動短縮: X weight ${rawWeight} → ${weight}/280`);
+  } else if (weight > 260) {
+    console.log(`    note: X weight ${weight}/280`);
   }
 
   await writeFile(postFile, post, "utf8");
