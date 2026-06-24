@@ -6,6 +6,10 @@ export async function sendPostNotification(opts: {
   weight: number;
   reports: DailyReport[];
   postFile: string;
+  /** X に実際に投稿できたか。false の場合は「未投稿」として通知する。 */
+  posted: boolean;
+  /** posted=false のときの理由（例: "X weight 283 > 280"）。 */
+  skipReason?: string;
 }): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.NOTIFY_EMAIL;
@@ -30,23 +34,38 @@ export async function sendPostNotification(opts: {
 
   const today = new Date().toLocaleDateString("ja-JP", { timeZone: "Asia/Tokyo" });
 
-  const text = `本牧海づり施設の釣果まとめを X に投稿しました ✅
+  const header = opts.posted
+    ? "本牧海づり施設の釣果まとめを X に投稿しました ✅"
+    : `⚠️ X には未投稿です（${opts.skipReason ?? "理由不明"}）。
+ブログ記事は公開済みです。手動で投稿するには次を実行してください:
+  npm run x:draft
+（最新の投稿文がポスト画面に入るので、内容を整えて「ポストする」を押してください）`;
+
+  const sourceLabel = opts.posted
+    ? "【データソース（リプライに投稿済み）】"
+    : "【データソース】";
+
+  const text = `${header}
 
 【投稿文】(X weight ${opts.weight}/280)
 --------------------------------------------------
 ${opts.post}
 --------------------------------------------------
 
-【データソース（リプライに投稿済み）】
+${sourceLabel}
 ${sourceLines}
 
 保存先: ${opts.postFile}
 `;
 
+  const subject = opts.posted
+    ? `🎣 本牧釣果まとめ X投稿完了 (${today})`
+    : `⚠️ 本牧釣果まとめ X未投稿 — 要手動対応 (${today})`;
+
   const { error } = await resend.emails.send({
     from,
     to: [to],
-    subject: `🎣 本牧釣果まとめ X投稿完了 (${today})`,
+    subject,
     text,
   });
 

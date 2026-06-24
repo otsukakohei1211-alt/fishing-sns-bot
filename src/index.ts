@@ -248,16 +248,20 @@ async function main() {
   console.log("---- end ----");
 
   // ── [4/5] X に投稿 ────────────────────────────────────────────────────────
+  let xPosted = false;
+  let skipReason: string | undefined;
   if (weight <= 280) {
     console.log("[4/5] X に投稿中 …");
     // 上位魚種に合わせたアフィリンク2件をスレッド末尾にぶら下げる
     const affiliateReply = formatAffiliateReply(article.topCatches, 2) ?? undefined;
     try {
       await postToX(post, report, undefined, undefined, affiliateReply);
+      xPosted = true;
     } catch (e) {
       // X投稿失敗でもブログ記事は公開済みなので、通知を送って続行する
       const err = e as Error;
       console.error(`  ⚠️ X投稿失敗: ${err.message}`);
+      skipReason = `X投稿エラー: ${err.message.slice(0, 120)}`;
       const hint =
         err instanceof SessionExpiredError
           ? "ターミナルで `npm run x:login` を実行して X に再ログインしてください。"
@@ -265,16 +269,17 @@ async function main() {
       await sendFailureNotification({ step: "X投稿", error: err, hint }).catch(() => {});
     }
   } else {
-    console.log(`[4/5] X 投稿スキップ (X weight ${weight} > 280)。ブログ用として保存済み。`);
+    skipReason = `X weight ${weight} > 280（文字数オーバー）`;
+    console.log(`[4/5] X 投稿スキップ (${skipReason})。ブログ用として保存済み。`);
   }
 
   // ── [5/5] メール通知 ──────────────────────────────────────────────────────
   console.log("[5/5] 通知メールを送信中 …");
   try {
-    await sendPostNotification({ post, weight, reports, postFile });
+    await sendPostNotification({ post, weight, reports, postFile, posted: xPosted, skipReason });
     console.log(`    📧 ${process.env.NOTIFY_EMAIL} に送信しました`);
   } catch (e) {
-    console.error("    メール送信失敗（X 投稿は完了済みです）:", (e as Error).message);
+    console.error("    メール送信失敗:", (e as Error).message);
   }
 
   console.log("✅ 完了");
