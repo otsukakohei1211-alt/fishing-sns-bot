@@ -29,20 +29,25 @@ const FISH_KEYWORD_MAP: Array<[RegExp, string]> = [
 
 const DEFAULT_KEYWORD = "釣り 仕掛けセット 初心者";
 
-/** 釣果魚種に依存しない、堤防・海づり施設の定番ギア（リスト穴埋め用） */
-const GENERAL_GEAR: Array<[string, string]> = [
-  ["釣り用クーラーボックス", "釣り クーラーボックス"],
-  ["自動膨張式ライフジャケット", "ライフジャケット 釣り 自動膨張"],
-  ["万能の堤防釣りロッド＆リールセット", "堤防 釣り竿 リール セット"],
-  ["タモ網・玉の柄", "釣り タモ網 玉の柄"],
-  ["フィッシュグリップ", "フィッシュグリップ"],
-  ["偏光サングラス", "偏光サングラス 釣り"],
-  ["水汲みバケツ", "釣り 水汲みバケツ"],
-  ["フィッシングプライヤー・ハサミ", "釣り プライヤー ハサミ"],
-  ["仕掛け収納ケース", "釣り 仕掛け ケース"],
-  ["釣り用グローブ", "釣り グローブ"],
-  ["LEDヘッドライト", "釣り ヘッドライト"],
-  ["撒き餌・コマセセット", "アミエビ コマセ 釣り"],
+/**
+ * 釣果魚種に依存しない、堤防・海づり施設の定番ギア（リスト穴埋め用）。
+ * asin を入れると個別商品リンク（高CV）、未指定なら keyword の検索リンクに
+ * 自動フォールバックする。ASIN は1件ずつ実機確認してから埋めること。
+ */
+type GearItem = { label: string; keyword: string; asin?: string };
+const GENERAL_GEAR: GearItem[] = [
+  { label: "釣り用クーラーボックス", keyword: "釣り クーラーボックス" },
+  { label: "自動膨張式ライフジャケット", keyword: "ライフジャケット 釣り 自動膨張" },
+  { label: "万能の堤防釣りロッド＆リールセット", keyword: "堤防 釣り竿 リール セット" },
+  { label: "タモ網・玉の柄", keyword: "釣り タモ網 玉の柄" },
+  { label: "フィッシュグリップ", keyword: "フィッシュグリップ" },
+  { label: "偏光サングラス", keyword: "偏光サングラス 釣り" },
+  { label: "水汲みバケツ", keyword: "釣り 水汲みバケツ" },
+  { label: "フィッシングプライヤー・ハサミ", keyword: "釣り プライヤー ハサミ" },
+  { label: "仕掛け収納ケース", keyword: "釣り 仕掛け ケース" },
+  { label: "釣り用グローブ", keyword: "釣り グローブ" },
+  { label: "LEDヘッドライト", keyword: "釣り ヘッドライト" },
+  { label: "撒き餌・コマセセット", keyword: "アミエビ コマセ 釣り" },
 ];
 
 function getKeyword(fishName: string): string {
@@ -54,6 +59,11 @@ function getKeyword(fishName: string): string {
 
 function buildAmazonUrl(keyword: string): string {
   return `https://www.amazon.co.jp/s?k=${encodeURIComponent(keyword)}&tag=${TRACKING_ID}`;
+}
+
+/** 個別商品（ASIN）への直リンク。検索リンクより CV が高い。 */
+function buildAmazonProductUrl(asin: string): string {
+  return `https://www.amazon.co.jp/dp/${asin}?tag=${TRACKING_ID}`;
 }
 
 /** 魚種名リストを検索キーワード単位に重複除外して返す（順序維持） */
@@ -89,11 +99,15 @@ export function getAffiliateLinks(fishNames: string[], count = 10): AffiliateLin
   }
 
   // 2) 不足分は堤防・海づり施設の定番ギアで補う
-  for (const [label, keyword] of GENERAL_GEAR) {
+  //    asin があれば商品リンク、無ければ keyword の検索リンクにフォールバック
+  for (const { label, keyword, asin } of GENERAL_GEAR) {
     if (links.length >= count) break;
     if (usedKeywords.has(keyword)) continue;
     usedKeywords.add(keyword);
-    links.push({ label: `${label}をAmazonで見る`, url: buildAmazonUrl(keyword) });
+    links.push({
+      label: `${label}をAmazonで見る`,
+      url: asin ? buildAmazonProductUrl(asin) : buildAmazonUrl(keyword),
+    });
   }
 
   return links;
