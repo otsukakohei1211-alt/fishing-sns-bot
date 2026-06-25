@@ -73,7 +73,7 @@ async function extractTweetId(response: Response): Promise<string | null> {
 // ── Playwright ヘルパー ───────────────────────────────────────────────────────
 
 /** リプライダイアログを開き、テキストを入力して投稿する。投稿したツイート ID を返す。 */
-async function postReply(
+export async function postReply(
   page: Page,
   parentTweetId: string,
   text: string,
@@ -98,7 +98,9 @@ async function postReply(
   // リプライ用テキストエリア（最後の tweetTextarea_ = 入力欄）
   const editor = dialog.locator('[data-testid^="tweetTextarea_"]').last();
   await editor.waitFor({ timeout: 10_000, state: "visible" });
-  await editor.click();
+  // プレースホルダーのオーバーレイが遮蔽することがあるため force クリック + JS フォーカス
+  await editor.click({ force: true });
+  await editor.evaluate((el) => (el as HTMLElement).focus());
   await page.keyboard.type(text, { delay: 8 });
 
   // 画像添付（ダイアログ内）
@@ -120,13 +122,24 @@ async function postReply(
   await postBtn.waitFor({ timeout: 10_000 });
 
   // 投稿 & CreateTweet レスポンスを同時待ち
-  const [, tweetRes] = await Promise.all([
-    postBtn.click(),
-    page.waitForResponse(
+  // メイン投稿と同様、オーバーレイ遮蔽対策で JS クリック + force クリックの二段構え
+  const tweetResPromise = page
+    .waitForResponse(
       (res) => res.url().includes("/CreateTweet") && res.status() === 200,
       { timeout: 30_000 },
-    ),
-  ]);
+    )
+    .catch(() => null);
+  await page.evaluate(() => {
+    const btn =
+      (document.querySelector('[data-testid="tweetButton"]') ??
+        document.querySelector('[data-testid="tweetButtonInline"]')) as HTMLElement | null;
+    if (btn) btn.click();
+  });
+  await postBtn.click({ force: true }).catch(() => { /* ignore */ });
+  const tweetRes = await tweetResPromise;
+  if (!tweetRes) {
+    throw new Error(`${label}: CreateTweet レスポンスが 30s 以内に受信できませんでした`);
+  }
 
   await dialog.waitFor({ timeout: 20_000, state: "hidden" });
 
@@ -221,7 +234,10 @@ export async function postToX(
       console.log("  X: スクリーンショット: data/logs/debug_compose_timeout.png");
       throw e;
     }
-    await editor.click();
+    // プレースホルダーのオーバーレイ div が pointer event を横取りすることがあるため
+    // force クリックで遮蔽を無視し、フォーカスも JS で確実に当てる
+    await editor.click({ force: true });
+    await editor.evaluate((el) => (el as HTMLElement).focus());
 
     // ── テキスト入力（クリップボード経由）──────────────────────────────────
     await page.evaluate((text) => navigator.clipboard.writeText(text), mainPost);
