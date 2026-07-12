@@ -4,6 +4,7 @@
 
 import { spawn } from "node:child_process";
 import type { FishFeatureData } from "./data.ts";
+import { xWeight } from "../compose.ts";
 
 const CLAUDE_BIN =
   process.env.CLAUDE_BIN ??
@@ -240,11 +241,68 @@ export type FishFeatureThread = {
   replies: string[];
 };
 
+/**
+ * Claude CLI の素テキスト応答から JSON 配列部分だけを抽出してパースする。
+ * モデルが配列の前後に説明文（```json フェンスや補足）を付けても拾えるよう、
+ * 最初の '[' から対応する ']' までをブラケット対応で切り出す（文字列内の括弧は無視）。
+ */
+function parseThreadArray(raw: string): string[] {
+  const start = raw.indexOf("[");
+  if (start === -1) {
+    throw new Error(`スレッド生成: 応答に JSON 配列が見つかりません: ${raw.slice(0, 200)}`);
+  }
+
+  let depth = 0;
+  let inStr = false;
+  let escaped = false;
+  let end = -1;
+  for (let i = start; i < raw.length; i++) {
+    const ch = raw[i];
+    if (inStr) {
+      if (escaped) escaped = false;
+      else if (ch === "\\") escaped = true;
+      else if (ch === '"') inStr = false;
+      continue;
+    }
+    if (ch === '"') inStr = true;
+    else if (ch === "[") depth++;
+    else if (ch === "]") {
+      depth--;
+      if (depth === 0) { end = i; break; }
+    }
+  }
+  if (end === -1) {
+    throw new Error(`スレッド生成: JSON 配列が閉じていません: ${raw.slice(start, start + 200)}`);
+  }
+
+  const parsed = JSON.parse(raw.slice(start, end + 1));
+  if (!Array.isArray(parsed) || parsed.some(p => typeof p !== "string")) {
+    throw new Error(`スレッド生成: 文字列配列ではありません: ${raw.slice(start, end + 1).slice(0, 200)}`);
+  }
+  return parsed as string[];
+}
+
 export async function composeFishFeaturePost(data: FishFeatureData): Promise<FishFeatureThread> {
-  const prompt = buildThreadPrompt(data);
-  const raw = await callClaude(prompt);
-  const cleaned = raw.replace(/^```json\s*/i, "").replace(/\s*```\s*$/, "").trim();
-  const posts = JSON.parse(cleaned) as string[];
+  const basePrompt = buildThreadPrompt(data);
+
+  // メイン投稿が 280 字を超えると本番で丸ごと失敗するため、超過時は
+  // 「短くして」と指示して最大2回まで再生成する（Claude CLI 経由＝従量課金なし）。
+  const MAX_ATTEMPTS = 2;
+  let posts: string[] = [];
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    let prompt = basePrompt;
+    if (attempt > 1) {
+      const over = xWeight(posts[0] ?? "");
+      prompt = `${basePrompt}
+
+【重要・再生成】前回のメイン投稿は ${over} 相当で 280 字上限を超えました。内容の要点は保ったまま、メイン投稿（投稿1）を必ず 280 字以内に短くして、再度4件の配列で出力してください。`;
+    }
+    const raw = await callClaude(prompt);
+    posts = parseThreadArray(raw);
+    if (xWeight(posts[0] ?? "") <= 280) break;
+    console.warn(`  メイン投稿が超過(${xWeight(posts[0] ?? "")}/280) — 再生成 (attempt ${attempt}/${MAX_ATTEMPTS})`);
+  }
+
   return {
     main: posts[0] ?? "",
     replies: posts.slice(1).filter(Boolean),

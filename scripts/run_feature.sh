@@ -1,5 +1,5 @@
 #!/bin/zsh
-# run_feature.sh — 魚種特集投稿（毎日 19:00）
+# run_feature.sh — 魚種特集投稿（毎日 12:00 発火 / 隔日ガードで2日に1回投稿）
 set -euo pipefail
 
 [[ -f ~/.zprofile ]] && source ~/.zprofile

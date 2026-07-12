@@ -30,11 +30,38 @@ async function main() {
 
   await mkdir("data/charts", { recursive: true });
 
+  // ── 隔日ガード ───────────────────────────────────────────────────────────────
+  // 魚種特集は「2日に1回」。前回 success 投稿から 2 日（暦日）未満ならスキップ。
+  // launchd は毎日 12:00 に発火させ、実際に投稿するかはここで判定する。
+  // （DRY_RUN はテスト目的なのでガードを無視して常に生成する）
+  if (!DRY_RUN) {
+    const last = db.prepare(`
+      SELECT posted_at FROM post_log
+      WHERE post_type = 'fish_feature' AND status = 'success'
+      ORDER BY posted_at DESC LIMIT 1
+    `).get() as { posted_at: string } | undefined;
+
+    if (last) {
+      const startOfDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+      const lastDay = startOfDay(new Date(last.posted_at.replace(" ", "T")));
+      const todayDay = startOfDay(new Date());
+      const daysSince = Math.round((todayDay.getTime() - lastDay.getTime()) / 86_400_000);
+      if (daysSince < 2) {
+        console.log(`前回投稿(${last.posted_at})から${daysSince}日 → 隔日ガードによりスキップ`);
+        closeDb();
+        return;
+      }
+    }
+  }
+
   // ── [1/5] 魚種選択 ──────────────────────────────────────────────────────────
   // FEATURE_FISH 環境変数で魚種を直接指定可能（例: FEATURE_FISH=ウミタナゴ）
   let fish = selectNextFish(FACILITY);
   const overrideName = process.env.FEATURE_FISH;
-  if (overrideName) {
+  if (overrideName && overrideName.includes("フグ")) {
+    // フグ類は調理にふぐ調理師免許が必要（毒処理）。手動指定でも特集対象にしない。
+    console.warn(`[1/5] FEATURE_FISH="${overrideName}" はフグ類のため特集対象外。自動選択に切り替え。`);
+  } else if (overrideName) {
     const overrideRow = db.prepare("SELECT id, name FROM fish WHERE name = ?").get(overrideName) as { id: number; name: string } | undefined;
     if (overrideRow) {
       fish = { ...overrideRow, score: -1 };

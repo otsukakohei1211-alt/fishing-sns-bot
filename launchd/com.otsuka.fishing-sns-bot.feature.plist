@@ -11,11 +11,11 @@
         <string>/Users/koheiotsuka/fishing-sns-bot/scripts/run_feature.sh</string>
     </array>
 
-    <!-- 毎日 19:00 JST に魚種特集投稿を実行 -->
+    <!-- 毎日 12:00 JST に発火。実際に投稿するかは隔日ガード（index.ts）で判定し 2日に1回に絞る -->
     <key>StartCalendarInterval</key>
     <dict>
         <key>Hour</key>
-        <integer>19</integer>
+        <integer>12</integer>
         <key>Minute</key>
         <integer>0</integer>
     </dict>

@@ -159,6 +159,8 @@ export function selectNextFish(facility: string): { id: number; name: string; sc
     LEFT JOIN trend t ON t.id=m_now.id
     WHERE m_now.id NOT IN (${excludeClause})
       AND COALESCE(m_now.avg_catch, 0) > 0
+      -- フグ類は調理にふぐ調理師免許が必要（毒処理）。特集は食べ方を含むため自動選定から除外
+      AND m_now.name NOT LIKE '%フグ%'
   `).all(facility, facility, thisMonth, nextMonth) as Array<{
     id: number; name: string;
     this_avg: number; next_avg: number; peak_avg: number;
@@ -171,6 +173,7 @@ export function selectNextFish(facility: string): { id: number; name: string; sc
       SELECT f.id, f.name FROM catch_records cr
       JOIN fish f ON f.id=cr.fish_id
       WHERE cr.facility=? AND cr.count>0 AND f.name NOT IN ('釣果なし','無し')
+        AND f.name NOT LIKE '%フグ%'  -- フグ類は免許要のため除外（上記参照）
       GROUP BY f.id ORDER BY COUNT(*) DESC LIMIT 1
     `).get(facility) as { id: number; name: string };
     return { ...fallback, score: 0 };
