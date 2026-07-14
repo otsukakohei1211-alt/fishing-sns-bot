@@ -176,6 +176,17 @@ async function main() {
     console.log(`  → UPSERT: 海況 ${conditions} 件, 釣果 ${catches} 件`);
   }
 
+  // fish_id を反映（upsertCatch は fish_name のみで挿入するため、ここで紐付ける）
+  // これを怠ると catch_records.fish_id が NULL のままになり、
+  // fish_id で結合する集計（selectNextFish の trend/monthly 等）が全て 0 になる。
+  const linked = db.prepare(`
+    UPDATE catch_records
+    SET fish_id = (SELECT id FROM fish WHERE fish.name = catch_records.fish_name)
+    WHERE fish_id IS NULL
+      AND EXISTS (SELECT 1 FROM fish WHERE fish.name = catch_records.fish_name)
+  `).run();
+  if (linked.changes > 0) console.log(`\nfish_id 反映: ${linked.changes} 件`);
+
   // 集計
   const stats = db.prepare(`
     SELECT

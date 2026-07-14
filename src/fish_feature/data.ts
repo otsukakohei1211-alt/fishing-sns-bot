@@ -168,16 +168,30 @@ export function selectNextFish(facility: string): { id: number; name: string; sc
   }>;
 
   if (candidates.length === 0) {
-    // フォールバック: 全魚種リセット
+    // フォールバック: 全魚種リセット。ただし直近に特集した魚は避ける。
     const fallback = db.prepare(`
       SELECT f.id, f.name FROM catch_records cr
       JOIN fish f ON f.id=cr.fish_id
       WHERE cr.facility=? AND cr.count>0 AND f.name NOT IN ('釣果なし','無し')
         AND f.name NOT LIKE '%フグ%'  -- フグ類は免許要のため除外（上記参照）
+        AND f.id NOT IN (${excludeClause})
+      GROUP BY f.id ORDER BY COUNT(*) DESC LIMIT 1
+    `).get(facility) as { id: number; name: string } | undefined;
+    // 除外で候補が尽きた場合は除外を無視して最頻魚（同じ魚を返しうるが最終手段）
+    const chosen = fallback ?? db.prepare(`
+      SELECT f.id, f.name FROM catch_records cr
+      JOIN fish f ON f.id=cr.fish_id
+      WHERE cr.facility=? AND cr.count>0 AND f.name NOT IN ('釣果なし','無し')
+        AND f.name NOT LIKE '%フグ%'
       GROUP BY f.id ORDER BY COUNT(*) DESC LIMIT 1
     `).get(facility) as { id: number; name: string };
-    return { ...fallback, score: 0 };
+    return { ...chosen, score: 0 };
   }
+
+  // 特集に足る釣果量の下限。これ未満の平均は統計ノイズ（1〜2匹/日の外道など）とみなし、
+  // momentum / season の加点対象にしない。エソのような低頻度の外道が
+  // 「1.0→1.8匹/日」程度の誤差で高スコアになるのを防ぐ。
+  const MIN_MEANINGFUL_AVG = 3;
 
   // 注目度スコア計算
   const scored = candidates.map((c) => {
@@ -185,21 +199,24 @@ export function selectNextFish(facility: string): { id: number; name: string; sc
     const trendRatio = c.prev_avg > 0 ? c.recent_avg / c.prev_avg : 1;
     const trendScore = trendRatio > 1.2 ? 3 : trendRatio > 0.9 ? 1 : -2;
 
-    // 2. 来月上昇スコア（これから盛り上がるか）
-    const momentumScore = c.next_avg > c.this_avg * 1.3 ? 3
+    // 2. 来月上昇スコア（これから盛り上がるか）。十分な釣果量がある魚のみ加点。
+    const momentumEligible = Math.max(c.this_avg, c.next_avg) >= MIN_MEANINGFUL_AVG;
+    const momentumScore = !momentumEligible ? 0
+      : c.next_avg > c.this_avg * 1.3 ? 3
       : c.next_avg > c.this_avg * 1.0 ? 1 : 0;
 
-    // 3. 旬スコア（今月が年間ピーク付近か）
+    // 3. 旬スコア（今月が年間ピーク付近か）。十分な釣果量がある魚のみ加点。
     const seasonRatio = c.peak_avg > 0 ? c.this_avg / c.peak_avg : 0;
-    const seasonScore = seasonRatio > 0.8 ? 2 : seasonRatio > 0.5 ? 1 : 0;
+    const seasonScore = c.this_avg < MIN_MEANINGFUL_AVG ? 0
+      : seasonRatio > 0.8 ? 2 : seasonRatio > 0.5 ? 1 : 0;
 
     const total = trendScore + momentumScore + seasonScore;
-    return { id: c.id, name: c.name, score: total };
+    return { id: c.id, name: c.name, score: total, abundance: c.this_avg };
   });
 
-  // スコア最高の魚を返す
-  scored.sort((a, b) => b.score - a.score);
-  return scored[0];
+  // スコア最高の魚を返す。同点は今月の釣果量（abundance）が多い＝コンテンツが濃い方を優先。
+  scored.sort((a, b) => b.score - a.score || b.abundance - a.abundance);
+  return { id: scored[0].id, name: scored[0].name, score: scored[0].score };
 }
 
 // ── 直近4週間の日別釣果データ ────────────────────────────────────────────────
