@@ -17,6 +17,7 @@ import { selectNextFish, buildFishFeatureData, getMonthlyAvg } from "./data.ts";
 import { generateFishChart, generateMonthlyChart } from "./chart.ts";
 import { composeFishFeaturePost } from "./compose.ts";
 import { postToX } from "../x_post.ts";
+import { formatAffiliateReply } from "../affiliate.ts";
 import { sendPostNotification } from "../notify.ts";
 import { xWeight } from "../compose.ts";
 import type { DailyReport } from "../types.ts";
@@ -109,6 +110,11 @@ async function main() {
   thread.replies.forEach((r, i) => {
     console.log(`    リプライ${i + 1}: ${xWeight(r)}/280`);
   });
+  // アフィリンク（特集魚に合わせたタックルをスレッド末尾にぶら下げる）
+  const affiliateReply = formatAffiliateReply(
+    [fish.name], 2, `🎣 ${fish.name}狙いのおすすめタックル`,
+  ) ?? undefined;
+
   console.log("---- スレッド ----");
   console.log("[メイン]");
   console.log(thread.main);
@@ -116,6 +122,10 @@ async function main() {
     console.log(`\n[リプライ${i + 1}]`);
     console.log(r);
   });
+  if (affiliateReply) {
+    console.log("\n[アフィリンク]");
+    console.log(affiliateReply);
+  }
   console.log("---- end ----");
 
   if (DRY_RUN) {
@@ -146,7 +156,7 @@ async function main() {
     images: i === 0 ? [chartPath] : undefined,  // リプライ1に直近4週グラフ
   }));
 
-  await postToX(thread.main, dummyReport, [monthlyPath], threadReplies);
+  await postToX(thread.main, dummyReport, [monthlyPath], threadReplies, affiliateReply);
 
   // post_log に記録
   db.prepare(`

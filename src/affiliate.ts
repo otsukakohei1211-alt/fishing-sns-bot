@@ -130,7 +130,11 @@ export function getAffiliateLinks(
  * 当日の上位魚種に合わせたタックルを max 件。釣果が少なければ定番ギアで補う。
  * ステマ規制対応として末尾に #PR を付ける。
  */
-export function formatAffiliateReply(fishNames: string[], max = 2): string | null {
+export function formatAffiliateReply(
+  fishNames: string[],
+  max = 2,
+  heading = "🎣 今日の釣果に合わせたおすすめタックル",
+): string | null {
   const picks = getAffiliateLinks(fishNames, max);
   if (picks.length === 0) return null;
 
@@ -138,5 +142,5 @@ export function formatAffiliateReply(fishNames: string[], max = 2): string | nul
     .map((l) => `▼ ${l.label.replace(/をAmazonで見る$/, "")}\n${l.url}`)
     .join("\n\n");
 
-  return `🎣 今日の釣果に合わせたおすすめタックル\n\n${body}\n\n※ Amazonアソシエイトのリンクを含みます #PR`;
+  return `${heading}\n\n${body}\n\n※ Amazonアソシエイトのリンクを含みます #PR`;
 }
