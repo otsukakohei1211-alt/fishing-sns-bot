@@ -37,17 +37,17 @@
     },
     {
       "month": 6,
-      "avg_catch": 2.3,
-      "avg_per_person": 0.01,
-      "avg_max_size": 34.8,
-      "appearance_pct": 7
+      "avg_catch": 1.9,
+      "avg_per_person": 0,
+      "avg_max_size": 34,
+      "appearance_pct": 12
     },
     {
       "month": 7,
-      "avg_catch": 1.4,
-      "avg_per_person": 0,
-      "avg_max_size": 32.5,
-      "appearance_pct": 12
+      "avg_catch": 2,
+      "avg_per_person": 0.01,
+      "avg_max_size": 35.2,
+      "appearance_pct": 25
     },
     {
       "month": 8,
@@ -86,12 +86,6 @@
     }
   ],
   "recent": [
-    {
-      "date": "2026/06/16",
-      "count": 0,
-      "water_temp": 20.5,
-      "avg_size": null
-    },
     {
       "date": "2026/06/17",
       "count": 0,
@@ -166,15 +160,15 @@
     },
     {
       "date": "2026/06/29",
-      "count": 0,
+      "count": 2,
       "water_temp": 22,
-      "avg_size": null
+      "avg_size": 32
     },
     {
       "date": "2026/06/30",
-      "count": 0,
+      "count": 1,
       "water_temp": 22.5,
-      "avg_size": null
+      "avg_size": 27
     },
     {
       "date": "2026/07/01",
@@ -190,9 +184,9 @@
     },
     {
       "date": "2026/07/03",
-      "count": 0,
+      "count": 2,
       "water_temp": 22,
-      "avg_size": null
+      "avg_size": 30
     },
     {
       "date": "2026/07/04",
@@ -202,9 +196,9 @@
     },
     {
       "date": "2026/07/05",
-      "count": 0,
+      "count": 2,
       "water_temp": 22.5,
-      "avg_size": null
+      "avg_size": 40
     },
     {
       "date": "2026/07/06",
@@ -238,21 +232,27 @@
     },
     {
       "date": "2026/07/11",
-      "count": 0,
+      "count": 2,
       "water_temp": 23,
-      "avg_size": null
+      "avg_size": 39.5
     },
     {
       "date": "2026/07/12",
-      "count": 0,
+      "count": 1,
       "water_temp": 23,
-      "avg_size": null
+      "avg_size": 37
     },
     {
       "date": "2026/07/13",
-      "count": 0,
+      "count": 6,
       "water_temp": 23.5,
-      "avg_size": null
+      "avg_size": 27.5
+    },
+    {
+      "date": "2026/07/15",
+      "count": 2,
+      "water_temp": 26,
+      "avg_size": 39.5
     }
   ],
   "tactics": []

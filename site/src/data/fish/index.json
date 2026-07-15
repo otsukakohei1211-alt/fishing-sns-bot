@@ -20,226 +20,11 @@
     "typical_size_min": 15,
     "typical_size_max": 25,
     "size_unit": "cm",
-    "bakuchou_index": 51,
-    "this_month_avg": 2672.1,
+    "bakuchou_index": 54,
+    "this_month_avg": 2789.9,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 60,
-    "name": "シロギス",
-    "name_kana": "シロギス",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 2,
-    "difficulty": 1,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "淡白",
-      "flavor": "淡白"
-    },
-    "best_season": [
-      "summer"
-    ],
-    "size_reference": 16,
-    "typical_size_min": 15,
-    "typical_size_max": 30,
-    "size_unit": "cm",
-    "bakuchou_index": 100,
-    "this_month_avg": 309.1,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 5,
-    "name": "アジ",
-    "name_kana": "アジ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 1,
-    "difficulty": 1,
-    "taste_profile": {
-      "texture": "青魚",
-      "fat_content": "脂のり",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "spring",
-      "summer",
-      "autumn"
-    ],
-    "size_reference": 19.9,
-    "typical_size_min": 15,
-    "typical_size_max": 40,
-    "size_unit": "cm",
-    "bakuchou_index": 13,
-    "this_month_avg": 152.7,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 27,
-    "name": "カサゴ",
-    "name_kana": "カサゴ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 2,
-    "difficulty": 2,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "淡白",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "winter",
-      "spring"
-    ],
-    "size_reference": 18.5,
-    "typical_size_min": 15,
-    "typical_size_max": 35,
-    "size_unit": "cm",
-    "bakuchou_index": 100,
-    "this_month_avg": 47.7,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 96,
-    "name": "ムツ",
-    "name_kana": "ムツ",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 3,
-    "difficulty": 3,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "脂のり",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "autumn",
-      "winter"
-    ],
-    "size_reference": 15.2,
-    "typical_size_min": 30,
-    "typical_size_max": 90,
-    "size_unit": "cm",
-    "bakuchou_index": 69,
-    "this_month_avg": 36.7,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 52,
-    "name": "サバ",
-    "name_kana": "サバ",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 1,
-    "difficulty": 1,
-    "taste_profile": {
-      "texture": "青魚",
-      "fat_content": "脂のり",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "autumn",
-      "winter"
-    ],
-    "size_reference": 26.4,
-    "typical_size_min": 20,
-    "typical_size_max": 50,
-    "size_unit": "cm",
-    "bakuchou_index": 100,
-    "this_month_avg": 31.2,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 46,
-    "name": "コノシロ",
-    "name_kana": "コノシロ",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 1,
-    "difficulty": 2,
-    "taste_profile": {
-      "texture": "青魚",
-      "fat_content": "脂のり",
-      "flavor": "独特の香り（酢締めで風味が増す）"
-    },
-    "best_season": [
-      "autumn",
-      "winter"
-    ],
-    "size_reference": 25.9,
-    "typical_size_min": 15,
-    "typical_size_max": 30,
-    "size_unit": "cm",
-    "bakuchou_index": 3,
-    "this_month_avg": 29.8,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 67,
-    "name": "タコ",
-    "name_kana": "タコ",
-    "category": "イカタコ",
-    "danger_level": 1,
-    "price_range": 2,
-    "difficulty": 3,
-    "taste_profile": {
-      "texture": "軟体",
-      "fat_content": "淡白",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "summer",
-      "autumn"
-    ],
-    "size_reference": 0.8,
-    "typical_size_min": 30,
-    "typical_size_max": 60,
-    "size_unit": "cm",
-    "bakuchou_index": 100,
-    "this_month_avg": 20.1,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 97,
-    "name": "メゴチ",
-    "name_kana": "メゴチ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 1,
-    "difficulty": 2,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "淡白",
-      "flavor": "淡白"
-    },
-    "best_season": [
-      "summer"
-    ],
-    "size_reference": 12.1,
-    "typical_size_min": 10,
-    "typical_size_max": 20,
-    "size_unit": "cm",
-    "bakuchou_index": 43,
-    "this_month_avg": 15.9,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 3042.4,
+    "prev_avg": 2147.5
   },
   {
     "id": 51,
@@ -263,11 +48,226 @@
     "typical_size_min": 10,
     "typical_size_max": 20,
     "size_unit": "cm",
-    "bakuchou_index": 19,
-    "this_month_avg": 12.8,
+    "bakuchou_index": 100,
+    "this_month_avg": 482,
+    "appearance_pct": 100,
+    "recent_avg": 649.6,
+    "prev_avg": 241.9
+  },
+  {
+    "id": 5,
+    "name": "アジ",
+    "name_kana": "アジ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 1,
+    "difficulty": 1,
+    "taste_profile": {
+      "texture": "青魚",
+      "fat_content": "脂のり",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 19.9,
+    "typical_size_min": 15,
+    "typical_size_max": 40,
+    "size_unit": "cm",
+    "bakuchou_index": 26,
+    "this_month_avg": 305.4,
+    "appearance_pct": 100,
+    "recent_avg": 632.6,
+    "prev_avg": 687.9
+  },
+  {
+    "id": 60,
+    "name": "シロギス",
+    "name_kana": "シロギス",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 2,
+    "difficulty": 1,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "淡白"
+    },
+    "best_season": [
+      "summer"
+    ],
+    "size_reference": 16,
+    "typical_size_min": 15,
+    "typical_size_max": 30,
+    "size_unit": "cm",
+    "bakuchou_index": 100,
+    "this_month_avg": 226.2,
+    "appearance_pct": 100,
+    "recent_avg": 48.4,
+    "prev_avg": 111.1
+  },
+  {
+    "id": 46,
+    "name": "コノシロ",
+    "name_kana": "コノシロ",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 1,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "青魚",
+      "fat_content": "脂のり",
+      "flavor": "独特の香り（酢締めで風味が増す）"
+    },
+    "best_season": [
+      "autumn",
+      "winter"
+    ],
+    "size_reference": 25.9,
+    "typical_size_min": 15,
+    "typical_size_max": 30,
+    "size_unit": "cm",
+    "bakuchou_index": 9,
+    "this_month_avg": 103.7,
+    "appearance_pct": 100,
+    "recent_avg": 193.5,
+    "prev_avg": 624.7
+  },
+  {
+    "id": 27,
+    "name": "カサゴ",
+    "name_kana": "カサゴ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 2,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "winter",
+      "spring"
+    ],
+    "size_reference": 18.5,
+    "typical_size_min": 15,
+    "typical_size_max": 35,
+    "size_unit": "cm",
+    "bakuchou_index": 100,
+    "this_month_avg": 52,
+    "appearance_pct": 100,
+    "recent_avg": 61.2,
+    "prev_avg": 42.4
+  },
+  {
+    "id": 96,
+    "name": "ムツ",
+    "name_kana": "ムツ",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 3,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "脂のり",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "autumn",
+      "winter"
+    ],
+    "size_reference": 15.2,
+    "typical_size_min": 30,
+    "typical_size_max": 90,
+    "size_unit": "cm",
+    "bakuchou_index": 60,
+    "this_month_avg": 32.1,
+    "appearance_pct": 100,
+    "recent_avg": 4,
+    "prev_avg": 2
+  },
+  {
+    "id": 52,
+    "name": "サバ",
+    "name_kana": "サバ",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 1,
+    "difficulty": 1,
+    "taste_profile": {
+      "texture": "青魚",
+      "fat_content": "脂のり",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "autumn",
+      "winter"
+    ],
+    "size_reference": 26.4,
+    "typical_size_min": 20,
+    "typical_size_max": 50,
+    "size_unit": "cm",
+    "bakuchou_index": 100,
+    "this_month_avg": 25.7,
+    "appearance_pct": 100,
+    "recent_avg": 13.9,
+    "prev_avg": 4.5
+  },
+  {
+    "id": 67,
+    "name": "タコ",
+    "name_kana": "タコ",
+    "category": "イカタコ",
+    "danger_level": 1,
+    "price_range": 2,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "軟体",
+      "fat_content": "淡白",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 0.8,
+    "typical_size_min": 30,
+    "typical_size_max": 60,
+    "size_unit": "cm",
+    "bakuchou_index": 89,
+    "this_month_avg": 16,
+    "appearance_pct": 100,
+    "recent_avg": 3.8,
+    "prev_avg": 3.3
+  },
+  {
+    "id": 97,
+    "name": "メゴチ",
+    "name_kana": "メゴチ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 1,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "淡白"
+    },
+    "best_season": [
+      "summer"
+    ],
+    "size_reference": 12.1,
+    "typical_size_min": 10,
+    "typical_size_max": 20,
+    "size_unit": "cm",
+    "bakuchou_index": 62,
+    "this_month_avg": 15.9,
     "appearance_pct": 100,
     "recent_avg": null,
-    "prev_avg": null
+    "prev_avg": 2.8
   },
   {
     "id": 77,
@@ -290,11 +290,11 @@
     "typical_size_min": 10,
     "typical_size_max": 25,
     "size_unit": "cm",
-    "bakuchou_index": 48,
-    "this_month_avg": 10.8,
+    "bakuchou_index": 49,
+    "this_month_avg": 10,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 4.8,
+    "prev_avg": 15.8
   },
   {
     "id": 42,
@@ -319,11 +319,11 @@
     "typical_size_min": 25,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 46,
-    "this_month_avg": 8.9,
+    "bakuchou_index": 47,
+    "this_month_avg": 9.1,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 9.5,
+    "prev_avg": 14.6
   },
   {
     "id": 83,
@@ -349,8 +349,62 @@
     "bakuchou_index": 57,
     "this_month_avg": 7.8,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 7.8,
+    "prev_avg": 10.6
+  },
+  {
+    "id": 99,
+    "name": "メバル",
+    "name_kana": "メバル",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 2,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "普通",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "winter",
+      "spring"
+    ],
+    "size_reference": 18.7,
+    "typical_size_min": 15,
+    "typical_size_max": 30,
+    "size_unit": "cm",
+    "bakuchou_index": 100,
+    "this_month_avg": 6.3,
+    "appearance_pct": 100,
+    "recent_avg": 8.5,
+    "prev_avg": 3
+  },
+  {
+    "id": 11,
+    "name": "イシモチ",
+    "name_kana": "イシモチ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 2,
+    "difficulty": 1,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 25.6,
+    "typical_size_min": 20,
+    "typical_size_max": 40,
+    "size_unit": "cm",
+    "bakuchou_index": 13,
+    "this_month_avg": 4.5,
+    "appearance_pct": 100,
+    "recent_avg": 4.8,
+    "prev_avg": 4.7
   },
   {
     "id": 70,
@@ -380,58 +434,58 @@
     "prev_avg": null
   },
   {
-    "id": 99,
-    "name": "メバル",
-    "name_kana": "メバル",
+    "id": 76,
+    "name": "ネンブツダイ",
+    "name_kana": "ネンブツダイ",
     "category": "魚",
     "danger_level": 1,
-    "price_range": 2,
-    "difficulty": 2,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "普通",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "winter",
-      "spring"
-    ],
-    "size_reference": 18.7,
-    "typical_size_min": 15,
-    "typical_size_max": 30,
-    "size_unit": "cm",
-    "bakuchou_index": 88,
-    "this_month_avg": 4.5,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 11,
-    "name": "イシモチ",
-    "name_kana": "イシモチ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 2,
+    "price_range": 1,
     "difficulty": 1,
     "taste_profile": {
       "texture": "白身",
       "fat_content": "淡白",
-      "flavor": "旨味が強い"
+      "flavor": "淡白"
     },
     "best_season": [
       "summer",
       "autumn"
     ],
-    "size_reference": 25.6,
-    "typical_size_min": 20,
-    "typical_size_max": 40,
+    "size_reference": 10,
+    "typical_size_min": 6,
+    "typical_size_max": 12,
     "size_unit": "cm",
-    "bakuchou_index": 13,
-    "this_month_avg": 4.3,
+    "bakuchou_index": 100,
+    "this_month_avg": 4.5,
     "appearance_pct": 100,
-    "recent_avg": null,
+    "recent_avg": 4.5,
     "prev_avg": null
+  },
+  {
+    "id": 87,
+    "name": "ベラ",
+    "name_kana": "ベラ",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 1,
+    "difficulty": 1,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "淡白"
+    },
+    "best_season": [
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 17.9,
+    "typical_size_min": 10,
+    "typical_size_max": 30,
+    "size_unit": "cm",
+    "bakuchou_index": 55,
+    "this_month_avg": 4.2,
+    "appearance_pct": 100,
+    "recent_avg": 11.7,
+    "prev_avg": 1.7
   },
   {
     "id": 18,
@@ -454,11 +508,93 @@
     "typical_size_min": 15,
     "typical_size_max": 25,
     "size_unit": "cm",
-    "bakuchou_index": 9,
-    "this_month_avg": 3,
+    "bakuchou_index": 12,
+    "this_month_avg": 4,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 5.4,
+    "prev_avg": 5.6
+  },
+  {
+    "id": 98,
+    "name": "メジナ",
+    "name_kana": "メジナ",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 2,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "普通",
+      "flavor": "磯の風味"
+    },
+    "best_season": [
+      "winter",
+      "spring"
+    ],
+    "size_reference": 25.9,
+    "typical_size_min": 20,
+    "typical_size_max": 50,
+    "size_unit": "cm",
+    "bakuchou_index": 88,
+    "this_month_avg": 3.9,
+    "appearance_pct": 100,
+    "recent_avg": 5.4,
+    "prev_avg": 4.8
+  },
+  {
+    "id": 57,
+    "name": "シマダイ",
+    "name_kana": "シマダイ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 3,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "普通",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 22.7,
+    "typical_size_min": 10,
+    "typical_size_max": 30,
+    "size_unit": "cm",
+    "bakuchou_index": 82,
+    "this_month_avg": 3.4,
+    "appearance_pct": 100,
+    "recent_avg": 4.1,
+    "prev_avg": 1.5
+  },
+  {
+    "id": 64,
+    "name": "セイゴ",
+    "name_kana": "セイゴ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 1,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "淡白"
+    },
+    "best_season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 22.3,
+    "typical_size_min": 20,
+    "typical_size_max": 40,
+    "size_unit": "cm",
+    "bakuchou_index": 64,
+    "this_month_avg": 3.4,
+    "appearance_pct": 100,
+    "recent_avg": 3.5,
+    "prev_avg": 4.3
   },
   {
     "id": 53,
@@ -489,11 +625,11 @@
     "prev_avg": null
   },
   {
-    "id": 87,
-    "name": "ベラ",
-    "name_kana": "ベラ",
+    "id": 80,
+    "name": "ヒイラギ",
+    "name_kana": "ヒイラギ",
     "category": "魚",
-    "danger_level": 0,
+    "danger_level": 1,
     "price_range": 1,
     "difficulty": 1,
     "taste_profile": {
@@ -505,15 +641,96 @@
       "summer",
       "autumn"
     ],
-    "size_reference": 17.9,
-    "typical_size_min": 10,
-    "typical_size_max": 30,
+    "size_reference": 13.1,
+    "typical_size_min": 8,
+    "typical_size_max": 15,
     "size_unit": "cm",
-    "bakuchou_index": 29,
-    "this_month_avg": 2.2,
+    "bakuchou_index": 71,
+    "this_month_avg": 3,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 4.7,
+    "prev_avg": 1.4
+  },
+  {
+    "id": 29,
+    "name": "カタボシイワシ",
+    "name_kana": "カタボシイワシ",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 1,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "青魚",
+      "fat_content": "普通",
+      "flavor": "磯の風味"
+    },
+    "best_season": [
+      "spring",
+      "summer"
+    ],
+    "size_reference": 24.3,
+    "typical_size_min": 15,
+    "typical_size_max": 25,
+    "size_unit": "cm",
+    "bakuchou_index": 32,
+    "this_month_avg": 2,
+    "appearance_pct": 100,
+    "recent_avg": 2,
+    "prev_avg": 1
+  },
+  {
+    "id": 30,
+    "name": "カマス",
+    "name_kana": "カマス",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 2,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "脂のり",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "autumn",
+      "winter"
+    ],
+    "size_reference": 22.9,
+    "typical_size_min": 20,
+    "typical_size_max": 45,
+    "size_unit": "cm",
+    "bakuchou_index": 14,
+    "this_month_avg": 2,
+    "appearance_pct": 100,
+    "recent_avg": 2.5,
+    "prev_avg": 1.5
+  },
+  {
+    "id": 34,
+    "name": "キジハタ",
+    "name_kana": "キジハタ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 4,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 31,
+    "typical_size_min": 25,
+    "typical_size_max": 50,
+    "size_unit": "cm",
+    "bakuchou_index": 99,
+    "this_month_avg": 1.9,
+    "appearance_pct": 100,
+    "recent_avg": 2.1,
+    "prev_avg": 1
   },
   {
     "id": 8,
@@ -538,11 +755,11 @@
     "typical_size_min": 20,
     "typical_size_max": 45,
     "size_unit": "cm",
-    "bakuchou_index": 11,
-    "this_month_avg": 2,
+    "bakuchou_index": 10,
+    "this_month_avg": 1.8,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 1.4,
+    "prev_avg": 7.1
   },
   {
     "id": 45,
@@ -565,23 +782,23 @@
     "typical_size_min": 30,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 57,
-    "this_month_avg": 2,
+    "bakuchou_index": 52,
+    "this_month_avg": 1.8,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 1.6,
+    "prev_avg": 1.2
   },
   {
-    "id": 64,
-    "name": "セイゴ",
-    "name_kana": "セイゴ",
+    "id": 84,
+    "name": "フッコ",
+    "name_kana": "フッコ",
     "category": "魚",
-    "danger_level": 1,
-    "price_range": 1,
+    "danger_level": 0,
+    "price_range": 2,
     "difficulty": 2,
     "taste_profile": {
       "texture": "白身",
-      "fat_content": "淡白",
+      "fat_content": "普通",
       "flavor": "淡白"
     },
     "best_season": [
@@ -589,96 +806,15 @@
       "summer",
       "autumn"
     ],
-    "size_reference": 22.3,
-    "typical_size_min": 20,
-    "typical_size_max": 40,
+    "size_reference": 49.3,
+    "typical_size_min": 30,
+    "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 38,
-    "this_month_avg": 2,
+    "bakuchou_index": 90,
+    "this_month_avg": 1.8,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 98,
-    "name": "メジナ",
-    "name_kana": "メジナ",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 2,
-    "difficulty": 3,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "普通",
-      "flavor": "磯の風味"
-    },
-    "best_season": [
-      "winter",
-      "spring"
-    ],
-    "size_reference": 25.9,
-    "typical_size_min": 20,
-    "typical_size_max": 50,
-    "size_unit": "cm",
-    "bakuchou_index": 68,
-    "this_month_avg": 1.9,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 34,
-    "name": "キジハタ",
-    "name_kana": "キジハタ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 4,
-    "difficulty": 3,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "淡白",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "summer",
-      "autumn"
-    ],
-    "size_reference": 31,
-    "typical_size_min": 25,
-    "typical_size_max": 50,
-    "size_unit": "cm",
-    "bakuchou_index": 85,
-    "this_month_avg": 1.7,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 57,
-    "name": "シマダイ",
-    "name_kana": "シマダイ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 3,
-    "difficulty": 3,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "普通",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "summer",
-      "autumn"
-    ],
-    "size_reference": 22.7,
-    "typical_size_min": 10,
-    "typical_size_max": 30,
-    "size_unit": "cm",
-    "bakuchou_index": 41,
-    "this_month_avg": 1.7,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 2,
+    "prev_avg": 1
   },
   {
     "id": 88,
@@ -704,8 +840,34 @@
     "bakuchou_index": 90,
     "this_month_avg": 1.6,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 1,
+    "prev_avg": 1
+  },
+  {
+    "id": 92,
+    "name": "マゴチ",
+    "name_kana": "マゴチ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 3,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "summer"
+    ],
+    "size_reference": 39.1,
+    "typical_size_min": 30,
+    "typical_size_max": 60,
+    "size_unit": "cm",
+    "bakuchou_index": 67,
+    "this_month_avg": 1.6,
+    "appearance_pct": 100,
+    "recent_avg": 2,
+    "prev_avg": 1.1
   },
   {
     "id": 23,
@@ -731,60 +893,7 @@
     "this_month_avg": 1.5,
     "appearance_pct": 100,
     "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 92,
-    "name": "マゴチ",
-    "name_kana": "マゴチ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 3,
-    "difficulty": 3,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "淡白",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "summer"
-    ],
-    "size_reference": 39.1,
-    "typical_size_min": 30,
-    "typical_size_max": 60,
-    "size_unit": "cm",
-    "bakuchou_index": 63,
-    "this_month_avg": 1.5,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 30,
-    "name": "カマス",
-    "name_kana": "カマス",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 2,
-    "difficulty": 2,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "脂のり",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "autumn",
-      "winter"
-    ],
-    "size_reference": 22.9,
-    "typical_size_min": 20,
-    "typical_size_max": 45,
-    "size_unit": "cm",
-    "bakuchou_index": 10,
-    "this_month_avg": 1.4,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "prev_avg": 1
   },
   {
     "id": 56,
@@ -807,10 +916,10 @@
     "typical_size_min": 15,
     "typical_size_max": 40,
     "size_unit": "cm",
-    "bakuchou_index": 98,
+    "bakuchou_index": 101,
     "this_month_avg": 1.3,
     "appearance_pct": 100,
-    "recent_avg": null,
+    "recent_avg": 1,
     "prev_avg": null
   },
   {
@@ -836,8 +945,8 @@
     "bakuchou_index": 21,
     "this_month_avg": 1,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 1,
+    "prev_avg": 1.5
   },
   {
     "id": 20,
@@ -891,8 +1000,8 @@
     "bakuchou_index": 18,
     "this_month_avg": 1,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 1,
+    "prev_avg": 1.9
   },
   {
     "id": 33,
@@ -918,8 +1027,62 @@
     "bakuchou_index": 4,
     "this_month_avg": 1,
     "appearance_pct": 100,
-    "recent_avg": null,
+    "recent_avg": 1,
+    "prev_avg": 2
+  },
+  {
+    "id": 37,
+    "name": "ギマ",
+    "name_kana": "ギマ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 1,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "淡白"
+    },
+    "best_season": [
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 18,
+    "typical_size_min": 10,
+    "typical_size_max": 20,
+    "size_unit": "cm",
+    "bakuchou_index": 29,
+    "this_month_avg": 1,
+    "appearance_pct": 100,
+    "recent_avg": 1,
     "prev_avg": null
+  },
+  {
+    "id": 47,
+    "name": "コブダイ",
+    "name_kana": "コブダイ",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 2,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "脂のり",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "winter",
+      "spring"
+    ],
+    "size_reference": 48.3,
+    "typical_size_min": 50,
+    "typical_size_max": 100,
+    "size_unit": "cm",
+    "bakuchou_index": 100,
+    "this_month_avg": 1,
+    "appearance_pct": 100,
+    "recent_avg": 1,
+    "prev_avg": 1
   },
   {
     "id": 61,
@@ -945,8 +1108,8 @@
     "bakuchou_index": 45,
     "this_month_avg": 1,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 1,
+    "prev_avg": 1
   },
   {
     "id": 68,
@@ -996,62 +1159,7 @@
     "typical_size_min": 50,
     "typical_size_max": 100,
     "size_unit": "cm",
-    "bakuchou_index": 71,
-    "this_month_avg": 1,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 80,
-    "name": "ヒイラギ",
-    "name_kana": "ヒイラギ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 1,
-    "difficulty": 1,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "淡白",
-      "flavor": "淡白"
-    },
-    "best_season": [
-      "summer",
-      "autumn"
-    ],
-    "size_reference": 13.1,
-    "typical_size_min": 8,
-    "typical_size_max": 15,
-    "size_unit": "cm",
-    "bakuchou_index": 24,
-    "this_month_avg": 1,
-    "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
-  },
-  {
-    "id": 84,
-    "name": "フッコ",
-    "name_kana": "フッコ",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 2,
-    "difficulty": 2,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "普通",
-      "flavor": "淡白"
-    },
-    "best_season": [
-      "spring",
-      "summer",
-      "autumn"
-    ],
-    "size_reference": 49.3,
-    "typical_size_min": 30,
-    "typical_size_max": 60,
-    "size_unit": "cm",
-    "bakuchou_index": 50,
+    "bakuchou_index": 75,
     "this_month_avg": 1,
     "appearance_pct": 100,
     "recent_avg": null,
@@ -1081,8 +1189,8 @@
     "bakuchou_index": 14,
     "this_month_avg": 1,
     "appearance_pct": 100,
-    "recent_avg": null,
-    "prev_avg": null
+    "recent_avg": 1,
+    "prev_avg": 5
   },
   {
     "id": 102,
@@ -1109,7 +1217,61 @@
     "bakuchou_index": 80,
     "this_month_avg": 1,
     "appearance_pct": 100,
-    "recent_avg": null,
+    "recent_avg": 1,
+    "prev_avg": null
+  },
+  {
+    "id": 232,
+    "name": "イネゴチ",
+    "name_kana": "イネゴチ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 3,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "上品な旨味があり刺身・洗い・天ぷらで美味"
+    },
+    "best_season": [
+      "spring",
+      "summer"
+    ],
+    "size_reference": null,
+    "typical_size_min": 30,
+    "typical_size_max": 50,
+    "size_unit": "cm",
+    "bakuchou_index": 100,
+    "this_month_avg": 1,
+    "appearance_pct": 100,
+    "recent_avg": 1,
+    "prev_avg": null
+  },
+  {
+    "id": 233,
+    "name": "カガミダイ",
+    "name_kana": "カガミダイ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 2,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "普通",
+      "flavor": "クセのない淡白な白身でムニエルや鍋に向く"
+    },
+    "best_season": [
+      "autumn",
+      "winter"
+    ],
+    "size_reference": null,
+    "typical_size_min": 30,
+    "typical_size_max": 60,
+    "size_unit": "cm",
+    "bakuchou_index": 100,
+    "this_month_avg": 1,
+    "appearance_pct": 100,
+    "recent_avg": 1,
     "prev_avg": null
   }
 ]
