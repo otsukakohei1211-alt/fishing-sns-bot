@@ -18,12 +18,17 @@ import { generateFishChart, generateMonthlyChart } from "./chart.ts";
 import { composeFishFeaturePost } from "./compose.ts";
 import { postToX } from "../x_post.ts";
 import { formatAffiliateReply } from "../affiliate.ts";
-import { sendPostNotification } from "../notify.ts";
+import { sendPostNotification, sendFailureNotification } from "../notify.ts";
+import { verifyClaudeAuth, isClaudeAuthError } from "../compose_article.ts";
 import { xWeight } from "../compose.ts";
 import type { DailyReport } from "../types.ts";
 
 const FACILITY = process.env.FEATURE_FACILITY ?? "honmoku";
 const DRY_RUN = process.env.DRY_RUN === "1";
+
+/** claude CLI の OAuth 失効時に案内する再ログイン手順。 */
+const CLAUDE_RELOGIN_HINT =
+  "claude CLI の認証（OAuth / Pro サブスク）が失効しています。ターミナルで `claude` を起動し `/login` で再ログインしてください。復旧後、次回の自動実行から通常どおり動きます。";
 
 async function main() {
   console.log(`=== fish_feature 開始 (${FACILITY})${DRY_RUN ? " [DRY_RUN]" : ""} ===`);
@@ -54,6 +59,24 @@ async function main() {
       }
     }
   }
+
+  // ── 事前チェック: claude CLI 認証 ─────────────────────────────────────────
+  // 投稿文生成（[4/5]）は claude CLI に依存する。OAuth 失効に気づかず毎回落ちるのを
+  // 防ぐため、魚種選択やグラフ生成の前に検知して即通知する。
+  console.log("[0/5] claude CLI 認証を確認中 …");
+  const auth = await verifyClaudeAuth();
+  if (!auth.ok) {
+    console.error(`  ❌ claude CLI 認証エラー: ${auth.error}`);
+    await sendFailureNotification({
+      step: "認証チェック（魚種特集・投稿文生成前）",
+      error: new Error(auth.error ?? "claude CLI の認証確認に失敗しました"),
+      hint: CLAUDE_RELOGIN_HINT,
+    }).catch(() => {});
+    console.log("認証が復旧するまで処理を中断します。");
+    closeDb();
+    return;
+  }
+  console.log("    認証OK");
 
   // ── [1/5] 魚種選択 ──────────────────────────────────────────────────────────
   // FEATURE_FISH 環境変数で魚種を直接指定可能（例: FEATURE_FISH=ウミタナゴ）
@@ -180,8 +203,11 @@ async function main() {
   closeDb();
 }
 
-main().catch((e) => {
+main().catch(async (e) => {
   console.error(e);
+  const err = e as Error;
+  const hint = isClaudeAuthError(err.message) ? CLAUDE_RELOGIN_HINT : undefined;
+  await sendFailureNotification({ step: "魚種特集パイプライン", error: err, hint }).catch(() => {});
   closeDb();
   process.exit(1);
 });

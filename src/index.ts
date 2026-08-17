@@ -4,13 +4,17 @@ import { promisify } from "node:util";
 import "dotenv/config";
 import { fetchRecentHonmoku } from "./scrapers/honmoku.js";
 import { composePost, xWeight, shortenPostToWeight, type ComposeContext } from "./compose.js";
-import { composeArticle } from "./compose_article.js";
+import { composeArticle, verifyClaudeAuth, isClaudeAuthError } from "./compose_article.js";
 import { sendPostNotification, sendFailureNotification } from "./notify.js";
 import { postToX, SessionExpiredError } from "./x_post.js";
 import { formatAffiliateReply } from "./affiliate.js";
 import { getDb, closeDb } from "./db/index.js";
 
 const execFileAsync = promisify(execFile);
+
+/** claude CLI の OAuth 失効時に案内する再ログイン手順。 */
+const CLAUDE_RELOGIN_HINT =
+  "claude CLI の認証（OAuth / Pro サブスク）が失効しています。ターミナルで `claude` を起動し `/login` で再ログインしてください。復旧後、次回の自動実行から通常どおり動きます。";
 
 // ── デプロイヘルパー ──────────────────────────────────────────────────────────
 
@@ -119,6 +123,23 @@ async function main() {
     console.log(`本日(${today})はすでに実行済みです（${postFile} が存在）。スキップします。`);
     return;
   }
+
+  // ── 事前チェック: claude CLI 認証 ─────────────────────────────────────────
+  // OAuth セッションは定期的に失効する。失効に気づかず毎日サイレントに失敗し続ける
+  // （データ取得は成功するが記事生成だけ落ちる）事態を防ぐため、重い処理の前に検知する。
+  console.log("[0/5] claude CLI 認証を確認中 …");
+  const auth = await verifyClaudeAuth();
+  if (!auth.ok) {
+    console.error(`  ❌ claude CLI 認証エラー: ${auth.error}`);
+    await sendFailureNotification({
+      step: "認証チェック（記事生成前）",
+      error: new Error(auth.error ?? "claude CLI の認証確認に失敗しました"),
+      hint: CLAUDE_RELOGIN_HINT,
+    }).catch(() => {});
+    console.log("認証が復旧するまで処理を中断します。");
+    return;
+  }
+  console.log("    認証OK");
 
   // ── [1/5] データ取得 ──────────────────────────────────────────────────────
   console.log(`[1/5] 本牧釣果データを取得中 (対象: ${today}) …`);
@@ -292,6 +313,8 @@ async function main() {
 
 main().catch(async (e) => {
   console.error(e);
-  await sendFailureNotification({ step: "パイプライン", error: e as Error }).catch(() => {});
+  const err = e as Error;
+  const hint = isClaudeAuthError(err.message) ? CLAUDE_RELOGIN_HINT : undefined;
+  await sendFailureNotification({ step: "パイプライン", error: err, hint }).catch(() => {});
   process.exit(1);
 });

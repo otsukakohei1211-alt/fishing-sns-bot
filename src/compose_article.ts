@@ -91,6 +91,32 @@ function callClaude(prompt: string): Promise<string> {
   });
 }
 
+/**
+ * claude CLI の認証が有効かを軽量チェックする。
+ * OAuth（Pro サブスク）セッションは定期的に失効するため、パイプライン本体を
+ * 走らせる前にこれを呼び、失効していれば即座に検知して通知できるようにする。
+ * 返り値 ok=false のとき error に理由が入る（"OAuth session expired ..." 等）。
+ */
+export async function verifyClaudeAuth(): Promise<{ ok: boolean; error?: string }> {
+  try {
+    // callClaude と同じ env（ANTHROPIC_API_KEY 除外・OAuth 強制）で極小プロンプトを投げる。
+    const out = await callClaude("Reply with exactly: OK");
+    if (out.length === 0) {
+      return { ok: false, error: "claude CLI が空応答を返しました" };
+    }
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: (e as Error).message };
+  }
+}
+
+/** エラーメッセージが claude CLI の認証失効を示すか判定する。 */
+export function isClaudeAuthError(message: string): boolean {
+  return /OAuth session expired|Failed to authenticate|not.*(logged in|authenticated)|Invalid API key/i.test(
+    message,
+  );
+}
+
 // ── プロンプト ────────────────────────────────────────────────────────────────
 
 const ARTICLE_PROMPT_TEMPLATE = `あなたは本牧海づり施設の釣果データを発信している釣りブログ「さかなりす」の中の人です。
