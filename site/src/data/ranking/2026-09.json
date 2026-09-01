@@ -1,0 +1,185 @@
+{
+  "year_month": "2026-09",
+  "ranking": [
+    {
+      "id": 51,
+      "name": "サッパ",
+      "price_range": 1,
+      "avg_catch": 823,
+      "avg_per_person": 3.19,
+      "avg_size": 12,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 5,
+      "name": "アジ",
+      "price_range": 1,
+      "avg_catch": 154,
+      "avg_per_person": 0.597,
+      "avg_size": 25,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 46,
+      "name": "コノシロ",
+      "price_range": 1,
+      "avg_catch": 131,
+      "avg_per_person": 0.508,
+      "avg_size": 28,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 15,
+      "name": "イワシ",
+      "price_range": 1,
+      "avg_catch": 40,
+      "avg_per_person": 0.155,
+      "avg_size": 12,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 27,
+      "name": "カサゴ",
+      "price_range": 2,
+      "avg_catch": 37,
+      "avg_per_person": 0.143,
+      "avg_size": 20,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 42,
+      "name": "クロダイ",
+      "price_range": 2,
+      "avg_catch": 32,
+      "avg_per_person": 0.124,
+      "avg_size": 46,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 83,
+      "name": "フグ",
+      "price_range": 4,
+      "avg_catch": 25,
+      "avg_per_person": 0.097,
+      "avg_size": 20,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 60,
+      "name": "シロギス",
+      "price_range": 2,
+      "avg_catch": 9,
+      "avg_per_person": 0.035,
+      "avg_size": 20,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 52,
+      "name": "サバ",
+      "price_range": 1,
+      "avg_catch": 8,
+      "avg_per_person": 0.031,
+      "avg_size": 26,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 90,
+      "name": "ボラ",
+      "price_range": 1,
+      "avg_catch": 5,
+      "avg_per_person": 0.019,
+      "avg_size": 40,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 67,
+      "name": "タコ",
+      "price_range": 2,
+      "avg_catch": 3,
+      "avg_per_person": 0.012,
+      "avg_size": 0.6,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 99,
+      "name": "メバル",
+      "price_range": 2,
+      "avg_catch": 3,
+      "avg_per_person": 0.012,
+      "avg_size": 20,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 56,
+      "name": "シマイサキ",
+      "price_range": 1,
+      "avg_catch": 2,
+      "avg_per_person": 0.008,
+      "avg_size": 25,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 87,
+      "name": "ベラ",
+      "price_range": 1,
+      "avg_catch": 2,
+      "avg_per_person": 0.008,
+      "avg_size": 18,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 30,
+      "name": "カマス",
+      "price_range": 2,
+      "avg_catch": 1,
+      "avg_per_person": 0.004,
+      "avg_size": 20,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 64,
+      "name": "セイゴ",
+      "price_range": 1,
+      "avg_catch": 1,
+      "avg_per_person": 0.004,
+      "avg_size": 34,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 84,
+      "name": "フッコ",
+      "price_range": 2,
+      "avg_catch": 1,
+      "avg_per_person": 0.004,
+      "avg_size": 40,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 98,
+      "name": "メジナ",
+      "price_range": 2,
+      "avg_catch": 1,
+      "avg_per_person": 0.004,
+      "avg_size": 25,
+      "active_days": 1,
+      "total_days": 1
+    }
+  ]
+}
