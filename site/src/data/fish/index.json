@@ -20,11 +20,11 @@
     "typical_size_min": 15,
     "typical_size_max": 25,
     "size_unit": "cm",
-    "bakuchou_index": 59,
-    "this_month_avg": 3047.3,
+    "bakuchou_index": 57,
+    "this_month_avg": 2960,
     "appearance_pct": 100,
-    "recent_avg": 322.1,
-    "prev_avg": 12.4
+    "recent_avg": 326.3,
+    "prev_avg": 8.9
   },
   {
     "id": 5,
@@ -48,11 +48,11 @@
     "typical_size_min": 15,
     "typical_size_max": 40,
     "size_unit": "cm",
-    "bakuchou_index": 66,
-    "this_month_avg": 772.3,
+    "bakuchou_index": 64,
+    "this_month_avg": 755.2,
     "appearance_pct": 100,
-    "recent_avg": 364.7,
-    "prev_avg": 254.7
+    "recent_avg": 364.1,
+    "prev_avg": 221.4
   },
   {
     "id": 51,
@@ -76,11 +76,11 @@
     "typical_size_min": 10,
     "typical_size_max": 20,
     "size_unit": "cm",
-    "bakuchou_index": 34,
-    "this_month_avg": 184.3,
+    "bakuchou_index": 35,
+    "this_month_avg": 187.6,
     "appearance_pct": 100,
-    "recent_avg": 1054.3,
-    "prev_avg": 185.7
+    "recent_avg": 1032.5,
+    "prev_avg": 209
   },
   {
     "id": 60,
@@ -103,10 +103,10 @@
     "typical_size_max": 30,
     "size_unit": "cm",
     "bakuchou_index": 29,
-    "this_month_avg": 57,
+    "this_month_avg": 55.5,
     "appearance_pct": 100,
-    "recent_avg": 10.9,
-    "prev_avg": 32.1
+    "recent_avg": 10.5,
+    "prev_avg": 33.8
   },
   {
     "id": 46,
@@ -132,8 +132,8 @@
     "bakuchou_index": 4,
     "this_month_avg": 47.8,
     "appearance_pct": 100,
-    "recent_avg": 504.5,
-    "prev_avg": 236.6
+    "recent_avg": 488,
+    "prev_avg": 251.7
   },
   {
     "id": 27,
@@ -156,11 +156,11 @@
     "typical_size_min": 15,
     "typical_size_max": 35,
     "size_unit": "cm",
-    "bakuchou_index": 78,
-    "this_month_avg": 41.5,
+    "bakuchou_index": 76,
+    "this_month_avg": 40.4,
     "appearance_pct": 100,
-    "recent_avg": 52.1,
-    "prev_avg": 57.6
+    "recent_avg": 48.7,
+    "prev_avg": 59.1
   },
   {
     "id": 96,
@@ -183,11 +183,11 @@
     "typical_size_min": 30,
     "typical_size_max": 90,
     "size_unit": "cm",
-    "bakuchou_index": 59,
-    "this_month_avg": 28.2,
+    "bakuchou_index": 57,
+    "this_month_avg": 27.4,
     "appearance_pct": 100,
-    "recent_avg": 4,
-    "prev_avg": 1.4
+    "recent_avg": 2.5,
+    "prev_avg": 1.5
   },
   {
     "id": 52,
@@ -210,11 +210,11 @@
     "typical_size_min": 20,
     "typical_size_max": 50,
     "size_unit": "cm",
-    "bakuchou_index": 69,
-    "this_month_avg": 20.6,
+    "bakuchou_index": 67,
+    "this_month_avg": 20.2,
     "appearance_pct": 100,
-    "recent_avg": 22.9,
-    "prev_avg": 12.8
+    "recent_avg": 22.5,
+    "prev_avg": 13.4
   },
   {
     "id": 42,
@@ -239,11 +239,11 @@
     "typical_size_min": 25,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 89,
-    "this_month_avg": 17.4,
+    "bakuchou_index": 90,
+    "this_month_avg": 17.5,
     "appearance_pct": 100,
-    "recent_avg": 19.1,
-    "prev_avg": 23.5
+    "recent_avg": 20.1,
+    "prev_avg": 23
   },
   {
     "id": 30,
@@ -269,8 +269,8 @@
     "bakuchou_index": 64,
     "this_month_avg": 12.8,
     "appearance_pct": 100,
-    "recent_avg": 2,
-    "prev_avg": 53.6
+    "recent_avg": 1.9,
+    "prev_avg": 31
   },
   {
     "id": 83,
@@ -293,11 +293,11 @@
     "typical_size_min": 20,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 75,
-    "this_month_avg": 12,
+    "bakuchou_index": 73,
+    "this_month_avg": 11.7,
     "appearance_pct": 100,
-    "recent_avg": 23.9,
-    "prev_avg": 24.4
+    "recent_avg": 22.8,
+    "prev_avg": 24.6
   },
   {
     "id": 35,
@@ -349,9 +349,9 @@
     "typical_size_max": 150,
     "size_unit": "cm",
     "bakuchou_index": 26,
-    "this_month_avg": 8.6,
+    "this_month_avg": 8.4,
     "appearance_pct": 100,
-    "recent_avg": 2,
+    "recent_avg": 2.7,
     "prev_avg": 3
   },
   {
@@ -379,7 +379,7 @@
     "this_month_avg": 7.6,
     "appearance_pct": 100,
     "recent_avg": 4.2,
-    "prev_avg": 6.2
+    "prev_avg": 6.4
   },
   {
     "id": 33,
@@ -456,11 +456,11 @@
     "typical_size_min": 20,
     "typical_size_max": 40,
     "size_unit": "cm",
-    "bakuchou_index": 18,
-    "this_month_avg": 5.9,
+    "bakuchou_index": 17,
+    "this_month_avg": 5.7,
     "appearance_pct": 100,
-    "recent_avg": 85.5,
-    "prev_avg": 23.2
+    "recent_avg": 84.3,
+    "prev_avg": 22.3
   },
   {
     "id": 87,
@@ -487,7 +487,7 @@
     "this_month_avg": 5.1,
     "appearance_pct": 100,
     "recent_avg": 5.3,
-    "prev_avg": 5.1
+    "prev_avg": 5.3
   },
   {
     "id": 64,
@@ -511,11 +511,11 @@
     "typical_size_min": 20,
     "typical_size_max": 40,
     "size_unit": "cm",
-    "bakuchou_index": 93,
-    "this_month_avg": 4.9,
+    "bakuchou_index": 91,
+    "this_month_avg": 4.8,
     "appearance_pct": 100,
-    "recent_avg": 2.7,
-    "prev_avg": 3.4
+    "recent_avg": 2.6,
+    "prev_avg": 3.3
   },
   {
     "id": 90,
@@ -542,7 +542,7 @@
     "this_month_avg": 4.4,
     "appearance_pct": 100,
     "recent_avg": 2.6,
-    "prev_avg": 3
+    "prev_avg": null
   },
   {
     "id": 37,
@@ -570,33 +570,6 @@
     "appearance_pct": 100,
     "recent_avg": null,
     "prev_avg": 1
-  },
-  {
-    "id": 45,
-    "name": "コショウダイ",
-    "name_kana": "コショウダイ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 2,
-    "difficulty": 3,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "普通",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "summer",
-      "autumn"
-    ],
-    "size_reference": 30,
-    "typical_size_min": 30,
-    "typical_size_max": 60,
-    "size_unit": "cm",
-    "bakuchou_index": 101,
-    "this_month_avg": 3.5,
-    "appearance_pct": 100,
-    "recent_avg": 2.8,
-    "prev_avg": 2.7
   },
   {
     "id": 97,
@@ -651,6 +624,33 @@
     "prev_avg": 1.7
   },
   {
+    "id": 45,
+    "name": "コショウダイ",
+    "name_kana": "コショウダイ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 2,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "普通",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 30,
+    "typical_size_min": 30,
+    "typical_size_max": 60,
+    "size_unit": "cm",
+    "bakuchou_index": 100,
+    "this_month_avg": 3.4,
+    "appearance_pct": 100,
+    "recent_avg": 2.6,
+    "prev_avg": 2.9
+  },
+  {
     "id": 53,
     "name": "サヨリ",
     "name_kana": "サヨリ",
@@ -698,10 +698,10 @@
     "typical_size_min": 30,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 93,
-    "this_month_avg": 2.3,
+    "bakuchou_index": 89,
+    "this_month_avg": 2.2,
     "appearance_pct": 100,
-    "recent_avg": 2.6,
+    "recent_avg": 2.3,
     "prev_avg": 4.3
   },
   {
@@ -725,11 +725,11 @@
     "typical_size_min": 20,
     "typical_size_max": 50,
     "size_unit": "cm",
-    "bakuchou_index": 52,
-    "this_month_avg": 2.3,
+    "bakuchou_index": 50,
+    "this_month_avg": 2.2,
     "appearance_pct": 100,
-    "recent_avg": 2,
-    "prev_avg": 1.8
+    "recent_avg": 1.8,
+    "prev_avg": 2
   },
   {
     "id": 18,
@@ -755,8 +755,8 @@
     "bakuchou_index": 6,
     "this_month_avg": 2.1,
     "appearance_pct": 100,
-    "recent_avg": 2.7,
-    "prev_avg": 3.5
+    "recent_avg": 2.8,
+    "prev_avg": 3.2
   },
   {
     "id": 8,
@@ -815,6 +815,33 @@
     "prev_avg": 4.3
   },
   {
+    "id": 57,
+    "name": "シマダイ",
+    "name_kana": "シマダイ",
+    "category": "魚",
+    "danger_level": 1,
+    "price_range": 3,
+    "difficulty": 3,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "普通",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "summer",
+      "autumn"
+    ],
+    "size_reference": 22.7,
+    "typical_size_min": 10,
+    "typical_size_max": 30,
+    "size_unit": "cm",
+    "bakuchou_index": 38,
+    "this_month_avg": 1.6,
+    "appearance_pct": 100,
+    "recent_avg": 1.6,
+    "prev_avg": 1.5
+  },
+  {
     "id": 84,
     "name": "フッコ",
     "name_kana": "フッコ",
@@ -836,8 +863,8 @@
     "typical_size_min": 30,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 87,
-    "this_month_avg": 1.7,
+    "bakuchou_index": 82,
+    "this_month_avg": 1.6,
     "appearance_pct": 100,
     "recent_avg": 1,
     "prev_avg": 1
@@ -868,33 +895,6 @@
     "appearance_pct": 100,
     "recent_avg": 1,
     "prev_avg": 1
-  },
-  {
-    "id": 57,
-    "name": "シマダイ",
-    "name_kana": "シマダイ",
-    "category": "魚",
-    "danger_level": 1,
-    "price_range": 3,
-    "difficulty": 3,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "普通",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "summer",
-      "autumn"
-    ],
-    "size_reference": 22.7,
-    "typical_size_min": 10,
-    "typical_size_max": 30,
-    "size_unit": "cm",
-    "bakuchou_index": 36,
-    "this_month_avg": 1.5,
-    "appearance_pct": 100,
-    "recent_avg": 1.4,
-    "prev_avg": 1.4
   },
   {
     "id": 12,
