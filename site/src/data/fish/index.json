@@ -20,11 +20,11 @@
     "typical_size_min": 15,
     "typical_size_max": 25,
     "size_unit": "cm",
-    "bakuchou_index": 57,
-    "this_month_avg": 2960,
+    "bakuchou_index": 55,
+    "this_month_avg": 2877.6,
     "appearance_pct": 100,
-    "recent_avg": 326.3,
-    "prev_avg": 8.9
+    "recent_avg": 327.1,
+    "prev_avg": 14.9
   },
   {
     "id": 5,
@@ -48,11 +48,11 @@
     "typical_size_min": 15,
     "typical_size_max": 40,
     "size_unit": "cm",
-    "bakuchou_index": 64,
-    "this_month_avg": 755.2,
+    "bakuchou_index": 63,
+    "this_month_avg": 736.3,
     "appearance_pct": 100,
-    "recent_avg": 364.1,
-    "prev_avg": 221.4
+    "recent_avg": 310,
+    "prev_avg": 257.1
   },
   {
     "id": 51,
@@ -76,11 +76,11 @@
     "typical_size_min": 10,
     "typical_size_max": 20,
     "size_unit": "cm",
-    "bakuchou_index": 35,
-    "this_month_avg": 187.6,
+    "bakuchou_index": 34,
+    "this_month_avg": 184.5,
     "appearance_pct": 100,
-    "recent_avg": 1032.5,
-    "prev_avg": 209
+    "recent_avg": 1035.9,
+    "prev_avg": 205.8
   },
   {
     "id": 60,
@@ -105,8 +105,8 @@
     "bakuchou_index": 29,
     "this_month_avg": 55.5,
     "appearance_pct": 100,
-    "recent_avg": 10.5,
-    "prev_avg": 33.8
+    "recent_avg": 11.1,
+    "prev_avg": 32.1
   },
   {
     "id": 46,
@@ -130,10 +130,10 @@
     "typical_size_max": 30,
     "size_unit": "cm",
     "bakuchou_index": 4,
-    "this_month_avg": 47.8,
+    "this_month_avg": 46.3,
     "appearance_pct": 100,
-    "recent_avg": 488,
-    "prev_avg": 251.7
+    "recent_avg": 401.5,
+    "prev_avg": 319.5
   },
   {
     "id": 27,
@@ -156,11 +156,11 @@
     "typical_size_min": 15,
     "typical_size_max": 35,
     "size_unit": "cm",
-    "bakuchou_index": 76,
-    "this_month_avg": 40.4,
+    "bakuchou_index": 74,
+    "this_month_avg": 39.3,
     "appearance_pct": 100,
-    "recent_avg": 48.7,
-    "prev_avg": 59.1
+    "recent_avg": 47.8,
+    "prev_avg": 57.1
   },
   {
     "id": 96,
@@ -187,7 +187,7 @@
     "this_month_avg": 27.4,
     "appearance_pct": 100,
     "recent_avg": 2.5,
-    "prev_avg": 1.5
+    "prev_avg": 1.7
   },
   {
     "id": 52,
@@ -210,11 +210,11 @@
     "typical_size_min": 20,
     "typical_size_max": 50,
     "size_unit": "cm",
-    "bakuchou_index": 67,
-    "this_month_avg": 20.2,
+    "bakuchou_index": 66,
+    "this_month_avg": 19.8,
     "appearance_pct": 100,
-    "recent_avg": 22.5,
-    "prev_avg": 13.4
+    "recent_avg": 22,
+    "prev_avg": 12.1
   },
   {
     "id": 42,
@@ -239,11 +239,11 @@
     "typical_size_min": 25,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 90,
-    "this_month_avg": 17.5,
+    "bakuchou_index": 88,
+    "this_month_avg": 17.2,
     "appearance_pct": 100,
-    "recent_avg": 20.1,
-    "prev_avg": 23
+    "recent_avg": 19.4,
+    "prev_avg": 23.2
   },
   {
     "id": 30,
@@ -269,8 +269,8 @@
     "bakuchou_index": 64,
     "this_month_avg": 12.8,
     "appearance_pct": 100,
-    "recent_avg": 1.9,
-    "prev_avg": 31
+    "recent_avg": 1.6,
+    "prev_avg": 23.2
   },
   {
     "id": 83,
@@ -293,11 +293,11 @@
     "typical_size_min": 20,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 73,
-    "this_month_avg": 11.7,
+    "bakuchou_index": 72,
+    "this_month_avg": 11.5,
     "appearance_pct": 100,
-    "recent_avg": 22.8,
-    "prev_avg": 24.6
+    "recent_avg": 21.9,
+    "prev_avg": 24.8
   },
   {
     "id": 35,
@@ -378,8 +378,8 @@
     "bakuchou_index": 57,
     "this_month_avg": 7.6,
     "appearance_pct": 100,
-    "recent_avg": 4.2,
-    "prev_avg": 6.4
+    "recent_avg": 3.4,
+    "prev_avg": 7.2
   },
   {
     "id": 33,
@@ -459,8 +459,8 @@
     "bakuchou_index": 17,
     "this_month_avg": 5.7,
     "appearance_pct": 100,
-    "recent_avg": 84.3,
-    "prev_avg": 22.3
+    "recent_avg": 83.1,
+    "prev_avg": 28.9
   },
   {
     "id": 87,
@@ -487,7 +487,7 @@
     "this_month_avg": 5.1,
     "appearance_pct": 100,
     "recent_avg": 5.3,
-    "prev_avg": 5.3
+    "prev_avg": 5.4
   },
   {
     "id": 64,
@@ -514,7 +514,7 @@
     "bakuchou_index": 91,
     "this_month_avg": 4.8,
     "appearance_pct": 100,
-    "recent_avg": 2.6,
+    "recent_avg": 2.7,
     "prev_avg": 3.3
   },
   {
@@ -648,7 +648,7 @@
     "this_month_avg": 3.4,
     "appearance_pct": 100,
     "recent_avg": 2.6,
-    "prev_avg": 2.9
+    "prev_avg": 3
   },
   {
     "id": 53,
@@ -728,8 +728,8 @@
     "bakuchou_index": 50,
     "this_month_avg": 2.2,
     "appearance_pct": 100,
-    "recent_avg": 1.8,
-    "prev_avg": 2
+    "recent_avg": 1.9,
+    "prev_avg": 1.8
   },
   {
     "id": 18,
@@ -755,8 +755,8 @@
     "bakuchou_index": 6,
     "this_month_avg": 2.1,
     "appearance_pct": 100,
-    "recent_avg": 2.8,
-    "prev_avg": 3.2
+    "recent_avg": 2.4,
+    "prev_avg": 3.5
   },
   {
     "id": 8,
@@ -808,11 +808,11 @@
     "typical_size_min": 15,
     "typical_size_max": 30,
     "size_unit": "cm",
-    "bakuchou_index": 30,
-    "this_month_avg": 1.8,
+    "bakuchou_index": 29,
+    "this_month_avg": 1.7,
     "appearance_pct": 100,
-    "recent_avg": 3.3,
-    "prev_avg": 4.3
+    "recent_avg": 2.9,
+    "prev_avg": 4.4
   },
   {
     "id": 57,
@@ -839,7 +839,7 @@
     "this_month_avg": 1.6,
     "appearance_pct": 100,
     "recent_avg": 1.6,
-    "prev_avg": 1.5
+    "prev_avg": 1.4
   },
   {
     "id": 84,
@@ -946,7 +946,7 @@
     "bakuchou_index": 63,
     "this_month_avg": 1.3,
     "appearance_pct": 100,
-    "recent_avg": 1.2,
+    "recent_avg": 1.3,
     "prev_avg": 1
   },
   {
