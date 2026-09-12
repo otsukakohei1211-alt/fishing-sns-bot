@@ -18,15 +18,15 @@
       "month": 3,
       "avg_catch": 1,
       "avg_per_person": 0,
-      "avg_max_size": 18,
+      "avg_max_size": 78,
       "appearance_pct": 2
     },
     {
       "month": 4,
-      "avg_catch": 1,
-      "avg_per_person": 0,
-      "avg_max_size": 25,
-      "appearance_pct": 2
+      "avg_catch": null,
+      "avg_per_person": null,
+      "avg_max_size": null,
+      "appearance_pct": 0
     },
     {
       "month": 5,
@@ -60,15 +60,15 @@
       "month": 9,
       "avg_catch": 1,
       "avg_per_person": 0,
-      "avg_max_size": 38,
+      "avg_max_size": 64,
       "appearance_pct": 3
     },
     {
       "month": 10,
-      "avg_catch": null,
-      "avg_per_person": null,
-      "avg_max_size": null,
-      "appearance_pct": 0
+      "avg_catch": 1,
+      "avg_per_person": 0,
+      "avg_max_size": 65,
+      "appearance_pct": 3
     },
     {
       "month": 11,
@@ -250,32 +250,10 @@
     },
     {
       "date": "2026/09/12",
-      "count": 0,
+      "count": 1,
       "water_temp": 24,
-      "avg_size": null
+      "avg_size": 64
     }
   ],
-  "tactics": [
-    {
-      "tactic_type": "tackle",
-      "tactic_value": "落とし込み",
-      "mention_count": 3,
-      "co_catch_count": 3,
-      "hit_rate_pct": 100
-    },
-    {
-      "tactic_type": "spot",
-      "tactic_value": "テトラ際（足元）",
-      "mention_count": 1,
-      "co_catch_count": 1,
-      "hit_rate_pct": 100
-    },
-    {
-      "tactic_type": "spot",
-      "tactic_value": "足元テトラの際",
-      "mention_count": 1,
-      "co_catch_count": 1,
-      "hit_rate_pct": 100
-    }
-  ]
+  "tactics": []
 }
