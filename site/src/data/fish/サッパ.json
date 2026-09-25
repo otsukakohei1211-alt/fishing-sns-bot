@@ -58,10 +58,10 @@
     },
     {
       "month": 9,
-      "avg_catch": 168.8,
-      "avg_per_person": 0.38,
-      "avg_max_size": 12.2,
-      "appearance_pct": 83
+      "avg_catch": 145.2,
+      "avg_per_person": 0.31,
+      "avg_max_size": 12.3,
+      "appearance_pct": 87
     },
     {
       "month": 10,
@@ -86,78 +86,6 @@
     }
   ],
   "recent": [
-    {
-      "date": "2026/08/15",
-      "count": 2,
-      "water_temp": 26,
-      "avg_size": 13.5
-    },
-    {
-      "date": "2026/08/16",
-      "count": 286,
-      "water_temp": 26,
-      "avg_size": 11.5
-    },
-    {
-      "date": "2026/08/17",
-      "count": 177,
-      "water_temp": 26,
-      "avg_size": 13
-    },
-    {
-      "date": "2026/08/18",
-      "count": 171,
-      "water_temp": 25.5,
-      "avg_size": 11.5
-    },
-    {
-      "date": "2026/08/19",
-      "count": 385,
-      "water_temp": 26,
-      "avg_size": 11.5
-    },
-    {
-      "date": "2026/08/20",
-      "count": 312,
-      "water_temp": 26,
-      "avg_size": 12.5
-    },
-    {
-      "date": "2026/08/21",
-      "count": 503,
-      "water_temp": 25,
-      "avg_size": 12.5
-    },
-    {
-      "date": "2026/08/22",
-      "count": 601,
-      "water_temp": 25,
-      "avg_size": 12.5
-    },
-    {
-      "date": "2026/08/23",
-      "count": 48,
-      "water_temp": 26,
-      "avg_size": 12.5
-    },
-    {
-      "date": "2026/08/24",
-      "count": 153,
-      "water_temp": 27,
-      "avg_size": 12.5
-    },
-    {
-      "date": "2026/08/25",
-      "count": 133,
-      "water_temp": 26,
-      "avg_size": 11.5
-    },
-    {
-      "date": "2026/08/26",
-      "count": 1034,
-      "water_temp": 26,
-      "avg_size": 11.5
-    },
     {
       "date": "2026/08/27",
       "count": 1100,
@@ -253,6 +181,78 @@
       "count": 42,
       "water_temp": 24,
       "avg_size": 11.5
+    },
+    {
+      "date": "2026/09/13",
+      "count": 43,
+      "water_temp": 23,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/09/14",
+      "count": 155,
+      "water_temp": 23.5,
+      "avg_size": 14.5
+    },
+    {
+      "date": "2026/09/15",
+      "count": 26,
+      "water_temp": 23,
+      "avg_size": 13
+    },
+    {
+      "date": "2026/09/16",
+      "count": 56,
+      "water_temp": 23,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/09/17",
+      "count": 197,
+      "water_temp": 23.5,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/09/18",
+      "count": 157,
+      "water_temp": 23.5,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/09/19",
+      "count": 70,
+      "water_temp": 23,
+      "avg_size": 12.5
+    },
+    {
+      "date": "2026/09/20",
+      "count": 149,
+      "water_temp": 23,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/09/22",
+      "count": 2,
+      "water_temp": 23,
+      "avg_size": 11
+    },
+    {
+      "date": "2026/09/23",
+      "count": 81,
+      "water_temp": 23,
+      "avg_size": 11.5
+    },
+    {
+      "date": "2026/09/24",
+      "count": 4,
+      "water_temp": 23,
+      "avg_size": 12
+    },
+    {
+      "date": "2026/09/25",
+      "count": 22,
+      "water_temp": 23,
+      "avg_size": 11
     }
   ],
   "tactics": []
