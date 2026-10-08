@@ -22,10 +22,10 @@
     "typical_size_max": 40,
     "size_unit": "cm",
     "bakuchou_index": 71,
-    "this_month_avg": 835.7,
+    "this_month_avg": 829.8,
     "appearance_pct": 100,
-    "recent_avg": 763.3,
-    "prev_avg": 260.6
+    "recent_avg": 761.6,
+    "prev_avg": 305
   },
   {
     "id": 15,
@@ -49,10 +49,10 @@
     "typical_size_max": 25,
     "size_unit": "cm",
     "bakuchou_index": 14,
-    "this_month_avg": 725.2,
+    "this_month_avg": 716.7,
     "appearance_pct": 100,
-    "recent_avg": 2526.7,
-    "prev_avg": 740.3
+    "recent_avg": 2087.6,
+    "prev_avg": 1389.1
   },
   {
     "id": 51,
@@ -76,11 +76,11 @@
     "typical_size_min": 10,
     "typical_size_max": 20,
     "size_unit": "cm",
-    "bakuchou_index": 20,
-    "this_month_avg": 106.1,
+    "bakuchou_index": 21,
+    "this_month_avg": 114.1,
     "appearance_pct": 100,
-    "recent_avg": 140.7,
-    "prev_avg": 82.8
+    "recent_avg": 150.9,
+    "prev_avg": 87.4
   },
   {
     "id": 1,
@@ -110,32 +110,6 @@
     "prev_avg": null
   },
   {
-    "id": 60,
-    "name": "シロギス",
-    "name_kana": "シロギス",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 2,
-    "difficulty": 1,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "淡白",
-      "flavor": "淡白"
-    },
-    "best_season": [
-      "summer"
-    ],
-    "size_reference": 16,
-    "typical_size_min": 15,
-    "typical_size_max": 30,
-    "size_unit": "cm",
-    "bakuchou_index": 23,
-    "this_month_avg": 43.9,
-    "appearance_pct": 100,
-    "recent_avg": 6.3,
-    "prev_avg": 7.2
-  },
-  {
     "id": 96,
     "name": "ムツ",
     "name_kana": "ムツ",
@@ -160,7 +134,33 @@
     "this_month_avg": 43.8,
     "appearance_pct": 100,
     "recent_avg": 1,
-    "prev_avg": 1.5
+    "prev_avg": 1.4
+  },
+  {
+    "id": 60,
+    "name": "シロギス",
+    "name_kana": "シロギス",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 2,
+    "difficulty": 1,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "淡白",
+      "flavor": "淡白"
+    },
+    "best_season": [
+      "summer"
+    ],
+    "size_reference": 16,
+    "typical_size_min": 15,
+    "typical_size_max": 30,
+    "size_unit": "cm",
+    "bakuchou_index": 22,
+    "this_month_avg": 42.9,
+    "appearance_pct": 100,
+    "recent_avg": 5.8,
+    "prev_avg": 8.2
   },
   {
     "id": 27,
@@ -183,11 +183,11 @@
     "typical_size_min": 15,
     "typical_size_max": 35,
     "size_unit": "cm",
-    "bakuchou_index": 66,
-    "this_month_avg": 34.9,
+    "bakuchou_index": 65,
+    "this_month_avg": 34.6,
     "appearance_pct": 100,
-    "recent_avg": 28.1,
-    "prev_avg": 58.2
+    "recent_avg": 25.4,
+    "prev_avg": 60.8
   },
   {
     "id": 68,
@@ -211,10 +211,10 @@
     "typical_size_max": 150,
     "size_unit": "cm",
     "bakuchou_index": 100,
-    "this_month_avg": 30.5,
+    "this_month_avg": 30.1,
     "appearance_pct": 100,
-    "recent_avg": 18.4,
-    "prev_avg": 28
+    "recent_avg": 19,
+    "prev_avg": 26.3
   },
   {
     "id": 33,
@@ -238,10 +238,10 @@
     "typical_size_max": 35,
     "size_unit": "cm",
     "bakuchou_index": 100,
-    "this_month_avg": 22.1,
+    "this_month_avg": 21.6,
     "appearance_pct": 100,
-    "recent_avg": 2.1,
-    "prev_avg": 1.5
+    "recent_avg": 2.2,
+    "prev_avg": 1.4
   },
   {
     "id": 83,
@@ -267,8 +267,8 @@
     "bakuchou_index": 85,
     "this_month_avg": 13.6,
     "appearance_pct": 100,
-    "recent_avg": 11.1,
-    "prev_avg": 10
+    "recent_avg": 11.4,
+    "prev_avg": 10.3
   },
   {
     "id": 42,
@@ -293,11 +293,11 @@
     "typical_size_min": 25,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 69,
-    "this_month_avg": 13.5,
+    "bakuchou_index": 68,
+    "this_month_avg": 13.3,
     "appearance_pct": 100,
-    "recent_avg": 19.5,
-    "prev_avg": 21.2
+    "recent_avg": 18.9,
+    "prev_avg": 19.2
   },
   {
     "id": 67,
@@ -348,10 +348,10 @@
     "typical_size_max": 30,
     "size_unit": "cm",
     "bakuchou_index": 100,
-    "this_month_avg": 7.1,
+    "this_month_avg": 7,
     "appearance_pct": 100,
-    "recent_avg": 4.4,
-    "prev_avg": 4.7
+    "recent_avg": 4.6,
+    "prev_avg": 4.6
   },
   {
     "id": 10,
@@ -404,8 +404,8 @@
     "bakuchou_index": 100,
     "this_month_avg": 6.6,
     "appearance_pct": 100,
-    "recent_avg": 4.8,
-    "prev_avg": 1.5
+    "recent_avg": 4.7,
+    "prev_avg": 2.2
   },
   {
     "id": 46,
@@ -485,8 +485,8 @@
     "bakuchou_index": 17,
     "this_month_avg": 5.7,
     "appearance_pct": 100,
-    "recent_avg": 6.6,
-    "prev_avg": 4.2
+    "recent_avg": 6.8,
+    "prev_avg": 4.4
   },
   {
     "id": 13,
@@ -536,10 +536,10 @@
     "typical_size_max": 80,
     "size_unit": "cm",
     "bakuchou_index": 101,
-    "this_month_avg": 4.8,
+    "this_month_avg": 4.9,
     "appearance_pct": 100,
-    "recent_avg": 3.2,
-    "prev_avg": 1.4
+    "recent_avg": 3.7,
+    "prev_avg": 1.3
   },
   {
     "id": 64,
@@ -564,10 +564,10 @@
     "typical_size_max": 40,
     "size_unit": "cm",
     "bakuchou_index": 99,
-    "this_month_avg": 4.5,
+    "this_month_avg": 4.4,
     "appearance_pct": 100,
     "recent_avg": 2.1,
-    "prev_avg": 3.4
+    "prev_avg": 3
   },
   {
     "id": 9,
@@ -623,6 +623,33 @@
     "prev_avg": 1.5
   },
   {
+    "id": 52,
+    "name": "サバ",
+    "name_kana": "サバ",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 1,
+    "difficulty": 1,
+    "taste_profile": {
+      "texture": "青魚",
+      "fat_content": "脂のり",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "autumn",
+      "winter"
+    ],
+    "size_reference": 26.4,
+    "typical_size_min": 20,
+    "typical_size_max": 50,
+    "size_unit": "cm",
+    "bakuchou_index": 11,
+    "this_month_avg": 3.3,
+    "appearance_pct": 100,
+    "recent_avg": 3,
+    "prev_avg": 4.9
+  },
+  {
     "id": 8,
     "name": "イカ",
     "name_kana": "イカ",
@@ -652,33 +679,6 @@
     "prev_avg": 1
   },
   {
-    "id": 52,
-    "name": "サバ",
-    "name_kana": "サバ",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 1,
-    "difficulty": 1,
-    "taste_profile": {
-      "texture": "青魚",
-      "fat_content": "脂のり",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "autumn",
-      "winter"
-    ],
-    "size_reference": 26.4,
-    "typical_size_min": 20,
-    "typical_size_max": 50,
-    "size_unit": "cm",
-    "bakuchou_index": 9,
-    "this_month_avg": 2.8,
-    "appearance_pct": 100,
-    "recent_avg": 2.7,
-    "prev_avg": 4
-  },
-  {
     "id": 20,
     "name": "エソ",
     "name_kana": "エソ",
@@ -699,10 +699,10 @@
     "typical_size_min": 20,
     "typical_size_max": 40,
     "size_unit": "cm",
-    "bakuchou_index": 101,
-    "this_month_avg": 2.4,
+    "bakuchou_index": 102,
+    "this_month_avg": 2.6,
     "appearance_pct": 100,
-    "recent_avg": 1,
+    "recent_avg": 2,
     "prev_avg": 1
   },
   {
@@ -729,8 +729,8 @@
     "bakuchou_index": 11,
     "this_month_avg": 2.3,
     "appearance_pct": 100,
-    "recent_avg": 2.5,
-    "prev_avg": 2.2
+    "recent_avg": 2.1,
+    "prev_avg": 3
   },
   {
     "id": 37,
@@ -780,11 +780,11 @@
     "typical_size_min": 30,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 70,
-    "this_month_avg": 2.2,
+    "bakuchou_index": 67,
+    "this_month_avg": 2.1,
     "appearance_pct": 100,
-    "recent_avg": 1.8,
-    "prev_avg": 3
+    "recent_avg": 1.7,
+    "prev_avg": 3.1
   },
   {
     "id": 26,
@@ -863,8 +863,8 @@
     "bakuchou_index": 34,
     "this_month_avg": 2,
     "appearance_pct": 100,
-    "recent_avg": 2.5,
-    "prev_avg": 4.8
+    "recent_avg": 2.2,
+    "prev_avg": 5.2
   },
   {
     "id": 98,
@@ -887,11 +887,11 @@
     "typical_size_min": 20,
     "typical_size_max": 50,
     "size_unit": "cm",
-    "bakuchou_index": 41,
-    "this_month_avg": 1.8,
+    "bakuchou_index": 38,
+    "this_month_avg": 1.7,
     "appearance_pct": 100,
-    "recent_avg": 1.7,
-    "prev_avg": 4.8
+    "recent_avg": 1.5,
+    "prev_avg": 4.7
   },
   {
     "id": 34,
@@ -917,8 +917,8 @@
     "bakuchou_index": 73,
     "this_month_avg": 1.5,
     "appearance_pct": 100,
-    "recent_avg": 1.5,
-    "prev_avg": 1.7
+    "recent_avg": 1.7,
+    "prev_avg": 1.5
   },
   {
     "id": 58,
@@ -944,8 +944,8 @@
     "bakuchou_index": 60,
     "this_month_avg": 1.5,
     "appearance_pct": 100,
-    "recent_avg": 2,
-    "prev_avg": null
+    "recent_avg": 1.7,
+    "prev_avg": 3
   },
   {
     "id": 50,
@@ -998,8 +998,8 @@
     "bakuchou_index": 31,
     "this_month_avg": 1.3,
     "appearance_pct": 100,
-    "recent_avg": 2,
-    "prev_avg": 1.4
+    "recent_avg": 1.6,
+    "prev_avg": 1.9
   },
   {
     "id": 61,
@@ -1107,7 +1107,7 @@
     "bakuchou_index": 83,
     "this_month_avg": 1.1,
     "appearance_pct": 100,
-    "recent_avg": null,
+    "recent_avg": 1,
     "prev_avg": null
   },
   {
@@ -1164,7 +1164,7 @@
     "this_month_avg": 1.1,
     "appearance_pct": 100,
     "recent_avg": 1,
-    "prev_avg": 2
+    "prev_avg": 1.5
   },
   {
     "id": 92,
@@ -1490,7 +1490,7 @@
     "this_month_avg": 1,
     "appearance_pct": 100,
     "recent_avg": 1,
-    "prev_avg": null
+    "prev_avg": 1
   },
   {
     "id": 103,
