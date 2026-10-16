@@ -65,10 +65,10 @@
     },
     {
       "month": 10,
-      "avg_catch": null,
-      "avg_per_person": null,
-      "avg_max_size": null,
-      "appearance_pct": 0
+      "avg_catch": 3,
+      "avg_per_person": 0.01,
+      "avg_max_size": 20,
+      "appearance_pct": 2
     },
     {
       "month": 11,
@@ -86,102 +86,6 @@
     }
   ],
   "recent": [
-    {
-      "date": "2026/09/01",
-      "count": 0,
-      "water_temp": 27,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/02",
-      "count": 0,
-      "water_temp": 26,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/03",
-      "count": 0,
-      "water_temp": 26,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/04",
-      "count": 0,
-      "water_temp": 25,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/05",
-      "count": 0,
-      "water_temp": 25,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/06",
-      "count": 0,
-      "water_temp": 25,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/07",
-      "count": 0,
-      "water_temp": 24.5,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/09",
-      "count": 0,
-      "water_temp": 25,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/10",
-      "count": 0,
-      "water_temp": 24,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/11",
-      "count": 0,
-      "water_temp": 23,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/12",
-      "count": 0,
-      "water_temp": 24,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/13",
-      "count": 0,
-      "water_temp": 23,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/14",
-      "count": 0,
-      "water_temp": 23.5,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/15",
-      "count": 0,
-      "water_temp": 23,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/16",
-      "count": 0,
-      "water_temp": 23,
-      "avg_size": null
-    },
-    {
-      "date": "2026/09/17",
-      "count": 1,
-      "water_temp": 23.5,
-      "avg_size": 15
-    },
     {
       "date": "2026/09/18",
       "count": 0,
@@ -253,6 +157,102 @@
       "count": 0,
       "water_temp": 22.5,
       "avg_size": null
+    },
+    {
+      "date": "2026/10/01",
+      "count": 0,
+      "water_temp": 22,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/02",
+      "count": 0,
+      "water_temp": 23,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/03",
+      "count": 0,
+      "water_temp": 22,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/04",
+      "count": 0,
+      "water_temp": 22,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/05",
+      "count": 0,
+      "water_temp": 21.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/06",
+      "count": 0,
+      "water_temp": 21,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/07",
+      "count": 0,
+      "water_temp": 21,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/08",
+      "count": 0,
+      "water_temp": 21,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/09",
+      "count": 0,
+      "water_temp": 21,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/10",
+      "count": 0,
+      "water_temp": 21,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/11",
+      "count": 0,
+      "water_temp": 21.5,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/12",
+      "count": 0,
+      "water_temp": 22,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/13",
+      "count": 0,
+      "water_temp": 22,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/14",
+      "count": 0,
+      "water_temp": 22,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/15",
+      "count": 0,
+      "water_temp": 22,
+      "avg_size": null
+    },
+    {
+      "date": "2026/10/16",
+      "count": 3,
+      "water_temp": 22,
+      "avg_size": 18
     }
   ],
   "tactics": []
