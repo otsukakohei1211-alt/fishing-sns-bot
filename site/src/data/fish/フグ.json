@@ -65,7 +65,7 @@
     },
     {
       "month": 10,
-      "avg_catch": 12.7,
+      "avg_catch": 12.4,
       "avg_per_person": 0.02,
       "avg_max_size": 25,
       "appearance_pct": 92
@@ -86,12 +86,6 @@
     }
   ],
   "recent": [
-    {
-      "date": "2026/09/23",
-      "count": 8,
-      "water_temp": 23,
-      "avg_size": 17.5
-    },
     {
       "date": "2026/09/24",
       "count": 6,
@@ -253,6 +247,12 @@
       "count": 6,
       "water_temp": 22,
       "avg_size": 16
+    },
+    {
+      "date": "2026/10/21",
+      "count": 1,
+      "water_temp": 22,
+      "avg_size": 25
     }
   ],
   "tactics": [
