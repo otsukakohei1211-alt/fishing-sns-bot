@@ -1,0 +1,205 @@
+{
+  "year_month": "2026-11",
+  "ranking": [
+    {
+      "id": 15,
+      "name": "イワシ",
+      "price_range": 1,
+      "avg_catch": 589,
+      "avg_per_person": 0.677,
+      "avg_size": 8,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 5,
+      "name": "アジ",
+      "price_range": 1,
+      "avg_catch": 177,
+      "avg_per_person": 0.203,
+      "avg_size": 25,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 6,
+      "name": "アナゴ",
+      "price_range": 3,
+      "avg_catch": 21,
+      "avg_per_person": 0.024,
+      "avg_size": 57,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 27,
+      "name": "カサゴ",
+      "price_range": 2,
+      "avg_catch": 21,
+      "avg_per_person": 0.024,
+      "avg_size": 20,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 11,
+      "name": "イシモチ",
+      "price_range": 2,
+      "avg_catch": 15,
+      "avg_per_person": 0.017,
+      "avg_size": 33.5,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 90,
+      "name": "ボラ",
+      "price_range": 1,
+      "avg_catch": 13,
+      "avg_per_person": 0.015,
+      "avg_size": 50,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 42,
+      "name": "クロダイ",
+      "price_range": 2,
+      "avg_catch": 10,
+      "avg_per_person": 0.011,
+      "avg_size": 41.5,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 83,
+      "name": "フグ",
+      "price_range": 4,
+      "avg_catch": 9,
+      "avg_per_person": 0.01,
+      "avg_size": 20,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 60,
+      "name": "シロギス",
+      "price_range": 2,
+      "avg_catch": 5,
+      "avg_per_person": 0.006,
+      "avg_size": 18,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 67,
+      "name": "タコ",
+      "price_range": 2,
+      "avg_catch": 4,
+      "avg_per_person": 0.005,
+      "avg_size": 0.8,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 32,
+      "name": "カレイ",
+      "price_range": 2,
+      "avg_catch": 3,
+      "avg_per_person": 0.003,
+      "avg_size": 27,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 68,
+      "name": "タチウオ",
+      "price_range": 2,
+      "avg_catch": 3,
+      "avg_per_person": 0.003,
+      "avg_size": 90,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 18,
+      "name": "ウミタナゴ",
+      "price_range": 1,
+      "avg_catch": 2,
+      "avg_per_person": 0.002,
+      "avg_size": 15,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 98,
+      "name": "メジナ",
+      "price_range": 2,
+      "avg_catch": 2,
+      "avg_per_person": 0.002,
+      "avg_size": 30,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 45,
+      "name": "コショウダイ",
+      "price_range": 2,
+      "avg_catch": 1,
+      "avg_per_person": 0.001,
+      "avg_size": 50,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 57,
+      "name": "シマダイ",
+      "price_range": 3,
+      "avg_catch": 1,
+      "avg_per_person": 0.001,
+      "avg_size": 18,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 64,
+      "name": "セイゴ",
+      "price_range": 1,
+      "avg_catch": 1,
+      "avg_per_person": 0.001,
+      "avg_size": 33,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 85,
+      "name": "ブリ",
+      "price_range": 2,
+      "avg_catch": 1,
+      "avg_per_person": 0.001,
+      "avg_size": 80,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 87,
+      "name": "ベラ",
+      "price_range": 1,
+      "avg_catch": 1,
+      "avg_per_person": 0.001,
+      "avg_size": 20,
+      "active_days": 1,
+      "total_days": 1
+    },
+    {
+      "id": 96,
+      "name": "ムツ",
+      "price_range": 3,
+      "avg_catch": 1,
+      "avg_per_person": 0.001,
+      "avg_size": 20,
+      "active_days": 1,
+      "total_days": 1
+    }
+  ]
+}
