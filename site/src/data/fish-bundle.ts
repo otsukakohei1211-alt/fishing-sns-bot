@@ -23,10 +23,10 @@ export const fishIndex = [
     "typical_size_max": 40,
     "size_unit": "cm",
     "bakuchou_index": 100,
-    "this_month_avg": 1035.9,
+    "this_month_avg": 1014.9,
     "appearance_pct": 100,
-    "recent_avg": 266.6,
-    "prev_avg": 411.3
+    "recent_avg": 271.2,
+    "prev_avg": 384.4
   },
   {
     "id": 15,
@@ -49,11 +49,11 @@ export const fishIndex = [
     "typical_size_min": 15,
     "typical_size_max": 25,
     "size_unit": "cm",
-    "bakuchou_index": 3,
-    "this_month_avg": 170.3,
+    "bakuchou_index": 4,
+    "this_month_avg": 209.1,
     "appearance_pct": 100,
-    "recent_avg": 253.9,
-    "prev_avg": 178.4
+    "recent_avg": 317.7,
+    "prev_avg": 157.6
   },
   {
     "id": 46,
@@ -157,11 +157,11 @@ export const fishIndex = [
     "typical_size_min": 15,
     "typical_size_max": 35,
     "size_unit": "cm",
-    "bakuchou_index": 64,
-    "this_month_avg": 34.2,
+    "bakuchou_index": 63,
+    "this_month_avg": 33.7,
     "appearance_pct": 100,
-    "recent_avg": 13.6,
-    "prev_avg": 25.4
+    "recent_avg": 14.3,
+    "prev_avg": 24.1
   },
   {
     "id": 11,
@@ -184,11 +184,11 @@ export const fishIndex = [
     "typical_size_min": 20,
     "typical_size_max": 40,
     "size_unit": "cm",
-    "bakuchou_index": 93,
-    "this_month_avg": 30.2,
+    "bakuchou_index": 92,
+    "this_month_avg": 29.9,
     "appearance_pct": 100,
-    "recent_avg": 10.9,
-    "prev_avg": 13.2
+    "recent_avg": 11.7,
+    "prev_avg": 12.8
   },
   {
     "id": 60,
@@ -210,11 +210,11 @@ export const fishIndex = [
     "typical_size_min": 15,
     "typical_size_max": 30,
     "size_unit": "cm",
-    "bakuchou_index": 15,
-    "this_month_avg": 28.9,
+    "bakuchou_index": 14,
+    "this_month_avg": 28.1,
     "appearance_pct": 100,
-    "recent_avg": 4.5,
-    "prev_avg": 13
+    "recent_avg": 4.6,
+    "prev_avg": 12.6
   },
   {
     "id": 52,
@@ -241,7 +241,7 @@ export const fishIndex = [
     "this_month_avg": 15.3,
     "appearance_pct": 100,
     "recent_avg": null,
-    "prev_avg": 6
+    "prev_avg": 2
   },
   {
     "id": 42,
@@ -266,11 +266,11 @@ export const fishIndex = [
     "typical_size_min": 25,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 71,
-    "this_month_avg": 13.8,
+    "bakuchou_index": 72,
+    "this_month_avg": 14.1,
     "appearance_pct": 100,
-    "recent_avg": 12.4,
-    "prev_avg": 12.1
+    "recent_avg": 14,
+    "prev_avg": 11.6
   },
   {
     "id": 18,
@@ -320,11 +320,11 @@ export const fishIndex = [
     "typical_size_min": 20,
     "typical_size_max": 35,
     "size_unit": "cm",
-    "bakuchou_index": 79,
-    "this_month_avg": 12.7,
+    "bakuchou_index": 77,
+    "this_month_avg": 12.3,
     "appearance_pct": 100,
     "recent_avg": 1.2,
-    "prev_avg": 2.4
+    "prev_avg": 2.3
   },
   {
     "id": 83,
@@ -347,11 +347,11 @@ export const fishIndex = [
     "typical_size_min": 20,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 76,
-    "this_month_avg": 12.2,
+    "bakuchou_index": 74,
+    "this_month_avg": 11.9,
     "appearance_pct": 100,
-    "recent_avg": 5.2,
-    "prev_avg": 9.4
+    "recent_avg": 5.1,
+    "prev_avg": 8.9
   },
   {
     "id": 67,
@@ -374,8 +374,8 @@ export const fishIndex = [
     "typical_size_min": 30,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 66,
-    "this_month_avg": 8.8,
+    "bakuchou_index": 65,
+    "this_month_avg": 8.7,
     "appearance_pct": 100,
     "recent_avg": 2.9,
     "prev_avg": 2.2
@@ -401,11 +401,11 @@ export const fishIndex = [
     "typical_size_min": 30,
     "typical_size_max": 60,
     "size_unit": "cm",
-    "bakuchou_index": 88,
-    "this_month_avg": 6.7,
+    "bakuchou_index": 87,
+    "this_month_avg": 6.6,
     "appearance_pct": 100,
-    "recent_avg": 10.5,
-    "prev_avg": 9.5
+    "recent_avg": 9.7,
+    "prev_avg": 10
   },
   {
     "id": 6,
@@ -427,11 +427,11 @@ export const fishIndex = [
     "typical_size_min": 40,
     "typical_size_max": 80,
     "size_unit": "cm",
-    "bakuchou_index": 70,
-    "this_month_avg": 5.3,
+    "bakuchou_index": 74,
+    "this_month_avg": 5.6,
     "appearance_pct": 100,
-    "recent_avg": 10.3,
-    "prev_avg": 11.8
+    "recent_avg": 11,
+    "prev_avg": 11.5
   },
   {
     "id": 77,
@@ -457,8 +457,8 @@ export const fishIndex = [
     "bakuchou_index": 25,
     "this_month_avg": 5.2,
     "appearance_pct": 100,
-    "recent_avg": 1,
-    "prev_avg": null
+    "recent_avg": null,
+    "prev_avg": 1
   },
   {
     "id": 68,
@@ -485,7 +485,7 @@ export const fishIndex = [
     "this_month_avg": 3.8,
     "appearance_pct": 100,
     "recent_avg": 18.7,
-    "prev_avg": 21.5
+    "prev_avg": 20.7
   },
   {
     "id": 87,
@@ -508,10 +508,10 @@ export const fishIndex = [
     "typical_size_min": 10,
     "typical_size_max": 30,
     "size_unit": "cm",
-    "bakuchou_index": 67,
-    "this_month_avg": 3.8,
+    "bakuchou_index": 65,
+    "this_month_avg": 3.7,
     "appearance_pct": 100,
-    "recent_avg": 2,
+    "recent_avg": 1.9,
     "prev_avg": 1.8
   },
   {
@@ -536,8 +536,8 @@ export const fishIndex = [
     "typical_size_min": 20,
     "typical_size_max": 40,
     "size_unit": "cm",
-    "bakuchou_index": 82,
-    "this_month_avg": 3.5,
+    "bakuchou_index": 80,
+    "this_month_avg": 3.4,
     "appearance_pct": 100,
     "recent_avg": 2.2,
     "prev_avg": 2
@@ -567,7 +567,7 @@ export const fishIndex = [
     "bakuchou_index": 57,
     "this_month_avg": 3.2,
     "appearance_pct": 100,
-    "recent_avg": 1.9,
+    "recent_avg": 2,
     "prev_avg": 1
   },
   {
@@ -594,8 +594,8 @@ export const fishIndex = [
     "bakuchou_index": 35,
     "this_month_avg": 2.1,
     "appearance_pct": 100,
-    "recent_avg": 3.5,
-    "prev_avg": 3.7
+    "recent_avg": 2.7,
+    "prev_avg": 4.6
   },
   {
     "id": 51,
@@ -622,35 +622,8 @@ export const fishIndex = [
     "bakuchou_index": 0,
     "this_month_avg": 2,
     "appearance_pct": 100,
-    "recent_avg": 3.4,
-    "prev_avg": 98.7
-  },
-  {
-    "id": 30,
-    "name": "カマス",
-    "name_kana": "カマス",
-    "category": "魚",
-    "danger_level": 0,
-    "price_range": 2,
-    "difficulty": 2,
-    "taste_profile": {
-      "texture": "白身",
-      "fat_content": "脂のり",
-      "flavor": "旨味が強い"
-    },
-    "best_season": [
-      "autumn",
-      "winter"
-    ],
-    "size_reference": 22.9,
-    "typical_size_min": 20,
-    "typical_size_max": 45,
-    "size_unit": "cm",
-    "bakuchou_index": 9,
-    "this_month_avg": 1.8,
-    "appearance_pct": 100,
-    "recent_avg": 1,
-    "prev_avg": 2.4
+    "recent_avg": 3.8,
+    "prev_avg": 79.3
   },
   {
     "id": 88,
@@ -678,6 +651,33 @@ export const fishIndex = [
     "appearance_pct": 100,
     "recent_avg": null,
     "prev_avg": null
+  },
+  {
+    "id": 30,
+    "name": "カマス",
+    "name_kana": "カマス",
+    "category": "魚",
+    "danger_level": 0,
+    "price_range": 2,
+    "difficulty": 2,
+    "taste_profile": {
+      "texture": "白身",
+      "fat_content": "脂のり",
+      "flavor": "旨味が強い"
+    },
+    "best_season": [
+      "autumn",
+      "winter"
+    ],
+    "size_reference": 22.9,
+    "typical_size_min": 20,
+    "typical_size_max": 45,
+    "size_unit": "cm",
+    "bakuchou_index": 8,
+    "this_month_avg": 1.7,
+    "appearance_pct": 100,
+    "recent_avg": 1,
+    "prev_avg": 2.4
   },
   {
     "id": 8,
@@ -733,7 +733,7 @@ export const fishIndex = [
     "this_month_avg": 1.5,
     "appearance_pct": 100,
     "recent_avg": 2,
-    "prev_avg": 2
+    "prev_avg": 1.7
   },
   {
     "id": 61,
@@ -787,7 +787,7 @@ export const fishIndex = [
     "this_month_avg": 1.4,
     "appearance_pct": 100,
     "recent_avg": 1.5,
-    "prev_avg": 2.3
+    "prev_avg": 2.6
   },
   {
     "id": 84,
@@ -923,7 +923,7 @@ export const fishIndex = [
     "this_month_avg": 1,
     "appearance_pct": 100,
     "recent_avg": null,
-    "prev_avg": 1
+    "prev_avg": null
   },
   {
     "id": 34,
@@ -949,7 +949,7 @@ export const fishIndex = [
     "bakuchou_index": 49,
     "this_month_avg": 1,
     "appearance_pct": 100,
-    "recent_avg": null,
+    "recent_avg": 1,
     "prev_avg": 1.3
   },
   {
@@ -1219,7 +1219,7 @@ export const fishIndex = [
     "this_month_avg": 1,
     "appearance_pct": 100,
     "recent_avg": 1,
-    "prev_avg": 1.4
+    "prev_avg": 1.5
   }
 ] as const;
 
@@ -1305,7 +1305,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 39.5,
         "avg_per_person": 0.07,
         "avg_max_size": 18.6,
-        "appearance_pct": 32
+        "appearance_pct": 31
       },
       {
         "month": 12,
@@ -1316,12 +1316,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -1483,6 +1477,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -1564,7 +1564,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 1,
         "avg_per_person": 0,
         "avg_max_size": 25,
-        "appearance_pct": 15
+        "appearance_pct": 14
       },
       {
         "month": 12,
@@ -1575,12 +1575,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -1742,6 +1736,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": [
@@ -1828,8 +1828,8 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 1035.9,
-        "avg_per_person": 1.93,
+        "avg_catch": 1014.9,
+        "avg_per_person": 1.91,
         "avg_max_size": 27,
         "appearance_pct": 100
       },
@@ -1842,12 +1842,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 420,
-        "water_temp": 21,
-        "avg_size": 32.25
-      },
       {
         "date": "2026/10/10",
         "count": 606,
@@ -2009,6 +2003,12 @@ export const fishDetails: Record<number, {
         "count": 256,
         "water_temp": 19,
         "avg_size": 23
+      },
+      {
+        "date": "2026/11/06",
+        "count": 301,
+        "water_temp": 19,
+        "avg_size": 22
       }
     ],
     "tactics": [
@@ -2158,9 +2158,9 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 5.3,
+        "avg_catch": 5.6,
         "avg_per_person": 0.01,
-        "avg_max_size": 55.8,
+        "avg_max_size": 56.2,
         "appearance_pct": 94
       },
       {
@@ -2172,12 +2172,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 10,
-        "water_temp": 21,
-        "avg_size": 48
-      },
       {
         "date": "2026/10/10",
         "count": 8,
@@ -2339,6 +2333,12 @@ export const fishDetails: Record<number, {
         "count": 2,
         "water_temp": 19,
         "avg_size": 35
+      },
+      {
+        "date": "2026/11/06",
+        "count": 15,
+        "water_temp": 19,
+        "avg_size": 50
       }
     ],
     "tactics": [
@@ -2428,7 +2428,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 1.5,
         "avg_per_person": 0,
         "avg_max_size": 0.5,
-        "appearance_pct": 18
+        "appearance_pct": 17
       },
       {
         "month": 12,
@@ -2439,12 +2439,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -2606,6 +2600,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -2684,7 +2684,7 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 30.2,
+        "avg_catch": 29.9,
         "avg_per_person": 0.06,
         "avg_max_size": 29.4,
         "appearance_pct": 100
@@ -2698,12 +2698,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 4,
-        "water_temp": 21,
-        "avg_size": 27.5
-      },
       {
         "date": "2026/10/10",
         "count": 8,
@@ -2865,6 +2859,12 @@ export const fishDetails: Record<number, {
         "count": 5,
         "water_temp": 19,
         "avg_size": 26
+      },
+      {
+        "date": "2026/11/06",
+        "count": 19,
+        "water_temp": 19,
+        "avg_size": 27
       }
     ],
     "tactics": [
@@ -2965,12 +2965,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -3132,6 +3126,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -3210,10 +3210,10 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 170.3,
-        "avg_per_person": 0.32,
-        "avg_max_size": 11.2,
-        "appearance_pct": 62
+        "avg_catch": 209.1,
+        "avg_per_person": 0.39,
+        "avg_max_size": 11.1,
+        "appearance_pct": 63
       },
       {
         "month": 12,
@@ -3224,12 +3224,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 246,
-        "water_temp": 21,
-        "avg_size": 7.5
-      },
       {
         "date": "2026/10/10",
         "count": 498,
@@ -3391,6 +3385,12 @@ export const fishDetails: Record<number, {
         "count": 2,
         "water_temp": 19,
         "avg_size": 8
+      },
+      {
+        "date": "2026/11/06",
+        "count": 1024,
+        "water_temp": 19,
+        "avg_size": 8.5
       }
     ],
     "tactics": [
@@ -3487,7 +3487,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 1.2,
         "avg_per_person": 0,
         "avg_max_size": 21.4,
-        "appearance_pct": 15
+        "appearance_pct": 14
       },
       {
         "month": 12,
@@ -3498,12 +3498,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -3665,6 +3659,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -3746,7 +3746,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 13.1,
         "avg_per_person": 0.02,
         "avg_max_size": 19.3,
-        "appearance_pct": 97
+        "appearance_pct": 94
       },
       {
         "month": 12,
@@ -3757,12 +3757,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 7,
-        "water_temp": 21,
-        "avg_size": 17.5
-      },
       {
         "date": "2026/10/10",
         "count": 3,
@@ -3924,6 +3918,12 @@ export const fishDetails: Record<number, {
         "count": 6,
         "water_temp": 19,
         "avg_size": 17.5
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": [
@@ -4069,7 +4069,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 1.5,
         "avg_per_person": 0,
         "avg_max_size": 32.8,
-        "appearance_pct": 12
+        "appearance_pct": 11
       },
       {
         "month": 12,
@@ -4080,12 +4080,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 2,
-        "water_temp": 21,
-        "avg_size": 40
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -4247,6 +4241,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -4325,7 +4325,7 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 34.2,
+        "avg_catch": 33.7,
         "avg_per_person": 0.06,
         "avg_max_size": 21.2,
         "appearance_pct": 94
@@ -4339,12 +4339,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 17,
-        "water_temp": 21,
-        "avg_size": 16.5
-      },
       {
         "date": "2026/10/10",
         "count": 24,
@@ -4506,6 +4500,12 @@ export const fishDetails: Record<number, {
         "count": 5,
         "water_temp": 19,
         "avg_size": 17.5
+      },
+      {
+        "date": "2026/11/06",
+        "count": 17,
+        "water_temp": 19,
+        "avg_size": 19.5
       }
     ],
     "tactics": [
@@ -4648,10 +4648,10 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 1.8,
+        "avg_catch": 1.7,
         "avg_per_person": 0,
-        "avg_max_size": 37.8,
-        "appearance_pct": 15
+        "avg_max_size": 36.5,
+        "appearance_pct": 17
       },
       {
         "month": 12,
@@ -4662,12 +4662,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 4,
-        "water_temp": 21,
-        "avg_size": 37.5
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -4829,6 +4823,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 1,
+        "water_temp": 19,
+        "avg_size": 30
       }
     ],
     "tactics": []
@@ -4909,8 +4909,8 @@ export const fishDetails: Record<number, {
         "month": 11,
         "avg_catch": 3.2,
         "avg_per_person": 0.01,
-        "avg_max_size": 32.4,
-        "appearance_pct": 79
+        "avg_max_size": 32.3,
+        "appearance_pct": 80
       },
       {
         "month": 12,
@@ -4921,12 +4921,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -5088,6 +5082,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 3,
+        "water_temp": 19,
+        "avg_size": 28
       }
     ],
     "tactics": [
@@ -5195,10 +5195,10 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 12.7,
+        "avg_catch": 12.3,
         "avg_per_person": 0.02,
-        "avg_max_size": 18.2,
-        "appearance_pct": 79
+        "avg_max_size": 18.4,
+        "appearance_pct": 80
       },
       {
         "month": 12,
@@ -5209,12 +5209,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -5376,6 +5370,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 1,
+        "water_temp": 19,
+        "avg_size": 26
       }
     ],
     "tactics": []
@@ -5456,8 +5456,8 @@ export const fishDetails: Record<number, {
         "month": 11,
         "avg_catch": 1,
         "avg_per_person": 0,
-        "avg_max_size": 26,
-        "appearance_pct": 3
+        "avg_max_size": 35,
+        "appearance_pct": 6
       },
       {
         "month": 12,
@@ -5468,12 +5468,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -5635,6 +5629,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 1,
+        "water_temp": 19,
+        "avg_size": 44
       }
     ],
     "tactics": [
@@ -5728,9 +5728,9 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 13.8,
+        "avg_catch": 14.1,
         "avg_per_person": 0.03,
-        "avg_max_size": 44.8,
+        "avg_max_size": 44.9,
         "appearance_pct": 100
       },
       {
@@ -5742,12 +5742,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 18,
-        "water_temp": 21,
-        "avg_size": 40
-      },
       {
         "date": "2026/10/10",
         "count": 21,
@@ -5909,6 +5903,12 @@ export const fishDetails: Record<number, {
         "count": 14,
         "water_temp": 19,
         "avg_size": 45
+      },
+      {
+        "date": "2026/11/06",
+        "count": 25,
+        "water_temp": 19,
+        "avg_size": 41.5
       }
     ],
     "tactics": [
@@ -6060,8 +6060,8 @@ export const fishDetails: Record<number, {
         "month": 11,
         "avg_catch": 1,
         "avg_per_person": 0,
-        "avg_max_size": 29,
-        "appearance_pct": 15
+        "avg_max_size": 30,
+        "appearance_pct": 17
       },
       {
         "month": 12,
@@ -6072,12 +6072,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 1,
-        "water_temp": 21,
-        "avg_size": 37
-      },
       {
         "date": "2026/10/10",
         "count": 1,
@@ -6239,6 +6233,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 1,
+        "water_temp": 19,
+        "avg_size": 35
       }
     ],
     "tactics": []
@@ -6320,7 +6320,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 59.6,
         "avg_per_person": 0.11,
         "avg_max_size": 28,
-        "appearance_pct": 91
+        "appearance_pct": 89
       },
       {
         "month": 12,
@@ -6331,12 +6331,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 8,
-        "water_temp": 21,
-        "avg_size": 22.5
-      },
       {
         "date": "2026/10/10",
         "count": 2,
@@ -6495,6 +6489,12 @@ export const fishDetails: Record<number, {
       },
       {
         "date": "2026/11/05",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
         "count": 0,
         "water_temp": 19,
         "avg_size": null
@@ -6662,12 +6662,6 @@ export const fishDetails: Record<number, {
     ],
     "recent": [
       {
-        "date": "2026/10/09",
-        "count": 278,
-        "water_temp": 21,
-        "avg_size": 11.5
-      },
-      {
         "date": "2026/10/10",
         "count": 112,
         "water_temp": 21,
@@ -6828,6 +6822,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -6909,7 +6909,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 15.3,
         "avg_per_person": 0.03,
         "avg_max_size": 29.7,
-        "appearance_pct": 65
+        "appearance_pct": 63
       },
       {
         "month": 12,
@@ -6920,12 +6920,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -7087,6 +7081,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": [
@@ -7187,12 +7187,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 1,
-        "water_temp": 21,
-        "avg_size": 72.5
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -7354,6 +7348,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -7435,7 +7435,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 1,
         "avg_per_person": 0,
         "avg_max_size": 21.2,
-        "appearance_pct": 15
+        "appearance_pct": 14
       },
       {
         "month": 12,
@@ -7446,12 +7446,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -7613,6 +7607,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -7691,7 +7691,7 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 28.9,
+        "avg_catch": 28.1,
         "avg_per_person": 0.05,
         "avg_max_size": 18.3,
         "appearance_pct": 100
@@ -7705,12 +7705,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 13,
-        "water_temp": 21,
-        "avg_size": 17
-      },
       {
         "date": "2026/10/10",
         "count": 18,
@@ -7872,6 +7866,12 @@ export const fishDetails: Record<number, {
         "count": 2,
         "water_temp": 19,
         "avg_size": 18
+      },
+      {
+        "date": "2026/11/06",
+        "count": 2,
+        "water_temp": 19,
+        "avg_size": 16
       }
     ],
     "tactics": [
@@ -7986,12 +7986,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 1,
@@ -8153,6 +8147,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": [
@@ -8302,10 +8302,10 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 3.5,
+        "avg_catch": 3.4,
         "avg_per_person": 0.01,
-        "avg_max_size": 25.7,
-        "appearance_pct": 88
+        "avg_max_size": 26,
+        "appearance_pct": 89
       },
       {
         "month": 12,
@@ -8316,12 +8316,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 1,
-        "water_temp": 21,
-        "avg_size": 33
-      },
       {
         "date": "2026/10/10",
         "count": 2,
@@ -8483,6 +8477,12 @@ export const fishDetails: Record<number, {
         "count": 1,
         "water_temp": 19,
         "avg_size": 30
+      },
+      {
+        "date": "2026/11/06",
+        "count": 1,
+        "water_temp": 19,
+        "avg_size": 37
       }
     ],
     "tactics": []
@@ -8561,7 +8561,7 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 8.8,
+        "avg_catch": 8.7,
         "avg_per_person": 0.02,
         "avg_max_size": 0.9,
         "appearance_pct": 97
@@ -8575,12 +8575,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 1,
@@ -8742,6 +8736,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 3,
+        "water_temp": 19,
+        "avg_size": 0.5
       }
     ],
     "tactics": [
@@ -8851,8 +8851,8 @@ export const fishDetails: Record<number, {
         "month": 11,
         "avg_catch": 3.8,
         "avg_per_person": 0.01,
-        "avg_max_size": 103.2,
-        "appearance_pct": 68
+        "avg_max_size": 103.9,
+        "appearance_pct": 69
       },
       {
         "month": 12,
@@ -8863,12 +8863,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 48,
-        "water_temp": 21,
-        "avg_size": 90
-      },
       {
         "date": "2026/10/10",
         "count": 24,
@@ -9030,6 +9024,12 @@ export const fishDetails: Record<number, {
         "count": 1,
         "water_temp": 19,
         "avg_size": 85
+      },
+      {
+        "date": "2026/11/06",
+        "count": 3,
+        "water_temp": 19,
+        "avg_size": 95
       }
     ],
     "tactics": []
@@ -9122,12 +9122,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -9289,6 +9283,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -9370,7 +9370,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 5.2,
         "avg_per_person": 0.01,
         "avg_max_size": 12.9,
-        "appearance_pct": 65
+        "appearance_pct": 63
       },
       {
         "month": 12,
@@ -9381,12 +9381,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -9548,6 +9542,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -9640,12 +9640,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -9807,6 +9801,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -9899,12 +9899,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -10066,6 +10060,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -10144,9 +10144,9 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 12.2,
+        "avg_catch": 11.9,
         "avg_per_person": 0.02,
-        "avg_max_size": 24.3,
+        "avg_max_size": 24.2,
         "appearance_pct": 97
       },
       {
@@ -10158,12 +10158,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 14,
-        "water_temp": 21,
-        "avg_size": 17.5
-      },
       {
         "date": "2026/10/10",
         "count": 9,
@@ -10325,6 +10319,12 @@ export const fishDetails: Record<number, {
         "count": 1,
         "water_temp": 19,
         "avg_size": 25
+      },
+      {
+        "date": "2026/11/06",
+        "count": 2,
+        "water_temp": 19,
+        "avg_size": 20
       }
     ],
     "tactics": [
@@ -10425,12 +10425,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -10592,6 +10586,12 @@ export const fishDetails: Record<number, {
         "count": 1,
         "water_temp": 19,
         "avg_size": 43
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": [
@@ -10699,12 +10699,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -10866,6 +10860,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -10944,10 +10944,10 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 3.8,
+        "avg_catch": 3.7,
         "avg_per_person": 0.01,
         "avg_max_size": 18.4,
-        "appearance_pct": 59
+        "appearance_pct": 60
       },
       {
         "month": 12,
@@ -10958,12 +10958,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 2,
@@ -11125,6 +11119,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 1,
+        "water_temp": 19,
+        "avg_size": 18
       }
     ],
     "tactics": []
@@ -11206,7 +11206,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 1.8,
         "avg_per_person": 0,
         "avg_max_size": 24.2,
-        "appearance_pct": 38
+        "appearance_pct": 37
       },
       {
         "month": 12,
@@ -11217,12 +11217,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -11384,6 +11378,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -11462,10 +11462,10 @@ export const fishDetails: Record<number, {
       },
       {
         "month": 11,
-        "avg_catch": 6.7,
+        "avg_catch": 6.6,
         "avg_per_person": 0.01,
-        "avg_max_size": 50.1,
-        "appearance_pct": 85
+        "avg_max_size": 49.9,
+        "appearance_pct": 86
       },
       {
         "month": 12,
@@ -11476,12 +11476,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 1,
@@ -11643,6 +11637,12 @@ export const fishDetails: Record<number, {
         "count": 8,
         "water_temp": 19,
         "avg_size": 45
+      },
+      {
+        "date": "2026/11/06",
+        "count": 5,
+        "water_temp": 19,
+        "avg_size": 42.5
       }
     ],
     "tactics": [
@@ -11743,12 +11743,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -11910,6 +11904,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -11991,7 +11991,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 1.3,
         "avg_per_person": 0,
         "avg_max_size": 41.3,
-        "appearance_pct": 12
+        "appearance_pct": 11
       },
       {
         "month": 12,
@@ -12002,12 +12002,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -12169,6 +12163,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -12250,7 +12250,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 45,
         "avg_per_person": 0.08,
         "avg_max_size": 21.1,
-        "appearance_pct": 91
+        "appearance_pct": 89
       },
       {
         "month": 12,
@@ -12261,12 +12261,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 1,
@@ -12428,6 +12422,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -12520,12 +12520,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 0,
-        "water_temp": 21,
-        "avg_size": null
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -12687,6 +12681,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": []
@@ -12768,7 +12768,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 1.4,
         "avg_per_person": 0,
         "avg_max_size": 25.6,
-        "appearance_pct": 15
+        "appearance_pct": 14
       },
       {
         "month": 12,
@@ -12779,12 +12779,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 2,
-        "water_temp": 21,
-        "avg_size": 30
-      },
       {
         "date": "2026/10/10",
         "count": 2,
@@ -12946,6 +12940,12 @@ export const fishDetails: Record<number, {
         "count": 0,
         "water_temp": 19,
         "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": [
@@ -13042,7 +13042,7 @@ export const fishDetails: Record<number, {
         "avg_catch": 2.1,
         "avg_per_person": 0,
         "avg_max_size": 21.3,
-        "appearance_pct": 44
+        "appearance_pct": 43
       },
       {
         "month": 12,
@@ -13053,12 +13053,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 3,
-        "water_temp": 21,
-        "avg_size": 15
-      },
       {
         "date": "2026/10/10",
         "count": 3,
@@ -13220,6 +13214,12 @@ export const fishDetails: Record<number, {
         "count": 4,
         "water_temp": 19,
         "avg_size": 15
+      },
+      {
+        "date": "2026/11/06",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
       }
     ],
     "tactics": [
@@ -13355,12 +13355,6 @@ export const fishDetails: Record<number, {
       }
     ],
     "recent": [
-      {
-        "date": "2026/10/09",
-        "count": 3,
-        "water_temp": 21,
-        "avg_size": 64.5
-      },
       {
         "date": "2026/10/10",
         "count": 0,
@@ -13519,6 +13513,12 @@ export const fishDetails: Record<number, {
       },
       {
         "date": "2026/11/05",
+        "count": 0,
+        "water_temp": 19,
+        "avg_size": null
+      },
+      {
+        "date": "2026/11/06",
         "count": 0,
         "water_temp": 19,
         "avg_size": null
