@@ -87,12 +87,6 @@
   ],
   "recent": [
     {
-      "date": "2026/10/12",
-      "count": 2,
-      "water_temp": 22,
-      "avg_size": 13.5
-    },
-    {
       "date": "2026/10/13",
       "count": 0,
       "water_temp": 22,
@@ -252,6 +246,12 @@
       "date": "2026/11/08",
       "count": 0,
       "water_temp": 19,
+      "avg_size": null
+    },
+    {
+      "date": "2026/11/09",
+      "count": 0,
+      "water_temp": 18.5,
       "avg_size": null
     }
   ],
