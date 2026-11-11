@@ -1,111 +1,188 @@
 {
-  "date": "2026/11/09",
+  "date": "2026/11/11",
   "facility": "honmoku",
-  "weather": "雨のち曇り",
-  "water_temp": 18.5,
-  "tide": "大潮",
-  "visitors": 188,
-  "comment": "本日は本牧海づり施設にご来場いただきありがとうございます。\n\n朝から冷たい雨が降って寒い一日になりました。朝方のアジはあまり振るわず、\n閉場時刻延長で、夕方に渡桟橋を中心に釣れて数を伸ばしました。\n\n明日は施設点検の為休館させていただきます。\n大黒海づり施設、磯子海づり施設は営業しております。\n\n明後日は開場時間１時間前倒しの朝６時から営業いたします。\n皆様のお越しをお待ちしております。\n\n※『釣果情報』につきましては、お客様のお帰り時の聞き取り調査の集計です。\n尚、小さな個体は釣果数にカウントしない場合がございます。\n小さな魚はなるべく元気な内にリリースして頂けます様、ご協力をお願い致します。\n\n日没以降も釣りをされます方は、周囲が暗いので必ずヘッドライト等の照明器具をお持ち下さい。",
+  "weather": "晴れ",
+  "water_temp": 18,
+  "tide": "中潮",
+  "visitors": 359,
+  "comment": "本日は、本牧海づり施設にご来場いただきありがとうございます。\n朝から晴天に恵まれ、釣り日和の１日となりました。\nサビキ釣りは、朝夕渡桟橋と沖桟橋を中心にレギュラーサイズのアジが釣れました。泳がせ釣りでは、沖桟橋でブリがヒットしています。エサ釣りでは、アナゴやカレイ、カワハギが釣れています。ルアー釣りでは、数が少なくなってきたものの、日没後タチウオがヒットしています。カゴ釣りでのクロダイも好調に釣れていました。\n明日は、終日晴れて最高気温は19℃前後までしか上がらない予報となっており、朝晩は冷え込んで体感温度は低く感じると思われますので、防寒対策及び最終まで釣りをされる方は手足元を照らす照明器具をご準備のうえお越しください。\n皆さまのご来場を心よりお待ちしております。\n\n※『釣果情報』につきましては、お客様のお帰り時の聞き取り調査の集計です。\n尚、小さな個体は釣果数にカウントしない場合がございます。小さな魚はなるべく元気な内にリリースしてください。",
   "catches": [
     {
       "id": 5,
       "name": "アジ",
-      "count": 510,
+      "count": 379,
       "min_size": 15,
       "max_size": 26,
       "unit": "cm",
       "places": [
+        "全釣り場"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "イワシ",
+      "count": 100,
+      "min_size": 7,
+      "max_size": 10,
+      "unit": "cm",
+      "places": [
         "沖桟橋",
         "新護岸",
-        "渡桟橋"
-      ]
-    },
-    {
-      "id": 51,
-      "name": "サッパ",
-      "count": 13,
-      "min_size": 10,
-      "max_size": 15,
-      "unit": "cm",
-      "places": [
-        "渡桟橋",
-        "新護岸"
-      ]
-    },
-    {
-      "id": 11,
-      "name": "イシモチ",
-      "count": 10,
-      "min_size": 20,
-      "max_size": 26,
-      "unit": "cm",
-      "places": [
-        "沖桟橋"
-      ]
-    },
-    {
-      "id": 90,
-      "name": "ボラ",
-      "count": 7,
-      "min_size": 35,
-      "max_size": 50,
-      "unit": "cm",
-      "places": [
-        "沖桟橋"
-      ]
-    },
-    {
-      "id": 60,
-      "name": "シロギス",
-      "count": 5,
-      "min_size": 17,
-      "max_size": 19,
-      "unit": "cm",
-      "places": [
-        "沖桟橋"
-      ]
-    },
-    {
-      "id": 6,
-      "name": "アナゴ",
-      "count": 4,
-      "min_size": 40,
-      "max_size": 73,
-      "unit": "cm",
-      "places": [
-        "沖桟橋",
-        "新護岸"
-      ]
-    },
-    {
-      "id": 18,
-      "name": "ウミタナゴ",
-      "count": 4,
-      "min_size": 12,
-      "max_size": 13,
-      "unit": "cm",
-      "places": [
-        "渡桟橋",
         "旧護岸"
       ]
     },
     {
       "id": 42,
       "name": "クロダイ",
-      "count": 4,
+      "count": 22,
+      "min_size": 30,
+      "max_size": 48,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "カサゴ",
+      "count": 21,
+      "min_size": 15,
+      "max_size": 21,
+      "unit": "cm",
+      "places": [
+        "全釣り場"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "イシモチ",
+      "count": 14,
+      "min_size": 25,
+      "max_size": 30,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "アナゴ",
+      "count": 10,
       "min_size": 40,
-      "max_size": 47,
+      "max_size": 55,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "カレイ",
+      "count": 10,
+      "min_size": 20,
+      "max_size": 25,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "id": 90,
+      "name": "ボラ",
+      "count": 10,
+      "min_size": 45,
+      "max_size": 50,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "シロギス",
+      "count": 8,
+      "min_size": 20,
+      "max_size": 21,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "タチウオ",
+      "count": 5,
+      "min_size": 80,
+      "max_size": 100,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "タコ",
+      "count": 4,
+      "min_size": 0.3,
+      "max_size": 0.6,
+      "unit": "kg",
+      "places": [
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "カワハギ",
+      "count": 3,
+      "min_size": 20,
+      "max_size": 22.5,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "id": 64,
+      "name": "セイゴ",
+      "count": 3,
+      "min_size": 30,
+      "max_size": 30,
       "unit": "cm",
       "places": [
         "沖桟橋"
       ]
     },
     {
-      "id": 68,
-      "name": "タチウオ",
-      "count": 4,
-      "min_size": 80,
-      "max_size": 90,
+      "id": 18,
+      "name": "ウミタナゴ",
+      "count": 2,
+      "min_size": 15,
+      "max_size": 22,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "コノシロ",
+      "count": 2,
+      "min_size": 25,
+      "max_size": 28,
       "unit": "cm",
       "places": [
         "沖桟橋",
@@ -115,67 +192,25 @@
     {
       "id": 83,
       "name": "フグ",
-      "count": 3,
-      "min_size": 18,
-      "max_size": 20,
+      "count": 2,
+      "min_size": 20,
+      "max_size": 25,
       "unit": "cm",
       "places": [
-        "沖桟橋"
+        "沖桟橋",
+        "旧護岸"
       ]
     },
     {
       "id": 99,
       "name": "メバル",
-      "count": 3,
-      "min_size": 15,
-      "max_size": 15,
+      "count": 2,
+      "min_size": 16,
+      "max_size": 23,
       "unit": "cm",
       "places": [
-        "渡桟橋"
-      ]
-    },
-    {
-      "id": 20,
-      "name": "エソ",
-      "count": 1,
-      "min_size": 48,
-      "max_size": 48,
-      "unit": "cm",
-      "places": [
-        "沖桟橋"
-      ]
-    },
-    {
-      "id": 30,
-      "name": "カマス",
-      "count": 1,
-      "min_size": 40,
-      "max_size": 40,
-      "unit": "cm",
-      "places": [
-        "沖桟橋"
-      ]
-    },
-    {
-      "id": 33,
-      "name": "カワハギ",
-      "count": 1,
-      "min_size": 20,
-      "max_size": 20,
-      "unit": "cm",
-      "places": [
-        "沖桟橋"
-      ]
-    },
-    {
-      "id": 45,
-      "name": "コショウダイ",
-      "count": 1,
-      "min_size": 30,
-      "max_size": 30,
-      "unit": "cm",
-      "places": [
-        "沖桟橋"
+        "渡桟橋",
+        "新護岸"
       ]
     },
     {
@@ -186,51 +221,51 @@
       "max_size": 30,
       "unit": "cm",
       "places": [
-        "沖桟橋"
+        "新護岸"
       ]
     },
     {
-      "id": 57,
-      "name": "シマダイ",
+      "id": 85,
+      "name": "ブリ",
       "count": 1,
-      "min_size": 18,
-      "max_size": 18,
+      "min_size": 81,
+      "max_size": 81,
       "unit": "cm",
       "places": [
         "沖桟橋"
       ]
     },
     {
-      "id": 64,
-      "name": "セイゴ",
+      "id": 87,
+      "name": "ベラ",
       "count": 1,
-      "min_size": 30,
-      "max_size": 30,
+      "min_size": 20,
+      "max_size": 20,
+      "unit": "cm",
+      "places": [
+        "渡桟橋"
+      ]
+    },
+    {
+      "id": 96,
+      "name": "ムツ",
+      "count": 1,
+      "min_size": 20,
+      "max_size": 20,
       "unit": "cm",
       "places": [
         "沖桟橋"
       ]
     },
     {
-      "id": 92,
-      "name": "マゴチ",
+      "id": 98,
+      "name": "メジナ",
       "count": 1,
-      "min_size": 50,
-      "max_size": 50,
+      "min_size": 26,
+      "max_size": 26,
       "unit": "cm",
       "places": [
-        "沖桟橋"
-      ]
-    },
-    {
-      "id": 32,
-      "name": "カレイ",
-      "count": 1,
-      "min_size": 23,
-      "max_size": 23,
-      "unit": "cm",
-      "places": [
-        "沖桟橋"
+        "渡桟橋"
       ]
     }
   ]
