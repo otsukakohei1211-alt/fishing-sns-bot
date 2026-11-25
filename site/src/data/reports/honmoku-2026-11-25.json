@@ -1,0 +1,396 @@
+{
+  "slug": "honmoku-2026-11-25",
+  "date": "2026/11/25",
+  "facility": "honmoku",
+  "title": "【本牧釣果 11/25（水）】アジ436匹、夕方の時合いが本番！ブリ82cm・ワラサも登場で青物熱続く",
+  "lead": "2026年11月25日の本牧海づり施設は、晴れて大潮。日差しはあっても気温が上がらず、冷え込む一日でした。それでも釣果は全27魚種と多彩で、アジが436匹とトップ。新護岸ではブリ82cmが上がり、ワラサも3匹出ています。この記事では、今日の釣果データと爆釣指数・先週比をもとに、今週の狙い目をまとめます。",
+  "sections": [
+    {
+      "heading": "今日の釣果ハイライト",
+      "content": "釣果のトップはアジで436匹、サイズは17〜25cm。全釣り場で釣れていますが、朝はほとんど反応がなく、16時を過ぎてから一気に釣れ始めたそうです。2位はイワシの356匹（7〜10cm）で、サビキ組はこの2魚種がメインでした。大物では新護岸でブリ82cm、沖桟橋と新護岸でワラサ3匹（68.5〜72cm）。シーバス系もスズキ71cm・フッコ・セイゴとそろって数を伸ばし、クロダイも最大52cmが15匹出ています。"
+    },
+    {
+      "heading": "爆釣指数・先週比",
+      "content": "今日の爆釣指数は今月の日平均に対して92%で、「平均的」な一日でした。数が突き抜けたわけではありませんが、11月の標準ラインはしっかり保っています。水温は16.5℃で、先週同日の17℃から0.5℃下がりました。じわじわ冬に向かっている流れです。上位3魚種はアジ・イワシ・イシモチで、先週同日とまったく同じ顔ぶれ。水温が少し下がっても、主役の回遊魚は安定して釣れていると言えそうです。"
+    },
+    {
+      "heading": "魚種別ガイド",
+      "content": "【アジ】436匹・17〜25cm。サビキで全釣り場。今日は16時以降が時合いでした。【イシモチ】28匹・20〜25cm。投げ釣りで沖桟橋・新護岸・渡桟橋。【タチウオ】14匹・80〜102cm。旧護岸と新護岸限定で、1mを超える個体も。【カレイ】4匹・23〜33cm。沖桟橋の投げ釣りで、日ごとにサイズが上がっているとのこと。【シロギス】10匹・17〜20cm。沖桟橋と旧護岸。【カサゴ】15匹・15〜22.5cm。沖桟橋と旧護岸で、根周りを探る釣りが有効です。"
+    },
+    {
+      "heading": "今週の狙い目まとめ",
+      "content": "数を狙うなら、夕方のサビキでアジ。今日は16時過ぎから釣れ始めたので、閉場まで粘れるプランがおすすめです。大物狙いなら沖桟橋・新護岸の青物で、ブリ・ワラサが連日上がっています。投げ釣りはイシモチに加え、型が上向いているカレイが沖桟橋で楽しみ。タチウオは旧護岸・新護岸に絞りましょう。日没は16:30頃なので、夕マヅメを狙うならヘッドライトなど手元・足元を照らせるライトは必ず持参してください。"
+    },
+    {
+      "heading": "まとめ",
+      "content": "11/25の本牧は、爆釣指数92%の平均的な日でした。アジ・イワシ・イシモチの上位3魚種は先週と同じで、安定感があります。水温は先週より0.5℃下がって16.5℃。それでもブリ82cmやワラサ、1m超えのタチウオなど大物の話題が続いています。施設によると明日の最高気温は16℃前後の見込みなので、しっかり防寒して出かけましょう。なお、釣り場と駐車場は禁煙です。喫煙は新護岸スロープ下の喫煙所でお願いします。小さな魚は元気なうちにリリースしましょう。"
+    }
+  ],
+  "topCatches": [
+    "アジ",
+    "イワシ",
+    "イシモチ"
+  ],
+  "waterTemp": "16.5",
+  "weather": "晴れ",
+  "tide": "大潮",
+  "visitors": 336,
+  "bakuchouIndex": 92,
+  "catches": [
+    {
+      "fishId": 5,
+      "name": "アジ",
+      "count": 436,
+      "minSize": 17,
+      "maxSize": 25,
+      "unit": "cm",
+      "places": [
+        "全釣り場"
+      ]
+    },
+    {
+      "fishId": 15,
+      "name": "イワシ",
+      "count": 356,
+      "minSize": 7,
+      "maxSize": 10,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "渡桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 11,
+      "name": "イシモチ",
+      "count": 28,
+      "minSize": 20,
+      "maxSize": 25,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "渡桟橋"
+      ]
+    },
+    {
+      "fishId": 90,
+      "name": "ボラ",
+      "count": 19,
+      "minSize": 44,
+      "maxSize": 50,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 27,
+      "name": "カサゴ",
+      "count": 15,
+      "minSize": 15,
+      "maxSize": 22.5,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 42,
+      "name": "クロダイ",
+      "count": 15,
+      "minSize": 30,
+      "maxSize": 52,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 68,
+      "name": "タチウオ",
+      "count": 14,
+      "minSize": 80,
+      "maxSize": 102,
+      "unit": "cm",
+      "places": [
+        "旧護岸",
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 60,
+      "name": "シロギス",
+      "count": 10,
+      "minSize": 17,
+      "maxSize": 20,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 6,
+      "name": "アナゴ",
+      "count": 7,
+      "minSize": 45,
+      "maxSize": 55,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 51,
+      "name": "サッパ",
+      "count": 6,
+      "minSize": 10,
+      "maxSize": 12,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 32,
+      "name": "カレイ",
+      "count": 4,
+      "minSize": 23,
+      "maxSize": 33,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 84,
+      "name": "フッコ",
+      "count": 4,
+      "minSize": 40,
+      "maxSize": 58.5,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 87,
+      "name": "ベラ",
+      "count": 4,
+      "minSize": 20,
+      "maxSize": 21,
+      "unit": "cm",
+      "places": [
+        "旧護岸",
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 103,
+      "name": "ワラサ",
+      "count": 3,
+      "minSize": 68.5,
+      "maxSize": 72,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 18,
+      "name": "ウミタナゴ",
+      "count": 2,
+      "minSize": 18,
+      "maxSize": 18,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 30,
+      "name": "カマス",
+      "count": 2,
+      "minSize": 40,
+      "maxSize": 40,
+      "unit": "cm",
+      "places": [
+        "沖桟橋",
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 61,
+      "name": "スズキ",
+      "count": 2,
+      "minSize": 71,
+      "maxSize": 71,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 64,
+      "name": "セイゴ",
+      "count": 2,
+      "minSize": 35,
+      "maxSize": 35,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 67,
+      "name": "タコ",
+      "count": 2,
+      "minSize": 0.4,
+      "maxSize": 0.7,
+      "unit": "kg",
+      "places": [
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 2,
+      "name": "アイナメ",
+      "count": 1,
+      "minSize": 33,
+      "maxSize": 33,
+      "unit": "cm",
+      "places": [
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 20,
+      "name": "エソ",
+      "count": 1,
+      "minSize": 43,
+      "maxSize": 43,
+      "unit": "cm",
+      "places": [
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 52,
+      "name": "サバ",
+      "count": 1,
+      "minSize": 30,
+      "maxSize": 30,
+      "unit": "cm",
+      "places": [
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 77,
+      "name": "ハゼ",
+      "count": 1,
+      "minSize": 15,
+      "maxSize": 15,
+      "unit": "cm",
+      "places": [
+        "旧護岸"
+      ]
+    },
+    {
+      "fishId": 83,
+      "name": "フグ",
+      "count": 1,
+      "minSize": 20,
+      "maxSize": 20,
+      "unit": "cm",
+      "places": [
+        "沖桟橋"
+      ]
+    },
+    {
+      "fishId": 85,
+      "name": "ブリ",
+      "count": 1,
+      "minSize": 82,
+      "maxSize": 82,
+      "unit": "cm",
+      "places": [
+        "新護岸"
+      ]
+    },
+    {
+      "fishId": 96,
+      "name": "ムツ",
+      "count": 1,
+      "minSize": 20,
+      "maxSize": 20,
+      "unit": "cm",
+      "places": [
+        "渡桟橋"
+      ]
+    },
+    {
+      "fishId": 99,
+      "name": "メバル",
+      "count": 1,
+      "minSize": 20,
+      "maxSize": 20,
+      "unit": "cm",
+      "places": [
+        "旧護岸"
+      ]
+    }
+  ],
+  "affiliateLinks": [
+    {
+      "label": "アジ釣りの仕掛け・タックルをAmazonで見る",
+      "url": "https://www.amazon.co.jp/s?k=%E3%82%A2%E3%82%B8%20%E3%82%B5%E3%83%93%E3%82%AD%E4%BB%95%E6%8E%9B%E3%81%91&tag=11221121-22"
+    },
+    {
+      "label": "イワシ釣りの仕掛け・タックルをAmazonで見る",
+      "url": "https://www.amazon.co.jp/s?k=%E3%82%B5%E3%83%93%E3%82%AD%E4%BB%95%E6%8E%9B%E3%81%91%20%E3%82%BB%E3%83%83%E3%83%88&tag=11221121-22"
+    },
+    {
+      "label": "イシモチ釣りの仕掛け・タックルをAmazonで見る",
+      "url": "https://www.amazon.co.jp/s?k=%E9%87%A3%E3%82%8A%20%E4%BB%95%E6%8E%9B%E3%81%91%E3%82%BB%E3%83%83%E3%83%88%20%E5%88%9D%E5%BF%83%E8%80%85&tag=11221121-22"
+    },
+    {
+      "label": "カサゴ釣りの仕掛け・タックルをAmazonで見る",
+      "url": "https://www.amazon.co.jp/s?k=%E3%82%AB%E3%82%B5%E3%82%B4%20%E8%83%B4%E7%AA%81%E3%81%8D%E4%BB%95%E6%8E%9B%E3%81%91&tag=11221121-22"
+    },
+    {
+      "label": "クロダイ釣りの仕掛け・タックルをAmazonで見る",
+      "url": "https://www.amazon.co.jp/s?k=%E3%82%AF%E3%83%AD%E3%83%80%E3%82%A4%20%E3%83%95%E3%82%AB%E3%82%BB%E9%87%A3%E3%82%8A%20%E4%BB%95%E6%8E%9B%E3%81%91&tag=11221121-22"
+    },
+    {
+      "label": "サビキ仕掛けセットをAmazonで見る",
+      "url": "https://www.amazon.co.jp/dp/B0D9B2YPKX?tag=11221121-22"
+    },
+    {
+      "label": "釣り用クーラーボックスをAmazonで見る",
+      "url": "https://www.amazon.co.jp/dp/B09RQJF9WP?tag=11221121-22"
+    },
+    {
+      "label": "自動膨張式ライフジャケットをAmazonで見る",
+      "url": "https://www.amazon.co.jp/dp/B07YWD7YDG?tag=11221121-22"
+    },
+    {
+      "label": "万能の堤防釣りロッド＆リールセットをAmazonで見る",
+      "url": "https://www.amazon.co.jp/dp/B089FDPFZ4?tag=11221121-22"
+    },
+    {
+      "label": "LEDヘッドライトをAmazonで見る",
+      "url": "https://www.amazon.co.jp/dp/B07Y21GMKQ?tag=11221121-22"
+    }
+  ],
+  "createdAt": "2026-11-25T11:00:31.097Z"
+}
